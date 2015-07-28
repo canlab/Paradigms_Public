@@ -1,2 +1,1 @@
-this is a Ruby on Rails app from ~2012
-paradigm is described in Ashar et al, Emotion
+this is a Ruby on Rails app from ~2012.  The paradigm is described in Ashar et al, Emotion, and in Yarkoni, Ashar, Wager 2015, PeerJ
