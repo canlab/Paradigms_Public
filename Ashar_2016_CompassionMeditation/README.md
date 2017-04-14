@@ -5,4 +5,6 @@ The audio biographies are provided in Audio.Biographies/, and the accompanying f
 
 In most cases, the name of the audio and photograph files are identical or very similar.  There are some exceptions to this.  The exact mapping is provided in EPrimeScripts/imageListFMRI*.txt
 
+To run the EPrime scripts, first move the Audio.Biographies/ and photos/ directories to be under (i.e. subdirectories) of the EPrimeScripts directory
+
 Contact Yoni Ashar at yoniashar@gmail.com with any questions.
