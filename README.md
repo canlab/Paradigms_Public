@@ -21,3 +21,14 @@ Compassion: Listen to 24 30-second true stories of suffering people, rate tender
 
     You should have received a copy of the GNU General Public License
     along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+
+Instructions for adding paradigms:
+
+- One folder per experiment
+- Folder naming convention: YEAR_LEADPERSON_PROJECTCODE_OTHERKEYWORDS
+- Readme file in each folder called Readme_for_paradigm_files.rtf
+- Update that file and fill in info
+- Update master Readme.md with folder name and short description. Folder names should appear in Readme.md in the same order as they are listed in Finder/File system.
+
+
