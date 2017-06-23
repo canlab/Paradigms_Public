@@ -1,0 +1,2050 @@
+'
+'
+'
+'	C:\Documents and Settings\Console Room\Desktop\R21_Wager\InUse_101110\Experimental\NBack\Version D_response_buttons\Post_D_run1.ebs
+'	Generated on: 5/23/2011	15:42:47
+'
+'
+'	This file generated with E-Studio interface.
+'	E-Prime Copyright © 2002 Psychology Software Tools.
+'	ALL RIGHTS RESERVED
+
+'	Legal use of this experiment script requires a full E-Prime or Runtime License.
+'
+'
+'	Author:
+'		Vanessa van Ast
+'
+'
+'
+'
+
+Option CStrings On
+Dim ebContext as Context
+
+
+'--------------------------------------------------------------------------
+' Class Declarations
+'--------------------------------------------------------------------------
+
+
+
+'--------------------------------------------------------------------------
+'InitImageDisplayDefaults
+'--------------------------------------------------------------------------
+Sub InitImageDisplayDefaults(theImageDisplay As ImageDisplay)
+
+	If theImageDisplay Is Nothing Then Exit Sub
+
+	theImageDisplay.X = "center"
+	theImageDisplay.Y = "center"
+	theImageDisplay.Width = "100%"
+	theImageDisplay.Height = "100%"
+	theImageDisplay.BackColor = CColor("black")
+	theImageDisplay.BackStyle = "opaque"
+	theImageDisplay.BorderColor = CColor("black")
+	theImageDisplay.BorderWidth = CLng("0")
+	theImageDisplay.XAlign = "center"
+	theImageDisplay.YAlign = "center"
+	theImageDisplay.AlignHorizontal = "center"
+	theImageDisplay.AlignVertical = "center"
+	theImageDisplay.ClearAfter = CLogical("No")
+	theImageDisplay.UseSourceColorKey = CLogical("No")
+	theImageDisplay.SourceColorKey = CColor("black")
+	theImageDisplay.MirrorLeftRight = CLogical("No")
+	theImageDisplay.MirrorUpDown = CLogical("No")
+	theImageDisplay.Stretch = CLogical("No")
+
+End Sub
+
+
+
+
+
+'--------------------------------------------------------------------------
+'InitTextDisplayDefaults
+'--------------------------------------------------------------------------
+Sub InitTextDisplayDefaults(theTextDisplay As TextDisplay)
+
+	If theTextDisplay Is Nothing Then Exit Sub
+
+	theTextDisplay.X = "center"
+	theTextDisplay.Y = "center"
+	theTextDisplay.Width = "100%"
+	theTextDisplay.Height = "100%"
+	theTextDisplay.ForeColor = CColor("black")
+	theTextDisplay.BackColor = CColor("white")
+	theTextDisplay.BackStyle = "opaque"
+	theTextDisplay.BorderColor = CColor("black")
+	theTextDisplay.BorderWidth = CLng("0")
+	theTextDisplay.XAlign = "center"
+	theTextDisplay.YAlign = "center"
+	theTextDisplay.AlignHorizontal = "center"
+	theTextDisplay.AlignVertical = "center"
+	theTextDisplay.WordWrap = True
+	theTextDisplay.ClearAfter = CLogical("No")
+	theTextDisplay.FontName = "Courier New"
+	theTextDisplay.FontSize = "18"
+	theTextDisplay.FontBold = CLogical("Yes")
+	theTextDisplay.FontItalic = CLogical("No")
+	theTextDisplay.FontUnderline = CLogical("No")
+	theTextDisplay.FontStrikeout = CLogical("No")
+
+End Sub
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+'--------------------------------------------------------------------------
+' Instance Declarations
+'--------------------------------------------------------------------------
+Dim Display As DisplayDevice
+Dim Sound As SoundDevice
+Dim Keyboard As KeyboardDevice
+Dim Mouse As MouseDevice
+Dim SessionProc As Procedure
+
+Dim WordPres As ImageDisplay
+Dim WordPresEchoClients As EchoClientCollection
+
+Dim InterStimulus As TextDisplay
+
+Dim FixationFinal As TextDisplay
+
+Dim EndingList As List
+
+Dim Ending As Procedure
+
+Dim Outro As TextDisplay
+Dim OutroEchoClients As EchoClientCollection
+
+Dim StimuliList1 As List
+
+Dim Nbackprocedures As List
+
+Dim StimuliList2 As List
+
+Dim Task As Procedure
+
+Dim StimuliList3 As List
+
+Dim Intro1 As TextDisplay
+
+Dim Intro4 As TextDisplay
+Dim Intro4EchoClients As EchoClientCollection
+
+Dim Intro6 As TextDisplay
+Dim Intro6EchoClients As EchoClientCollection
+
+Dim Intro10 As TextDisplay
+Dim Intro10EchoClients As EchoClientCollection
+
+Dim nInstruction As TextDisplay
+
+Dim StimuliList4 As List
+
+Dim StimuliList5 As List
+
+Dim StimuliList6 As List
+
+Dim StimuliList7 As List
+
+Dim StimuliList8 As List
+
+Dim StimuliList9 As List
+
+Dim Intro8 As TextDisplay
+Dim Intro8EchoClients As EchoClientCollection
+
+Dim Intro2 As TextDisplay
+
+Dim Intro7 As TextDisplay
+Dim Intro7EchoClients As EchoClientCollection
+
+Dim Intro9 As TextDisplay
+Dim Intro9EchoClients As EchoClientCollection
+
+Dim Intro5 As TextDisplay
+Dim Intro5EchoClients As EchoClientCollection
+
+Dim Welcome As TextDisplay
+
+Dim BlockProc As Procedure
+
+Dim Taskrun As List
+
+Dim Fix As TextDisplay
+
+Dim Intro3 As TextDisplay
+
+Dim SubjectReady As TextDisplay
+Dim SubjectReadyEchoClients As EchoClientCollection
+
+Dim Experimenter As TextDisplay
+Dim ExperimenterEchoClients As EchoClientCollection
+
+Dim Percentile As TextDisplay
+
+Dim Feedback As TextDisplay
+
+Dim Prefix As TextDisplay
+
+Dim Wait8000 As TextDisplay
+
+Dim TextDisplay1 As TextDisplay
+Dim TextDisplay1EchoClients As EchoClientCollection
+
+Dim TextDisplay2 As TextDisplay
+Dim TextDisplay2EchoClients As EchoClientCollection
+
+Dim TextDisplay3 As TextDisplay
+Dim TextDisplay3EchoClients As EchoClientCollection
+
+Dim TryButtons1 As TextDisplay
+Dim TryButtons1EchoClients As EchoClientCollection
+
+Dim TryButtons2 As TextDisplay
+Dim TryButtons2EchoClients As EchoClientCollection
+
+
+
+'--------------------------------------------------------------------------
+' Package Declare Script
+'--------------------------------------------------------------------------
+
+
+
+'--------------------------------------------------------------------------
+' User Script
+'--------------------------------------------------------------------------
+'--------------------------------------------------------------------------
+' User Script
+'--------------------------------------------------------------------------
+' 
+'Const BASEADDRESS = 888
+'   (Verify the Parallet port's address in the control panel first)
+
+'Const ON_Trigger   = 255
+'Const OFF_Trigger  = 0
+
+
+Dim Incorrect As TextDisplay
+Dim ChoiceDisp As TextDisplay
+Dim Selection As Integer
+Dim TimeZero As Double
+Dim TimeSum As Double
+Dim TotalTime As Double
+dim PortInputVal as Integer
+dim PortInputValHex as Integer
+dim hits as integer
+dim miss as integer
+dim fa as integer
+dim cr as integer
+dim nokey as integer 
+dim i as integer
+dim TrialNum as integer
+dim CorrectNum as integer
+Dim yourscore As Integer
+
+
+'--------------------------------------------------------------------------
+' Package Global Script
+'--------------------------------------------------------------------------
+
+
+
+'--------------------------------------------------------------------------
+' Package Routines
+'--------------------------------------------------------------------------
+
+
+
+'--------------------------------------------------------------------------
+' Implementation
+'--------------------------------------------------------------------------
+Sub SessionProc_Run(c as Context)
+	
+	'''''''''''''''''''''''''''''''''''''''''''''
+	' InLine - Markbeginning BEGIN
+	'''''''''''''''''''''''''''''''''''''''''''''
+	WritePort &H378, 0
+	'''''''''''''''''''''''''''''''''''''''''''''
+	' InLine - Markbeginning END
+	'''''''''''''''''''''''''''''''''''''''''''''
+	
+	
+	
+	TextDisplay1.InputMasks.Reset
+	
+	TextDisplay1EchoClients.RemoveAll
+	TextDisplay1.InputMasks.Add Keyboard.CreateInputMask("{ANY}", "", CLng(TextDisplay1.Duration), CLng("1"), ebEndResponseActionTerminate, CLogical("Yes"), "", "", "ResponseMode:All ProcessBackspace:Yes")
+
+	
+	TextDisplay1.Run
+	
+	Welcome.Run
+	
+	Intro1.Run
+	
+	Intro2.Run
+	
+	Intro3.Run
+	
+	
+	Intro4.InputMasks.Reset
+	
+	Intro4EchoClients.RemoveAll
+	Intro4.InputMasks.Add Keyboard.CreateInputMask("{ANY}", "", CLng(Intro4.Duration), CLng("1"), ebEndResponseActionTerminate, CLogical("Yes"), "", "", "ResponseMode:All ProcessBackspace:Yes")
+
+	
+	Intro4.Run
+	
+	
+	Intro5.InputMasks.Reset
+	
+	Intro5EchoClients.RemoveAll
+	Intro5.InputMasks.Add Keyboard.CreateInputMask("{ANY}", "", CLng(Intro5.Duration), CLng("1"), ebEndResponseActionTerminate, CLogical("Yes"), "", "", "ResponseMode:All ProcessBackspace:Yes")
+
+	
+	Intro5.Run
+	
+	
+	Intro6.InputMasks.Reset
+	
+	Intro6EchoClients.RemoveAll
+	Intro6.InputMasks.Add Keyboard.CreateInputMask("{ANY}", "", CLng(Intro6.Duration), CLng("1"), ebEndResponseActionTerminate, CLogical("Yes"), "", "", "ResponseMode:All ProcessBackspace:Yes")
+
+	
+	Intro6.Run
+	
+	
+	Intro7.InputMasks.Reset
+	
+	Intro7EchoClients.RemoveAll
+	Intro7.InputMasks.Add Keyboard.CreateInputMask("{ANY}", "", CLng(Intro7.Duration), CLng("1"), ebEndResponseActionTerminate, CLogical("Yes"), "", "", "ResponseMode:All ProcessBackspace:Yes")
+
+	
+	Intro7.Run
+	
+	
+	TextDisplay2.InputMasks.Reset
+	
+	TextDisplay2EchoClients.RemoveAll
+	TextDisplay2.InputMasks.Add Keyboard.CreateInputMask("{ANY}", "", CLng(TextDisplay2.Duration), CLng("1"), ebEndResponseActionTerminate, CLogical("Yes"), "", "", "ResponseMode:All ProcessBackspace:Yes")
+
+	
+	TextDisplay2.Run
+	
+	
+	Intro8.InputMasks.Reset
+	
+	Intro8EchoClients.RemoveAll
+	Intro8.InputMasks.Add Keyboard.CreateInputMask("{ANY}", "", CLng(Intro8.Duration), CLng("1"), ebEndResponseActionTerminate, CLogical("Yes"), "", "", "ResponseMode:All ProcessBackspace:Yes")
+
+	
+	Intro8.Run
+	
+	
+	Intro9.InputMasks.Reset
+	
+	Intro9EchoClients.RemoveAll
+	Intro9.InputMasks.Add Keyboard.CreateInputMask("{ANY}", "", CLng(Intro9.Duration), CLng("1"), ebEndResponseActionTerminate, CLogical("Yes"), "", "", "ResponseMode:All ProcessBackspace:Yes")
+
+	
+	Intro9.Run
+	
+	
+	TextDisplay3.InputMasks.Reset
+	
+	TextDisplay3EchoClients.RemoveAll
+	TextDisplay3.InputMasks.Add Keyboard.CreateInputMask("{ANY}", "", CLng(TextDisplay3.Duration), CLng("1"), ebEndResponseActionTerminate, CLogical("Yes"), "", "", "ResponseMode:All ProcessBackspace:Yes")
+
+	
+	TextDisplay3.Run
+	
+	
+	Intro10.InputMasks.Reset
+	
+	Intro10EchoClients.RemoveAll
+	Intro10.InputMasks.Add Keyboard.CreateInputMask("{ANY}", "", CLng(Intro10.Duration), CLng("1"), ebEndResponseActionTerminate, CLogical("Yes"), "", "", "ResponseMode:All ProcessBackspace:Yes")
+
+	
+	Intro10.Run
+	
+	
+	TryButtons1.InputMasks.Reset
+	
+	TryButtons1EchoClients.RemoveAll
+	TryButtons1.InputMasks.Add Keyboard.CreateInputMask("1", "1", CLng(TryButtons1.Duration), CLng("1"), ebEndResponseActionTerminate, CLogical("Yes"), "", "", "ResponseMode:All ProcessBackspace:Yes")
+
+	
+	TryButtons1.Run
+	c.SetAttrib "TryButtons1.OnsetDelay", TryButtons1.OnsetDelay
+	c.SetAttrib "TryButtons1.OnsetTime", TryButtons1.OnsetTime
+	c.SetAttrib "TryButtons1.DurationError", TryButtons1.DurationError
+	c.SetAttrib "TryButtons1.RTTime", TryButtons1.RTTime
+	c.SetAttrib "TryButtons1.ACC", TryButtons1.ACC
+	c.SetAttrib "TryButtons1.RT", TryButtons1.RT
+	c.SetAttrib "TryButtons1.RESP", TryButtons1.RESP
+	c.SetAttrib "TryButtons1.CRESP", TryButtons1.CRESP
+	
+	
+	
+	TryButtons2.InputMasks.Reset
+	
+	TryButtons2EchoClients.RemoveAll
+	TryButtons2.InputMasks.Add Keyboard.CreateInputMask("2", "2", CLng(TryButtons2.Duration), CLng("1"), ebEndResponseActionTerminate, CLogical("Yes"), "", "", "ResponseMode:All ProcessBackspace:Yes")
+
+	
+	TryButtons2.Run
+	c.SetAttrib "TryButtons2.OnsetDelay", TryButtons2.OnsetDelay
+	c.SetAttrib "TryButtons2.OnsetTime", TryButtons2.OnsetTime
+	c.SetAttrib "TryButtons2.DurationError", TryButtons2.DurationError
+	c.SetAttrib "TryButtons2.RTTime", TryButtons2.RTTime
+	c.SetAttrib "TryButtons2.ACC", TryButtons2.ACC
+	c.SetAttrib "TryButtons2.RT", TryButtons2.RT
+	c.SetAttrib "TryButtons2.RESP", TryButtons2.RESP
+	c.SetAttrib "TryButtons2.CRESP", TryButtons2.CRESP
+	
+	
+	
+	SubjectReady.InputMasks.Reset
+	
+	SubjectReadyEchoClients.RemoveAll
+	SubjectReady.InputMasks.Add Keyboard.CreateInputMask("{F6}{/}", "", CLng(SubjectReady.Duration), CLng("1"), ebEndResponseActionTerminate, CLogical("Yes"), "", "", "ResponseMode:All ProcessBackspace:Yes")
+
+	
+	SubjectReady.Run
+	c.SetAttrib "SubjectReady.OnsetDelay", SubjectReady.OnsetDelay
+	c.SetAttrib "SubjectReady.OnsetTime", SubjectReady.OnsetTime
+	c.SetAttrib "SubjectReady.DurationError", SubjectReady.DurationError
+	c.SetAttrib "SubjectReady.RTTime", SubjectReady.RTTime
+	c.SetAttrib "SubjectReady.ACC", SubjectReady.ACC
+	c.SetAttrib "SubjectReady.RT", SubjectReady.RT
+	c.SetAttrib "SubjectReady.RESP", SubjectReady.RESP
+	c.SetAttrib "SubjectReady.CRESP", SubjectReady.CRESP
+	
+	
+	Wait8000.Run
+	c.SetAttrib "Wait8000.OnsetDelay", Wait8000.OnsetDelay
+	c.SetAttrib "Wait8000.OnsetTime", Wait8000.OnsetTime
+	c.SetAttrib "Wait8000.DurationError", Wait8000.DurationError
+	c.SetAttrib "Wait8000.Duration", Wait8000.Duration
+	c.SetAttrib "Wait8000.OffsetTime", Wait8000.OffsetTime
+	
+	Nbackprocedures.Run c
+	
+	'''''''''''''''''''''''''''''''''''''''''''''
+	' InLine - Markend BEGIN
+	'''''''''''''''''''''''''''''''''''''''''''''
+	WritePort &H378, 0
+	'''''''''''''''''''''''''''''''''''''''''''''
+	' InLine - Markend END
+	'''''''''''''''''''''''''''''''''''''''''''''
+	
+	
+	'''''''''''''''''''''''''''''''''''''''''''''
+	' InLine - RecStats BEGIN
+	'''''''''''''''''''''''''''''''''''''''''''''
+	c.setattrib"totalhits", format$(hits/27,"#.#####")
+c.setattrib"totalmiss", format$(miss/27,"#.#####")
+c.setattrib"totalfa", format$(fa/63,"#.#####")
+c.setattrib"totalcr", format$(cr/63,"#.#####")
+c.setattrib"totalnokey", format$(nokey/90,"#.#####")
+c.setattrib"pr",format$((hits/27)-(fa/90),"#.#####")
+
+
+	'''''''''''''''''''''''''''''''''''''''''''''
+	' InLine - RecStats END
+	'''''''''''''''''''''''''''''''''''''''''''''
+	
+	
+	Percentile.Run
+	c.SetAttrib "Percentile.OnsetDelay", Percentile.OnsetDelay
+	c.SetAttrib "Percentile.OnsetTime", Percentile.OnsetTime
+	c.SetAttrib "Percentile.DurationError", Percentile.DurationError
+	c.SetAttrib "Percentile.Duration", Percentile.Duration
+	c.SetAttrib "Percentile.OffsetTime", Percentile.OffsetTime
+	
+	
+	Feedback.Run
+	c.SetAttrib "Feedback.OnsetDelay", Feedback.OnsetDelay
+	c.SetAttrib "Feedback.OnsetTime", Feedback.OnsetTime
+	c.SetAttrib "Feedback.DurationError", Feedback.DurationError
+	c.SetAttrib "Feedback.Duration", Feedback.Duration
+	c.SetAttrib "Feedback.OffsetTime", Feedback.OffsetTime
+	
+	EndingList.Run c
+	c.SetAttrib "TryButtons1.OnsetDelay", TryButtons1.OnsetDelay
+	c.SetAttrib "TryButtons1.OnsetTime", TryButtons1.OnsetTime
+	c.SetAttrib "TryButtons1.DurationError", TryButtons1.DurationError
+	c.SetAttrib "TryButtons1.RTTime", TryButtons1.RTTime
+	c.SetAttrib "TryButtons1.ACC", TryButtons1.ACC
+	c.SetAttrib "TryButtons1.RT", TryButtons1.RT
+	c.SetAttrib "TryButtons1.RESP", TryButtons1.RESP
+	c.SetAttrib "TryButtons1.CRESP", TryButtons1.CRESP
+	
+	c.SetAttrib "TryButtons2.OnsetDelay", TryButtons2.OnsetDelay
+	c.SetAttrib "TryButtons2.OnsetTime", TryButtons2.OnsetTime
+	c.SetAttrib "TryButtons2.DurationError", TryButtons2.DurationError
+	c.SetAttrib "TryButtons2.RTTime", TryButtons2.RTTime
+	c.SetAttrib "TryButtons2.ACC", TryButtons2.ACC
+	c.SetAttrib "TryButtons2.RT", TryButtons2.RT
+	c.SetAttrib "TryButtons2.RESP", TryButtons2.RESP
+	c.SetAttrib "TryButtons2.CRESP", TryButtons2.CRESP
+	
+	c.SetAttrib "SubjectReady.OnsetDelay", SubjectReady.OnsetDelay
+	c.SetAttrib "SubjectReady.OnsetTime", SubjectReady.OnsetTime
+	c.SetAttrib "SubjectReady.DurationError", SubjectReady.DurationError
+	c.SetAttrib "SubjectReady.RTTime", SubjectReady.RTTime
+	c.SetAttrib "SubjectReady.ACC", SubjectReady.ACC
+	c.SetAttrib "SubjectReady.RT", SubjectReady.RT
+	c.SetAttrib "SubjectReady.RESP", SubjectReady.RESP
+	c.SetAttrib "SubjectReady.CRESP", SubjectReady.CRESP
+	
+	c.SetAttrib "Wait8000.OnsetDelay", Wait8000.OnsetDelay
+	c.SetAttrib "Wait8000.OnsetTime", Wait8000.OnsetTime
+	c.SetAttrib "Wait8000.DurationError", Wait8000.DurationError
+	c.SetAttrib "Wait8000.Duration", Wait8000.Duration
+	c.SetAttrib "Wait8000.OffsetTime", Wait8000.OffsetTime
+	
+	c.SetAttrib "Percentile.OnsetDelay", Percentile.OnsetDelay
+	c.SetAttrib "Percentile.OnsetTime", Percentile.OnsetTime
+	c.SetAttrib "Percentile.DurationError", Percentile.DurationError
+	c.SetAttrib "Percentile.Duration", Percentile.Duration
+	c.SetAttrib "Percentile.OffsetTime", Percentile.OffsetTime
+	
+	c.SetAttrib "Feedback.OnsetDelay", Feedback.OnsetDelay
+	c.SetAttrib "Feedback.OnsetTime", Feedback.OnsetTime
+	c.SetAttrib "Feedback.DurationError", Feedback.DurationError
+	c.SetAttrib "Feedback.Duration", Feedback.Duration
+	c.SetAttrib "Feedback.OffsetTime", Feedback.OffsetTime
+	
+
+	c.Log
+End Sub
+
+Sub Ending_Run(c as Context)
+	
+	Outro.Text = c.GetAttrib("Outro") &_ 
+				"\n\n\n\n\npress any key to end"
+	
+	Outro.InputMasks.Reset
+	
+	OutroEchoClients.RemoveAll
+	Outro.InputMasks.Add Keyboard.CreateInputMask("{ANY}", "", CLng(Outro.Duration), CLng("1"), ebEndResponseActionTerminate, CLogical("Yes"), "", "", "ResponseMode:All ProcessBackspace:Yes")
+
+	
+	Outro.Run
+
+	c.Log
+End Sub
+
+Sub Task_Run(c as Context)
+	
+	WordPres.Filename = "Images/" &_ 
+				c.GetAttrib("Image") &_ 
+				".bmp"
+	WordPres.Load
+	
+	WordPres.InputMasks.Reset
+	
+	WordPresEchoClients.RemoveAll
+	WordPres.InputMasks.Add Keyboard.CreateInputMask("12", c.GetAttrib("CorrectRes"), CLng("3000"), CLng("1"), ebEndResponseActionNone, CLogical("Yes"), "", "", "ResponseMode:All ProcessBackspace:Yes")
+
+	
+	WordPres.Run
+	c.SetAttrib "WordPres.OnsetDelay", WordPres.OnsetDelay
+	c.SetAttrib "WordPres.OnsetTime", WordPres.OnsetTime
+	c.SetAttrib "WordPres.DurationError", WordPres.DurationError
+	c.SetAttrib "WordPres.PreRelease", WordPres.PreRelease
+	c.SetAttrib "WordPres.Duration", WordPres.Duration
+	c.SetAttrib "WordPres.StartTime", WordPres.StartTime
+	c.SetAttrib "WordPres.OffsetTime", WordPres.OffsetTime
+	c.SetAttrib "WordPres.FinishTime", WordPres.FinishTime
+	c.SetAttrib "WordPres.TargetOffsetTime", WordPres.TargetOffsetTime
+	c.SetAttrib "WordPres.TargetOnsetTime", WordPres.TargetOnsetTime
+	c.SetAttrib "WordPres.OffsetDelay", WordPres.OffsetDelay
+	c.SetAttrib "WordPres.RTTime", WordPres.RTTime
+	c.SetAttrib "WordPres.ACC", WordPres.ACC
+	c.SetAttrib "WordPres.RT", WordPres.RT
+	c.SetAttrib "WordPres.RESP", WordPres.RESP
+	c.SetAttrib "WordPres.CRESP", WordPres.CRESP
+	
+	
+	InterStimulus.Run
+	c.SetAttrib "InterStimulus.OnsetDelay", InterStimulus.OnsetDelay
+	c.SetAttrib "InterStimulus.OnsetTime", InterStimulus.OnsetTime
+	c.SetAttrib "InterStimulus.DurationError", InterStimulus.DurationError
+	c.SetAttrib "InterStimulus.Duration", InterStimulus.Duration
+	c.SetAttrib "InterStimulus.OffsetTime", InterStimulus.OffsetTime
+	
+	
+	'''''''''''''''''''''''''''''''''''''''''''''
+	' InLine - WriteCode BEGIN
+	'''''''''''''''''''''''''''''''''''''''''''''
+	if WordPres.ACC = 1 and WordPres.RESP = "1" then hits = hits + 1 
+if WordPres.ACC = 1 and WordPres.RESP = "2" then cr = cr + 1 
+if WordPres.ACC = 0 and WordPres.RESP = "1" then fa = fa + 1 
+if WordPres.ACC = 0 and WordPres.RESP = "2" then miss = miss + 1 
+if WordPres.ACC = 0 and WordPres.RESP = "" then nokey = nokey + 1
+
+if WordPres.ACC = 1 and WordPres.RESP = "1" then c.setAttrib"answer","hit"  
+if WordPres.ACC = 1 and WordPres.RESP = "2" then c.setAttrib"answer","cr"  
+if WordPres.ACC = 0 and WordPres.RESP = "1" then c.setAttrib"answer","fa"  
+if WordPres.ACC = 0 and WordPres.RESP = "2" then c.setAttrib"answer","miss"  
+if WordPres.ACC = 0 and WordPres.RESP = "" then c.setAttrib"answer","nokey" 
+
+
+
+
+
+
+	'''''''''''''''''''''''''''''''''''''''''''''
+	' InLine - WriteCode END
+	'''''''''''''''''''''''''''''''''''''''''''''
+	
+	c.SetAttrib "WordPres.OnsetDelay", WordPres.OnsetDelay
+	c.SetAttrib "WordPres.OnsetTime", WordPres.OnsetTime
+	c.SetAttrib "WordPres.DurationError", WordPres.DurationError
+	c.SetAttrib "WordPres.PreRelease", WordPres.PreRelease
+	c.SetAttrib "WordPres.Duration", WordPres.Duration
+	c.SetAttrib "WordPres.StartTime", WordPres.StartTime
+	c.SetAttrib "WordPres.OffsetTime", WordPres.OffsetTime
+	c.SetAttrib "WordPres.FinishTime", WordPres.FinishTime
+	c.SetAttrib "WordPres.TargetOffsetTime", WordPres.TargetOffsetTime
+	c.SetAttrib "WordPres.TargetOnsetTime", WordPres.TargetOnsetTime
+	c.SetAttrib "WordPres.OffsetDelay", WordPres.OffsetDelay
+	c.SetAttrib "WordPres.RTTime", WordPres.RTTime
+	c.SetAttrib "WordPres.ACC", WordPres.ACC
+	c.SetAttrib "WordPres.RT", WordPres.RT
+	c.SetAttrib "WordPres.RESP", WordPres.RESP
+	c.SetAttrib "WordPres.CRESP", WordPres.CRESP
+	
+	c.SetAttrib "InterStimulus.OnsetDelay", InterStimulus.OnsetDelay
+	c.SetAttrib "InterStimulus.OnsetTime", InterStimulus.OnsetTime
+	c.SetAttrib "InterStimulus.DurationError", InterStimulus.DurationError
+	c.SetAttrib "InterStimulus.Duration", InterStimulus.Duration
+	c.SetAttrib "InterStimulus.OffsetTime", InterStimulus.OffsetTime
+	
+
+	c.Log
+End Sub
+
+Sub BlockProc_Run(c as Context)
+	
+	nInstruction.Text = "\n\n\nFollowing trials are:\n\n\n*****     " &_ 
+				c.GetAttrib("n") &_ 
+				"-back     *****\n\n\n\n"
+	nInstruction.Run
+	c.SetAttrib "nInstruction.OnsetDelay", nInstruction.OnsetDelay
+	c.SetAttrib "nInstruction.OnsetTime", nInstruction.OnsetTime
+	c.SetAttrib "nInstruction.DurationError", nInstruction.DurationError
+	c.SetAttrib "nInstruction.Duration", nInstruction.Duration
+	c.SetAttrib "nInstruction.OffsetTime", nInstruction.OffsetTime
+	
+	
+	Prefix.Run
+	c.SetAttrib "Prefix.OnsetDelay", Prefix.OnsetDelay
+	c.SetAttrib "Prefix.OnsetTime", Prefix.OnsetTime
+	c.SetAttrib "Prefix.DurationError", Prefix.DurationError
+	c.SetAttrib "Prefix.Duration", Prefix.Duration
+	c.SetAttrib "Prefix.OffsetTime", Prefix.OffsetTime
+	
+	Taskrun.Run c
+	
+	Fix.Run
+	c.SetAttrib "Fix.OnsetDelay", Fix.OnsetDelay
+	c.SetAttrib "Fix.OnsetTime", Fix.OnsetTime
+	c.SetAttrib "Fix.DurationError", Fix.DurationError
+	c.SetAttrib "Fix.Duration", Fix.Duration
+	c.SetAttrib "Fix.OffsetTime", Fix.OffsetTime
+	
+	c.SetAttrib "nInstruction.OnsetDelay", nInstruction.OnsetDelay
+	c.SetAttrib "nInstruction.OnsetTime", nInstruction.OnsetTime
+	c.SetAttrib "nInstruction.DurationError", nInstruction.DurationError
+	c.SetAttrib "nInstruction.Duration", nInstruction.Duration
+	c.SetAttrib "nInstruction.OffsetTime", nInstruction.OffsetTime
+	
+	c.SetAttrib "Prefix.OnsetDelay", Prefix.OnsetDelay
+	c.SetAttrib "Prefix.OnsetTime", Prefix.OnsetTime
+	c.SetAttrib "Prefix.DurationError", Prefix.DurationError
+	c.SetAttrib "Prefix.Duration", Prefix.Duration
+	c.SetAttrib "Prefix.OffsetTime", Prefix.OffsetTime
+	
+	c.SetAttrib "Fix.OnsetDelay", Fix.OnsetDelay
+	c.SetAttrib "Fix.OnsetTime", Fix.OnsetTime
+	c.SetAttrib "Fix.DurationError", Fix.DurationError
+	c.SetAttrib "Fix.Duration", Fix.Duration
+	c.SetAttrib "Fix.OffsetTime", Fix.OffsetTime
+	
+
+	c.Log
+End Sub
+
+
+
+'--------------------------------------------------------------------------
+' InitDevices
+'
+'--------------------------------------------------------------------------
+Sub InitDevices(c As Context)
+
+
+
+	SetOSThreadPriority 3
+
+
+	Set Display = New DisplayDevice
+	Display.Name = "Display"
+
+	Dim DisplayDisplayDeviceInfo As DisplayDeviceInfo
+	DisplayDisplayDeviceInfo.XRes = 800
+	DisplayDisplayDeviceInfo.YRes = 600
+	DisplayDisplayDeviceInfo.ColorDepth = 16
+	DisplayDisplayDeviceInfo.RefreshRate = 0
+	DisplayDisplayDeviceInfo.NumPages = 0
+
+	Display.Open DisplayDisplayDeviceInfo
+	c.SetAttrib "Display.RefreshRate", Format$(Display.CalculatedRefreshRate, "0.000")
+
+	Set Sound = New SoundDevice
+	Sound.Name = "Sound"
+
+	Dim SoundSoundOutDeviceInfo As SoundDeviceInfo
+	SoundSoundOutDeviceInfo.Channels = 2
+	SoundSoundOutDeviceInfo.SamplesPerSecond = 22050
+	SoundSoundOutDeviceInfo.BitsPerSample = 16
+	
+	Set Keyboard = New KeyboardDevice
+	Keyboard.Name = "Keyboard"
+
+	Dim KeyboardKeyboardDeviceInfo as KeyboardDeviceInfo
+	KeyboardKeyboardDeviceInfo.CollectionMode = ebPressesOnly
+	KeyboardKeyboardDeviceInfo.CapsLock = ebCapsLockOff
+	KeyboardKeyboardDeviceInfo.NumLock = ebNumLockOn
+	Keyboard.Open KeyboardKeyboardDeviceInfo
+	
+	Set Mouse = New MouseDevice
+	Mouse.Name = "Mouse"
+
+	Dim MouseMouseDeviceInfo as MouseDeviceInfo
+	MouseMouseDeviceInfo.OpenMode = ebMouseOpenModeDirect
+	MouseMouseDeviceInfo.CollectionMode = ebPressesOnly
+	MouseMouseDeviceInfo.ShowCursor = False
+	Mouse.Open MouseMouseDeviceInfo
+
+
+	SetOSThreadPriority 0
+
+End Sub
+
+
+
+'--------------------------------------------------------------------------
+' InitObjects
+'
+'--------------------------------------------------------------------------
+Sub InitObjects(c As Context)
+
+	Set SessionProc = New Procedure
+	SessionProc.Name = "SessionProc"
+	SessionProc.Tag = ""
+	SessionProc.Subroutine = "SessionProc_Run"
+
+	Set WordPres = New ImageDisplay
+	WordPres.Name = "WordPres"
+	WordPres.Tag = ""
+
+	Set WordPresEchoClients = New EchoClientCollection
+
+	InitImageDisplayDefaults WordPres
+
+	WordPres.Duration = CLng("2000")
+	WordPres.TimingMode = ebTimingModeCumulative
+	WordPres.PreRelease = Val("500")
+
+	WordPres.OnsetSync = 1
+	WordPres.OffsetSync = 0
+
+	Set InterStimulus = New TextDisplay
+	InterStimulus.Name = "InterStimulus"
+	InterStimulus.Tag = ""
+
+	InitTextDisplayDefaults InterStimulus
+
+	InterStimulus.Text = "+"
+	InterStimulus.BackColor = CColor("black")
+	InterStimulus.ForeColor = CColor("white")
+	InterStimulus.FontSize = "30"
+	InterStimulus.Duration = CLng("1000")
+	InterStimulus.TimingMode = ebTimingModeCumulative
+	InterStimulus.PreRelease = Val("100")
+
+	InterStimulus.OnsetSync = 1
+	InterStimulus.OffsetSync = 0
+
+	Set FixationFinal = New TextDisplay
+	FixationFinal.Name = "FixationFinal"
+	FixationFinal.Tag = ""
+
+	InitTextDisplayDefaults FixationFinal
+
+	FixationFinal.Text = "+"
+	FixationFinal.BackColor = CColor("black")
+	FixationFinal.ForeColor = CColor("white")
+	FixationFinal.FontSize = "60"
+	FixationFinal.Duration = CLng("3000")
+	FixationFinal.TimingMode = ebTimingModeEvent
+	FixationFinal.PreRelease = Val("0")
+
+	FixationFinal.OnsetSync = 1
+	FixationFinal.OffsetSync = 0
+
+	Set EndingList = New List
+	EndingList.Name = "EndingList"
+	EndingList.Tag = ""
+
+	'Initialization for EndingList
+	
+	Set EndingList.Order = New SequentialOrder
+	Set EndingList.Deletion = NoDeletion
+	EndingList.ResetEveryRun = False
+
+	' Create the column headings
+	EndingList.AddAttrib "Outro"
+	EndingList.Filename = ""
+	EndingList.LoadMethod = ebLoadMethodEmbedded
+
+	EndingList.Load
+
+	Set EndingList.TerminateCondition = Cycles(1)
+	Set EndingList.ResetCondition = Samples(1)
+	EndingList.Reset
+	
+	Set Ending = New Procedure
+	Ending.Name = "Ending"
+	Ending.Tag = ""
+	Ending.Subroutine = "Ending_Run"
+
+	Set Outro = New TextDisplay
+	Outro.Name = "Outro"
+	Outro.Tag = ""
+
+	Set OutroEchoClients = New EchoClientCollection
+
+	InitTextDisplayDefaults Outro
+
+	Outro.BackColor = CColor("black")
+	Outro.ForeColor = CColor("white")
+	Outro.Duration = CLng("-1")
+	Outro.TimingMode = ebTimingModeEvent
+	Outro.PreRelease = Val("0")
+
+	Outro.OnsetSync = 1
+	Outro.OffsetSync = 0
+
+	Set StimuliList1 = New List
+	StimuliList1.Name = "StimuliList1"
+	StimuliList1.Tag = ""
+
+	'Initialization for StimuliList1
+	
+	Set StimuliList1.Order = New SequentialOrder
+	Set StimuliList1.Deletion = NoDeletion
+	StimuliList1.ResetEveryRun = False
+
+	' Create the column headings
+	StimuliList1.AddAttrib "Target"
+	StimuliList1.AddAttrib "Image"
+	StimuliList1.AddAttrib "CorrectRes"
+	StimuliList1.AddAttrib "Answer"
+	StimuliList1.Filename = ""
+	StimuliList1.LoadMethod = ebLoadMethodEmbedded
+
+	StimuliList1.Load
+
+	Set StimuliList1.TerminateCondition = Cycles(1)
+	Set StimuliList1.ResetCondition = Samples(10)
+	StimuliList1.Reset
+	
+	Set Nbackprocedures = New List
+	Nbackprocedures.Name = "Nbackprocedures"
+	Nbackprocedures.Tag = ""
+
+	'Initialization for Nbackprocedures
+	
+	Set Nbackprocedures.Order = New SequentialOrder
+	Set Nbackprocedures.Deletion = NoDeletion
+	Nbackprocedures.ResetEveryRun = False
+
+	' Create the column headings
+	Nbackprocedures.AddAttrib "setBlockList"
+	Nbackprocedures.AddAttrib "TaskCueDur"
+	Nbackprocedures.AddAttrib "n"
+	Nbackprocedures.AddAttrib "Switch"
+	Nbackprocedures.AddAttrib "totalhits"
+	Nbackprocedures.AddAttrib "totalcr"
+	Nbackprocedures.AddAttrib "totalmiss"
+	Nbackprocedures.AddAttrib "totalfa"
+	Nbackprocedures.AddAttrib "pr"
+	Nbackprocedures.Filename = ""
+	Nbackprocedures.LoadMethod = ebLoadMethodEmbedded
+
+	Nbackprocedures.Load
+
+	Set Nbackprocedures.TerminateCondition = Cycles(1)
+	Set Nbackprocedures.ResetCondition = Samples(9)
+	Nbackprocedures.Reset
+	
+	Set StimuliList2 = New List
+	StimuliList2.Name = "StimuliList2"
+	StimuliList2.Tag = ""
+
+	'Initialization for StimuliList2
+	
+	Set StimuliList2.Order = New SequentialOrder
+	Set StimuliList2.Deletion = NoDeletion
+	StimuliList2.ResetEveryRun = False
+
+	' Create the column headings
+	StimuliList2.AddAttrib "Target"
+	StimuliList2.AddAttrib "Image"
+	StimuliList2.AddAttrib "CorrectRes"
+	StimuliList2.AddAttrib "Answer"
+	StimuliList2.Filename = ""
+	StimuliList2.LoadMethod = ebLoadMethodEmbedded
+
+	StimuliList2.Load
+
+	Set StimuliList2.TerminateCondition = Cycles(1)
+	Set StimuliList2.ResetCondition = Samples(10)
+	StimuliList2.Reset
+	
+	Set Task = New Procedure
+	Task.Name = "Task"
+	Task.Tag = ""
+	Task.Subroutine = "Task_Run"
+
+	Set StimuliList3 = New List
+	StimuliList3.Name = "StimuliList3"
+	StimuliList3.Tag = ""
+
+	'Initialization for StimuliList3
+	
+	Set StimuliList3.Order = New SequentialOrder
+	Set StimuliList3.Deletion = NoDeletion
+	StimuliList3.ResetEveryRun = False
+
+	' Create the column headings
+	StimuliList3.AddAttrib "Target"
+	StimuliList3.AddAttrib "Image"
+	StimuliList3.AddAttrib "CorrectRes"
+	StimuliList3.AddAttrib "Answer"
+	StimuliList3.Filename = ""
+	StimuliList3.LoadMethod = ebLoadMethodEmbedded
+
+	StimuliList3.Load
+
+	Set StimuliList3.TerminateCondition = Cycles(1)
+	Set StimuliList3.ResetCondition = Samples(10)
+	StimuliList3.Reset
+	
+	Set Intro1 = New TextDisplay
+	Intro1.Name = "Intro1"
+	Intro1.Tag = ""
+
+	InitTextDisplayDefaults Intro1
+
+	Intro1.Text = "\n\nIndeed, psychological research has\nshown that performance on\nthis task is highly related to\nIQ. It is also predictive\nof future professional s" &_ 
+				"uccess,\nand even related to social success.\n"
+	Intro1.BackColor = CColor("black")
+	Intro1.ForeColor = CColor("white")
+	Intro1.Duration = CLng("15000")
+	Intro1.TimingMode = ebTimingModeEvent
+	Intro1.PreRelease = Val("0")
+
+	Intro1.OnsetSync = 1
+	Intro1.OffsetSync = 0
+
+	Set Intro4 = New TextDisplay
+	Intro4.Name = "Intro4"
+	Intro4.Tag = ""
+
+	Set Intro4EchoClients = New EchoClientCollection
+
+	InitTextDisplayDefaults Intro4
+
+	Intro4.Text = "    \nThe procedure of the task will be\nthe same as the previous nback you\nperformed:\nThe specific amount of words-back \nwill be indicated prior t" &_ 
+				"o a sequence\nof 10 words, stating either\n\"2-back\", or \"3-back\".\nAfter the sequence you will see a \nfixation cross, where you can relax.\nThen," &_ 
+				" a new sequence will begin. \n\nPress any key to continue \n\n     "
+	Intro4.BackColor = CColor("black")
+	Intro4.ForeColor = CColor("white")
+	Intro4.Duration = CLng("-1")
+	Intro4.TimingMode = ebTimingModeEvent
+	Intro4.PreRelease = Val("0")
+
+	Intro4.OnsetSync = 1
+	Intro4.OffsetSync = 0
+
+	Set Intro6 = New TextDisplay
+	Intro6.Name = "Intro6"
+	Intro6.Tag = ""
+
+	Set Intro6EchoClients = New EchoClientCollection
+
+	InitTextDisplayDefaults Intro6
+
+	Intro6.Text = "\n\n***    2-back    ***\n\nDuring 2-back you will have to\nindicate whether the current \nword matches the word that was\npresented two words ago, by" &_ 
+				" either\npressing the \"yes\" button (index\nfinger) or the \"no\" button (middle\nfinger).      \n    \nPress any key to see an example.\n  \n    "
+	Intro6.BackColor = CColor("black")
+	Intro6.ForeColor = CColor("white")
+	Intro6.Duration = CLng("-1")
+	Intro6.TimingMode = ebTimingModeEvent
+	Intro6.PreRelease = Val("0")
+
+	Intro6.OnsetSync = 1
+	Intro6.OffsetSync = 0
+
+	Set Intro10 = New TextDisplay
+	Intro10.Name = "Intro10"
+	Intro10.Tag = ""
+
+	Set Intro10EchoClients = New EchoClientCollection
+
+	InitTextDisplayDefaults Intro10
+
+	Intro10.Text = "      \n\nButton 1 (index finger)\nindicates \"YES\", a match \n         \nButton 2 (middle finger)\nindicates \"NO\", a mismatch.\n\nPress any key to" &_ 
+				" continue     \n   \n      "
+	Intro10.BackColor = CColor("black")
+	Intro10.ForeColor = CColor("white")
+	Intro10.Duration = CLng("-1")
+	Intro10.TimingMode = ebTimingModeEvent
+	Intro10.PreRelease = Val("0")
+
+	Intro10.OnsetSync = 1
+	Intro10.OffsetSync = 0
+
+	Set nInstruction = New TextDisplay
+	nInstruction.Name = "nInstruction"
+	nInstruction.Tag = ""
+
+	InitTextDisplayDefaults nInstruction
+
+	nInstruction.BackColor = CColor("black")
+	nInstruction.ForeColor = CColor("white")
+	nInstruction.Duration = CLng("3000")
+	nInstruction.TimingMode = ebTimingModeCumulative
+	nInstruction.PreRelease = Val("100")
+
+	nInstruction.OnsetSync = 1
+	nInstruction.OffsetSync = 0
+
+	Set StimuliList4 = New List
+	StimuliList4.Name = "StimuliList4"
+	StimuliList4.Tag = ""
+
+	'Initialization for StimuliList4
+	
+	Set StimuliList4.Order = New SequentialOrder
+	Set StimuliList4.Deletion = NoDeletion
+	StimuliList4.ResetEveryRun = False
+
+	' Create the column headings
+	StimuliList4.AddAttrib "Target"
+	StimuliList4.AddAttrib "Image"
+	StimuliList4.AddAttrib "CorrectRes"
+	StimuliList4.AddAttrib "Answer"
+	StimuliList4.Filename = ""
+	StimuliList4.LoadMethod = ebLoadMethodEmbedded
+
+	StimuliList4.Load
+
+	Set StimuliList4.TerminateCondition = Cycles(1)
+	Set StimuliList4.ResetCondition = Samples(10)
+	StimuliList4.Reset
+	
+	Set StimuliList5 = New List
+	StimuliList5.Name = "StimuliList5"
+	StimuliList5.Tag = ""
+
+	'Initialization for StimuliList5
+	
+	Set StimuliList5.Order = New SequentialOrder
+	Set StimuliList5.Deletion = NoDeletion
+	StimuliList5.ResetEveryRun = False
+
+	' Create the column headings
+	StimuliList5.AddAttrib "Target"
+	StimuliList5.AddAttrib "Image"
+	StimuliList5.AddAttrib "CorrectRes"
+	StimuliList5.AddAttrib "Answer"
+	StimuliList5.Filename = ""
+	StimuliList5.LoadMethod = ebLoadMethodEmbedded
+
+	StimuliList5.Load
+
+	Set StimuliList5.TerminateCondition = Cycles(1)
+	Set StimuliList5.ResetCondition = Samples(10)
+	StimuliList5.Reset
+	
+	Set StimuliList6 = New List
+	StimuliList6.Name = "StimuliList6"
+	StimuliList6.Tag = ""
+
+	'Initialization for StimuliList6
+	
+	Set StimuliList6.Order = New SequentialOrder
+	Set StimuliList6.Deletion = NoDeletion
+	StimuliList6.ResetEveryRun = False
+
+	' Create the column headings
+	StimuliList6.AddAttrib "Target"
+	StimuliList6.AddAttrib "Image"
+	StimuliList6.AddAttrib "CorrectRes"
+	StimuliList6.AddAttrib "Answer"
+	StimuliList6.Filename = ""
+	StimuliList6.LoadMethod = ebLoadMethodEmbedded
+
+	StimuliList6.Load
+
+	Set StimuliList6.TerminateCondition = Cycles(1)
+	Set StimuliList6.ResetCondition = Samples(10)
+	StimuliList6.Reset
+	
+	Set StimuliList7 = New List
+	StimuliList7.Name = "StimuliList7"
+	StimuliList7.Tag = ""
+
+	'Initialization for StimuliList7
+	
+	Set StimuliList7.Order = New SequentialOrder
+	Set StimuliList7.Deletion = NoDeletion
+	StimuliList7.ResetEveryRun = False
+
+	' Create the column headings
+	StimuliList7.AddAttrib "Target"
+	StimuliList7.AddAttrib "Image"
+	StimuliList7.AddAttrib "CorrectRes"
+	StimuliList7.AddAttrib "Answer"
+	StimuliList7.Filename = ""
+	StimuliList7.LoadMethod = ebLoadMethodEmbedded
+
+	StimuliList7.Load
+
+	Set StimuliList7.TerminateCondition = Cycles(1)
+	Set StimuliList7.ResetCondition = Samples(10)
+	StimuliList7.Reset
+	
+	Set StimuliList8 = New List
+	StimuliList8.Name = "StimuliList8"
+	StimuliList8.Tag = ""
+
+	'Initialization for StimuliList8
+	
+	Set StimuliList8.Order = New SequentialOrder
+	Set StimuliList8.Deletion = NoDeletion
+	StimuliList8.ResetEveryRun = False
+
+	' Create the column headings
+	StimuliList8.AddAttrib "Target"
+	StimuliList8.AddAttrib "Image"
+	StimuliList8.AddAttrib "CorrectRes"
+	StimuliList8.AddAttrib "Answer"
+	StimuliList8.Filename = ""
+	StimuliList8.LoadMethod = ebLoadMethodEmbedded
+
+	StimuliList8.Load
+
+	Set StimuliList8.TerminateCondition = Cycles(1)
+	Set StimuliList8.ResetCondition = Samples(10)
+	StimuliList8.Reset
+	
+	Set StimuliList9 = New List
+	StimuliList9.Name = "StimuliList9"
+	StimuliList9.Tag = ""
+
+	'Initialization for StimuliList9
+	
+	Set StimuliList9.Order = New SequentialOrder
+	Set StimuliList9.Deletion = NoDeletion
+	StimuliList9.ResetEveryRun = False
+
+	' Create the column headings
+	StimuliList9.AddAttrib "Target"
+	StimuliList9.AddAttrib "Image"
+	StimuliList9.AddAttrib "CorrectRes"
+	StimuliList9.AddAttrib "Answer"
+	StimuliList9.Filename = ""
+	StimuliList9.LoadMethod = ebLoadMethodEmbedded
+
+	StimuliList9.Load
+
+	Set StimuliList9.TerminateCondition = Cycles(1)
+	Set StimuliList9.ResetCondition = Samples(10)
+	StimuliList9.Reset
+	
+	Set Intro8 = New TextDisplay
+	Intro8.Name = "Intro8"
+	Intro8.Tag = ""
+
+	Set Intro8EchoClients = New EchoClientCollection
+
+	InitTextDisplayDefaults Intro8
+
+	Intro8.Text = "          \n\n***    3-back    ***\n\nDuring 3-back you will have \nto indicate whether the current\nword matches the word that was \npresented three " &_ 
+				"words ago. Again,\nyou indicate a 3-back match by \npressing the \"yes\" button (index\nfinger) or a non-match by pressing\nthe \"no\" button (middle " &_ 
+				"finger).    \n    \nPress any key to see an example\n    \n    \n     "
+	Intro8.BackColor = CColor("black")
+	Intro8.ForeColor = CColor("white")
+	Intro8.Duration = CLng("-1")
+	Intro8.TimingMode = ebTimingModeEvent
+	Intro8.PreRelease = Val("0")
+
+	Intro8.OnsetSync = 1
+	Intro8.OffsetSync = 0
+
+	Set Intro2 = New TextDisplay
+	Intro2.Name = "Intro2"
+	Intro2.Tag = ""
+
+	InitTextDisplayDefaults Intro2
+
+	Intro2.Text = "  \n   \nPersons with an average IQ\nwill have no problems executing\nthe nback. That means that your\ntask-score will be at least in \nthe 60th perce" &_ 
+				"ntile or higher.\n      \n "
+	Intro2.BackColor = CColor("black")
+	Intro2.ForeColor = CColor("white")
+	Intro2.Duration = CLng("15000")
+	Intro2.TimingMode = ebTimingModeEvent
+	Intro2.PreRelease = Val("0")
+
+	Intro2.OnsetSync = 1
+	Intro2.OffsetSync = 0
+
+	Set Intro7 = New TextDisplay
+	Intro7.Name = "Intro7"
+	Intro7.Tag = ""
+
+	Set Intro7EchoClients = New EchoClientCollection
+
+	InitTextDisplayDefaults Intro7
+
+	Intro7.Text = "\n\n***    2-back    ***\n\nIn the following 2-back example\nyou should make a \"yes\" response\non word number 4 \"CAT\", since it\nis the same as tw" &_ 
+				"o words ago, while\nthe other words require a \"no\" \nresponse. \n\nSIDE - CAT - FISH - CAT - DOG - SIDE\n   \"no\"  \"no\"   \"no\" \"YES\"  \"no\" " &_ 
+				" \"no\" \n      \n Press any key to continue\n\n    "
+	Intro7.BackColor = CColor("black")
+	Intro7.ForeColor = CColor("white")
+	Intro7.Duration = CLng("-1")
+	Intro7.TimingMode = ebTimingModeEvent
+	Intro7.PreRelease = Val("0")
+
+	Intro7.OnsetSync = 1
+	Intro7.OffsetSync = 0
+
+	Set Intro9 = New TextDisplay
+	Intro9.Name = "Intro9"
+	Intro9.Tag = ""
+
+	Set Intro9EchoClients = New EchoClientCollection
+
+	InitTextDisplayDefaults Intro9
+
+	Intro9.Text = " \n     \n***    3-back    ***\n\nIn the following 3-back example\nyou would have to make a \"yes\"\nresponse during the word \"DOG\",\nsince it is th" &_ 
+				"e same as three words\nago. Note that \"CAT\" and the other\n\"DOG\" presentationis are 2-back matches,\nbut you will have to respond to\n3-back match" &_ 
+				"es only!  \n\nSIDE - CAT - DOG - CAT - DOG - DOG\n      \"no\"  \"no\"   \"no\"  \"no\"  \"no\" \"YES\"     \n      \nPress any key to continue\n\n"
+	Intro9.BackColor = CColor("black")
+	Intro9.ForeColor = CColor("white")
+	Intro9.Duration = CLng("-1")
+	Intro9.TimingMode = ebTimingModeEvent
+	Intro9.PreRelease = Val("0")
+
+	Intro9.OnsetSync = 1
+	Intro9.OffsetSync = 0
+
+	Set Intro5 = New TextDisplay
+	Intro5.Name = "Intro5"
+	Intro5.Tag = ""
+
+	Set Intro5EchoClients = New EchoClientCollection
+
+	InitTextDisplayDefaults Intro5
+
+	Intro5.Text = "   \n   \nDuring the task it is very important\nthat you respond as fast and as \naccurately as possible.\nYou should try to respond while \nthe word " &_ 
+				"is being presented.      \nIt is very important that\nyou concentrate!\n\nPress any key to continue  "
+	Intro5.BackColor = CColor("black")
+	Intro5.ForeColor = CColor("white")
+	Intro5.Duration = CLng("-1")
+	Intro5.TimingMode = ebTimingModeEvent
+	Intro5.PreRelease = Val("0")
+
+	Intro5.OnsetSync = 1
+	Intro5.OffsetSync = 0
+
+	Set Welcome = New TextDisplay
+	Welcome.Name = "Welcome"
+	Welcome.Tag = ""
+
+	InitTextDisplayDefaults Welcome
+
+	Welcome.Text = " \n\nThis specific task is actually a\nmeasure of your working memory. \nSince you use your working memory\nfor about anything (e.g.,\nreasoning, calc" &_ 
+				"ulating, talking)\nit will be clear that having good\nworking memory capacity is crucial \nfor effective functioning in life\nin general. \n      \n"
+	Welcome.BackColor = CColor("black")
+	Welcome.ForeColor = CColor("white")
+	Welcome.Duration = CLng("15000")
+	Welcome.TimingMode = ebTimingModeEvent
+	Welcome.PreRelease = Val("0")
+
+	Welcome.OnsetSync = 1
+	Welcome.OffsetSync = 0
+
+	Set BlockProc = New Procedure
+	BlockProc.Name = "BlockProc"
+	BlockProc.Tag = ""
+	BlockProc.Subroutine = "BlockProc_Run"
+
+	Set Taskrun = New List
+	Taskrun.Name = "Taskrun"
+	Taskrun.Tag = ""
+
+	'Initialization for Taskrun
+	
+	Set Taskrun.Order = New SequentialOrder
+	Set Taskrun.Deletion = NoDeletion
+	Taskrun.ResetEveryRun = False
+
+	' Create the column headings
+	Taskrun.AddAttrib "n"
+	Taskrun.Filename = ""
+	Taskrun.LoadMethod = ebLoadMethodEmbedded
+
+	Taskrun.Load
+
+	Set Taskrun.TerminateCondition = Samples(10)
+	Set Taskrun.ResetCondition = Samples(1)
+	Taskrun.Reset
+	
+	Set Fix = New TextDisplay
+	Fix.Name = "Fix"
+	Fix.Tag = ""
+
+	InitTextDisplayDefaults Fix
+
+	Fix.Text = "+"
+	Fix.BackColor = CColor("black")
+	Fix.ForeColor = CColor("white")
+	Fix.FontSize = "30"
+	Fix.Duration = CLng("25000")
+	Fix.TimingMode = ebTimingModeCumulative
+	Fix.PreRelease = Val("100")
+
+	Fix.OnsetSync = 1
+	Fix.OffsetSync = 0
+
+	Set Intro3 = New TextDisplay
+	Intro3.Name = "Intro3"
+	Intro3.Tag = ""
+
+	InitTextDisplayDefaults Intro3
+
+	Intro3.Text = "\n\nThe panel will monitor your\naccuracy and reaction time, \nthereby evaluating\nyour cognitive skills.\n\nAfter each run, the computer \nwill show " &_ 
+				"you in which percentile\nyou scored. \n      \nBased on your performance on this task, \nthe previous task and your speech, \nthe panel will be able t" &_ 
+				"o relate your \nbrain functioning with your performance\non these tasks. \n"
+	Intro3.BackColor = CColor("black")
+	Intro3.ForeColor = CColor("white")
+	Intro3.Duration = CLng("16000")
+	Intro3.TimingMode = ebTimingModeEvent
+	Intro3.PreRelease = Val("0")
+
+	Intro3.OnsetSync = 1
+	Intro3.OffsetSync = 0
+
+	Set SubjectReady = New TextDisplay
+	SubjectReady.Name = "SubjectReady"
+	SubjectReady.Tag = ""
+
+	Set SubjectReadyEchoClients = New EchoClientCollection
+
+	InitTextDisplayDefaults SubjectReady
+
+	SubjectReady.Text = "\n\nThe scanning is \nabout to start.\n\nPlease keep your head \nas still as possible at all times.\n\nPlease keep your mouth still,\ndo not even sile" &_ 
+				"ntly pronounce\nthe words.\n  \n\n      \n"
+	SubjectReady.BackColor = CColor("black")
+	SubjectReady.ForeColor = CColor("white")
+	SubjectReady.Duration = CLng("-1")
+	SubjectReady.TimingMode = ebTimingModeEvent
+	SubjectReady.PreRelease = Val("0")
+
+	SubjectReady.OnsetSync = 1
+	SubjectReady.OffsetSync = 0
+
+	Set Experimenter = New TextDisplay
+	Experimenter.Name = "Experimenter"
+	Experimenter.Tag = ""
+
+	Set ExperimenterEchoClients = New EchoClientCollection
+
+	InitTextDisplayDefaults Experimenter
+
+	Experimenter.Text = " Experimenter: \nPress F6 to start\n"
+	Experimenter.BackColor = CColor("black")
+	Experimenter.ForeColor = CColor("white")
+	Experimenter.Duration = CLng("-1")
+	Experimenter.TimingMode = ebTimingModeEvent
+	Experimenter.PreRelease = Val("0")
+
+	Experimenter.OnsetSync = 1
+	Experimenter.OffsetSync = 0
+
+	Set Percentile = New TextDisplay
+	Percentile.Name = "Percentile"
+	Percentile.Tag = ""
+
+	InitTextDisplayDefaults Percentile
+
+	Percentile.Text = "Your total score was:\n\n            \n41%\n"
+	Percentile.BackColor = CColor("black")
+	Percentile.ForeColor = CColor("red")
+	Percentile.FontSize = "30"
+	Percentile.Duration = CLng("6000")
+	Percentile.TimingMode = ebTimingModeEvent
+	Percentile.PreRelease = Val("0")
+
+	Percentile.OnsetSync = 1
+	Percentile.OffsetSync = 0
+
+	Set Feedback = New TextDisplay
+	Feedback.Name = "Feedback"
+	Feedback.Tag = ""
+
+	InitTextDisplayDefaults Feedback
+
+	Feedback.Text = "You scored within the \n50th percentile.\nThat is below average.\n\nPlease focus harder!\n"
+	Feedback.BackColor = CColor("black")
+	Feedback.ForeColor = CColor("red")
+	Feedback.FontSize = "30"
+	Feedback.Duration = CLng("6000")
+	Feedback.TimingMode = ebTimingModeEvent
+	Feedback.PreRelease = Val("0")
+
+	Feedback.OnsetSync = 1
+	Feedback.OffsetSync = 0
+
+	Set Prefix = New TextDisplay
+	Prefix.Name = "Prefix"
+	Prefix.Tag = ""
+
+	InitTextDisplayDefaults Prefix
+
+	Prefix.Text = "+"
+	Prefix.BackColor = CColor("black")
+	Prefix.ForeColor = CColor("white")
+	Prefix.FontSize = "30"
+	Prefix.Duration = CLng("1000")
+	Prefix.TimingMode = ebTimingModeCumulative
+	Prefix.PreRelease = Val("100")
+
+	Prefix.OnsetSync = 1
+	Prefix.OffsetSync = 0
+
+	Set Wait8000 = New TextDisplay
+	Wait8000.Name = "Wait8000"
+	Wait8000.Tag = ""
+
+	InitTextDisplayDefaults Wait8000
+
+	Wait8000.Text = "LOADING..."
+	Wait8000.BackColor = CColor("black")
+	Wait8000.ForeColor = CColor("white")
+	Wait8000.Duration = CLng("8000")
+	Wait8000.TimingMode = ebTimingModeEvent
+	Wait8000.PreRelease = Val("0")
+
+	Wait8000.OnsetSync = 1
+	Wait8000.OffsetSync = 0
+
+	Set TextDisplay1 = New TextDisplay
+	TextDisplay1.Name = "TextDisplay1"
+	TextDisplay1.Tag = ""
+
+	Set TextDisplay1EchoClients = New EchoClientCollection
+
+	InitTextDisplayDefaults TextDisplay1
+
+	TextDisplay1.Text = "\nWelcome to the n-back task again.\n\nPress any key to see instructions."
+	TextDisplay1.BackColor = CColor("black")
+	TextDisplay1.ForeColor = CColor("white")
+	TextDisplay1.Duration = CLng("-1")
+	TextDisplay1.TimingMode = ebTimingModeEvent
+	TextDisplay1.PreRelease = Val("0")
+
+	TextDisplay1.OnsetSync = 1
+	TextDisplay1.OffsetSync = 0
+
+	Set TextDisplay2 = New TextDisplay
+	TextDisplay2.Name = "TextDisplay2"
+	TextDisplay2.Tag = ""
+
+	Set TextDisplay2EchoClients = New EchoClientCollection
+
+	InitTextDisplayDefaults TextDisplay2
+
+	TextDisplay2.Text = "\n\n***    2-back    ***\n      \nSo you will have to keep the last\ntwo words before the current word \nin memory. This means that with\neach newly p" &_ 
+				"resented word, you will\nhave to constantly update your memory\nand compare the word two words ago with \nthe current word. \n\nPress any key to conti" &_ 
+				"nue.\n\n\n"
+	TextDisplay2.BackColor = CColor("black")
+	TextDisplay2.ForeColor = CColor("white")
+	TextDisplay2.Duration = CLng("-1")
+	TextDisplay2.TimingMode = ebTimingModeEvent
+	TextDisplay2.PreRelease = Val("0")
+
+	TextDisplay2.OnsetSync = 1
+	TextDisplay2.OffsetSync = 0
+
+	Set TextDisplay3 = New TextDisplay
+	TextDisplay3.Name = "TextDisplay3"
+	TextDisplay3.Tag = ""
+
+	Set TextDisplay3EchoClients = New EchoClientCollection
+
+	InitTextDisplayDefaults TextDisplay3
+
+	TextDisplay3.Text = "\n\n***    3-back    ***\n      \nDuring 3-back you will have to\nkeep the last three words before\nthe current word in memory.\nThis means that you h" &_ 
+				"ave \nto constantly update your memory\nand compare the word three words ago with \nthe current word. \n\nPress any key to continue\n\n"
+	TextDisplay3.BackColor = CColor("black")
+	TextDisplay3.ForeColor = CColor("white")
+	TextDisplay3.Duration = CLng("-1")
+	TextDisplay3.TimingMode = ebTimingModeEvent
+	TextDisplay3.PreRelease = Val("0")
+
+	TextDisplay3.OnsetSync = 1
+	TextDisplay3.OffsetSync = 0
+
+	Set TryButtons1 = New TextDisplay
+	TryButtons1.Name = "TryButtons1"
+	TryButtons1.Tag = ""
+
+	Set TryButtons1EchoClients = New EchoClientCollection
+
+	InitTextDisplayDefaults TryButtons1
+
+	TryButtons1.Text = "\nWe'd like to ask you to verify \nwhether the response buttons \nare actually responding.\n\nPlease press button number 1...\n"
+	TryButtons1.BackColor = CColor("black")
+	TryButtons1.ForeColor = CColor("white")
+	TryButtons1.Duration = CLng("-1")
+	TryButtons1.TimingMode = ebTimingModeEvent
+	TryButtons1.PreRelease = Val("0")
+
+	TryButtons1.OnsetSync = 1
+	TryButtons1.OffsetSync = 0
+
+	Set TryButtons2 = New TextDisplay
+	TryButtons2.Name = "TryButtons2"
+	TryButtons2.Tag = ""
+
+	Set TryButtons2EchoClients = New EchoClientCollection
+
+	InitTextDisplayDefaults TryButtons2
+
+	TryButtons2.Text = "\nPlease press button number 2... \n\nThanks!\n"
+	TryButtons2.BackColor = CColor("black")
+	TryButtons2.ForeColor = CColor("white")
+	TryButtons2.Duration = CLng("-1")
+	TryButtons2.TimingMode = ebTimingModeEvent
+	TryButtons2.PreRelease = Val("0")
+
+	TryButtons2.OnsetSync = 1
+	TryButtons2.OffsetSync = 0
+
+
+End Sub
+
+
+'--------------------------------------------------------------------------
+' InitPackages
+'
+'--------------------------------------------------------------------------
+Sub InitPackages(c As Context)
+
+End Sub
+
+
+
+'--------------------------------------------------------------------------
+'--------------------------------------------------------------------------
+' UnInitDevices
+'--------------------------------------------------------------------------
+Sub UnInitDevices()
+	Display.Close
+	Set Display = Nothing
+
+	Keyboard.Close
+	Set Keyboard = Nothing
+
+	Mouse.Close
+	Set Mouse = Nothing
+
+End Sub
+
+
+'--------------------------------------------------------------------------
+'--------------------------------------------------------------------------
+' UnInitPackages
+'--------------------------------------------------------------------------
+Sub UnInitPackages()
+End Sub
+
+
+'--------------------------------------------------------------------------
+' UnInitObjects
+'
+'--------------------------------------------------------------------------
+Sub UnInitObjects()
+
+	Set SessionProc = Nothing
+
+	Set WordPres = Nothing
+
+	Set WordPresEchoClients = Nothing
+
+	Set InterStimulus = Nothing
+
+	Set FixationFinal = Nothing
+
+	Set EndingList = Nothing
+
+	Set Ending = Nothing
+
+	Set Outro = Nothing
+
+	Set OutroEchoClients = Nothing
+
+	Set StimuliList1 = Nothing
+
+	Set Nbackprocedures = Nothing
+
+	Set StimuliList2 = Nothing
+
+	Set Task = Nothing
+
+	Set StimuliList3 = Nothing
+
+	Set Intro1 = Nothing
+
+	Set Intro4 = Nothing
+
+	Set Intro4EchoClients = Nothing
+
+	Set Intro6 = Nothing
+
+	Set Intro6EchoClients = Nothing
+
+	Set Intro10 = Nothing
+
+	Set Intro10EchoClients = Nothing
+
+	Set nInstruction = Nothing
+
+	Set StimuliList4 = Nothing
+
+	Set StimuliList5 = Nothing
+
+	Set StimuliList6 = Nothing
+
+	Set StimuliList7 = Nothing
+
+	Set StimuliList8 = Nothing
+
+	Set StimuliList9 = Nothing
+
+	Set Intro8 = Nothing
+
+	Set Intro8EchoClients = Nothing
+
+	Set Intro2 = Nothing
+
+	Set Intro7 = Nothing
+
+	Set Intro7EchoClients = Nothing
+
+	Set Intro9 = Nothing
+
+	Set Intro9EchoClients = Nothing
+
+	Set Intro5 = Nothing
+
+	Set Intro5EchoClients = Nothing
+
+	Set Welcome = Nothing
+
+	Set BlockProc = Nothing
+
+	Set Taskrun = Nothing
+
+	Set Fix = Nothing
+
+	Set Intro3 = Nothing
+
+	Set SubjectReady = Nothing
+
+	Set SubjectReadyEchoClients = Nothing
+
+	Set Experimenter = Nothing
+
+	Set ExperimenterEchoClients = Nothing
+
+	Set Percentile = Nothing
+
+	Set Feedback = Nothing
+
+	Set Prefix = Nothing
+
+	Set Wait8000 = Nothing
+
+	Set TextDisplay1 = Nothing
+
+	Set TextDisplay1EchoClients = Nothing
+
+	Set TextDisplay2 = Nothing
+
+	Set TextDisplay2EchoClients = Nothing
+
+	Set TextDisplay3 = Nothing
+
+	Set TextDisplay3EchoClients = Nothing
+
+	Set TryButtons1 = Nothing
+
+	Set TryButtons1EchoClients = Nothing
+
+	Set TryButtons2 = Nothing
+
+	Set TryButtons2EchoClients = Nothing
+
+
+End Sub
+
+
+'--------------------------------------------------------------------------
+' Main
+'
+'--------------------------------------------------------------------------
+Sub Main()
+
+	CreateDefaultPort
+
+	' Create and initialize the default context, data file,
+	' and provide global access to the context.
+	Dim c As Context
+	Set c = New Context
+	Set c.DataFile = New DataFile
+	c.PushNewFrame
+	Set ebContext = c
+
+	' Set the log level names
+	c.SetLogLevelName 1, "Session"
+	c.SetLogLevelName 2, "Block"
+	c.SetLogLevelName 3, "Trial"
+	c.SetLogLevelName 4, "SubTrial"
+	c.SetLogLevelName 5, "LogLevel5"
+	c.SetLogLevelName 6, "LogLevel6"
+	c.SetLogLevelName 7, "LogLevel7"
+	c.SetLogLevelName 8, "LogLevel8"
+	c.SetLogLevelName 9, "LogLevel9"
+	c.SetLogLevelName 10, "LogLevel10"
+
+	' Set standard logging items
+	ebContext.SetAttrib "Experiment", "Post_D_run1"
+	ebContext.SetAttrib "SessionDate", Date$
+	ebContext.SetAttrib "SessionTime", Time$
+	ebContext.SetAttrib "RandomSeed", PRNG.GetSeed()
+
+	If Basic.OS = ebWin32 Then
+		WinActivate "E-Run Experiment Window"
+	End If
+
+	' Get the StartupInfo
+	' Set default for GroupNumber
+	c.SetAttrib "Group", "1"
+
+
+	' Set the defaults for all of the StartupInfo
+	c.SetAttrib "Subject", "1"
+	c.SetAttrib "Session", "1"
+
+	Dim vAnswer As Variant
+StartupInfo_Begin:
+
+StartupInfoPrompt_Subject:
+	vAnswer = AskBox("Please enter the Subject Number (1-32767, 0=No Data Logging):", c.GetAttrib("Subject"))
+	If Not IsEmpty(vAnswer) then
+		If Not IsNumeric(vAnswer) then
+			MsgBox "Please enter an integer value"
+			GoTo StartupInfoPrompt_Subject
+		ElseIf CLng(vAnswer) < 0 Then
+			MsgBox "The value for Subject must not be less than 0"
+			GoTo StartupInfoPrompt_Subject
+		ElseIf CLng(vAnswer) > 32767 Then
+			MsgBox "The value for Subject must be not be greater than 32767"
+			GoTo StartupInfoPrompt_Subject
+		End If
+	Else
+		GoTo ExperimentAbort
+	End if
+
+	c.SetAttrib "Subject", CStr(vAnswer)
+
+StartupInfoPrompt_Session:
+	vAnswer = AskBox("Please enter the Session Number (1-32767):", c.GetAttrib("Session"))
+	If Not IsEmpty(vAnswer) then
+		If Not IsNumeric(vAnswer) then
+			MsgBox "Please enter an integer value"
+			GoTo StartupInfoPrompt_Session
+		ElseIf CLng(vAnswer) < 1 Then
+			MsgBox "The value for Session must not be less than 1"
+			GoTo StartupInfoPrompt_Session
+		ElseIf CLng(vAnswer) > 32767 Then
+			MsgBox "The value for Session must be not be greater than 32767"
+			GoTo StartupInfoPrompt_Session
+		End If
+	Else
+		GoTo ExperimentAbort
+	End if
+
+	c.SetAttrib "Session", CStr(vAnswer)
+
+	' Display the summary
+	Dim strSummary As String
+	strSummary = "Subject:    " & c.GetAttrib("Subject") & "\n"
+	strSummary = strSummary & "Session:    " & c.GetAttrib("Session") & "\n"
+	strSummary = strSummary & "\nContinue with the above startup info?"
+
+	Dim nSummaryAnswer As Integer
+	nSummaryAnswer = MsgBox(strSummary, ebYesNoCancel + ebQuestion, "Summary of Startup Info")
+	If nSummaryAnswer = ebNo Then
+		GoTo StartupInfo_Begin
+	ElseIf nSummaryAnswer = ebCancel Then
+		GoTo ExperimentAbort
+	End If
+
+
+	' Set the default Data Filename
+	c.DataFile.Filename = CStr(c.GetAttrib("Experiment")) & "-" & CStr(c.GetAttrib("Subject")) & "-" & CStr(c.GetAttrib("Session")) & ".txt"
+
+	' If we are logging data, then prompt to overwrite the data file if it exists
+	If CLng(c.GetAttrib("Subject")) <> 0 Then
+		If FileExists(c.DataFile.Filename) Then
+			If ebYes <> MsgBox("WARNING: The data file and/or recovery file already exists:\nFILE: " & c.DataFile.Filename & "\n\nDo you want to overwrite?", ebYesNo + ebQuestion) Then
+				GoTo ExperimentAbort
+			End If
+		End If
+	End If
+
+	' Initialize all system devices, packages, and objects
+	InitDevices c
+	InitPackages c
+	InitObjects c
+
+	' If we are logging data, then open the datafile
+	If CLng(c.GetAttrib("Subject")) <> 0 Then
+		c.DataFile.Open
+		c.LogHeader
+	End If
+
+	' Start the running of the Experiment
+	SessionProc.Run c
+
+	' Clean up the context and close the datafile
+	If CLng(c.GetAttrib("Subject")) <> 0 Then
+		c.DataFile.Close
+		' Attempt to convert the recovery file into a data file
+		Dim nConvert As Long
+		nConvert = c.DataFile.Convert(ebProgressSimple)
+		If nConvert = 0 Then
+			' Settings in E-Studio are set to not remove E-Recovery file
+		Else
+			' The datafile failed to convert!
+			MsgBox "ERROR: The datafile did not convert!\nFILE: " & c.DataFile.Filename & "\n\nIt is recommended that you recover your data with the E-Recovery utility"
+			MsgBox c.DataFile.GetLastErrorMessage()
+		End If
+	End If
+ExperimentFinish:
+
+	UnInitObjects
+
+	UnInitPackages
+	UnInitDevices
+
+ExperimentAbort:
+
+	' Clean up the context
+	c.PopFrame
+	Set c = Nothing
+	Set ebContext = Nothing
+
+	DestroyDefaultPort
+
+End Sub
+
+
+[DataSection_EndingList(1)]
+Weight	Nested	Procedure	Outro
+1		Ending	Please wait until  next session.\0
+
+[DataSection_StimuliList1(1)]
+Weight	Nested	Procedure	Target	Image	CorrectRes	Answer
+1			start	90	2	\[answer\]
+1			start	89	2	\[answer\]
+1			start	88	2	\[answer\]
+1			3b_lure	90	2	\[answer\]
+1			4b_lure	90	2	\[answer\]
+1			3b_lure	88	2	\[answer\]
+1			non_lure	87	2	\[answer\]
+1			Target	88	1	\[answer\]
+1			Target	87	1	\[answer\]
+1			Target	88	1	\[answer\]\0
+
+[DataSection_Nbackprocedures(1)]
+Weight	Nested	Procedure	setBlockList	TaskCueDur	n	Switch	totalhits	totalcr	totalmiss	totalfa	pr
+1		BlockProc	StimuliList1		2	noswitch					
+1		BlockProc	StimuliList2		3	switch					
+1		BlockProc	StimuliList3		3	noswitch					
+1		BlockProc	StimuliList4		2	switch					
+1		BlockProc	StimuliList5		2	noswitch					
+1		BlockProc	StimuliList6		3	switch					
+1		BlockProc	StimuliList7		3	noswitch					
+1		BlockProc	StimuliList8		2	switch					
+1		BlockProc	StimuliList9		2	noswitch					\0
+
+[DataSection_StimuliList2(1)]
+Weight	Nested	Procedure	Target	Image	CorrectRes	Answer
+1			start	1	2	\[answer\]
+1			start	2	2	\[answer\]
+1			start	3	2	\[answer\]
+1			Target	1	1	\[answer\]
+1			2b_lure	3	2	\[answer\]
+1			Target	3	1	\[answer\]
+1			2b_lure	3	2	\[answer\]
+1			4b_lure	1	2	\[answer\]
+1			Target	3	1	\[answer\]
+1			Target	3	1	\[answer\]\0
+
+[DataSection_StimuliList3(1)]
+Weight	Nested	Procedure	Target	Image	CorrectRes	Answer
+1			start	4	2	\[answer\]
+1			start	5	2	\[answer\]
+1			start	6	2	\[answer\]
+1			non_lure	7	2	\[answer\]
+1			Target	5	1	\[answer\]
+1			non_lure	8	2	\[answer\]
+1			non_lure	9	2	\[answer\]
+1			4b_lure	7	2	\[answer\]
+1			2b_lure	9	2	\[answer\]
+1			non_lure	10	2	\[answer\]\0
+
+[DataSection_StimuliList4(1)]
+Weight	Nested	Procedure	Target	Image	CorrectRes	Answer
+1			start	86	2	\[answer\]
+1			start	85	2	\[answer\]
+1			start	84	2	\[answer\]
+1			Target	85	1	\[answer\]
+1			non_lure	83	2	\[answer\]
+1			Target	85	1	\[answer\]
+1			4b_lure	84	2	\[answer\]
+1			Target	85	1	\[answer\]
+1			Target	84	1	\[answer\]
+1			non_lure	82	2	\[answer\]\0
+
+[DataSection_StimuliList5(1)]
+Weight	Nested	Procedure	Target	Image	CorrectRes	Answer
+1			start	81	2	\[answer\]
+1			start	80	2	\[answer\]
+1			start	79	2	\[answer\]
+1			non_lure	78	2	\[answer\]
+1			non_lure	77	2	\[answer\]
+1			4b_lure	80	2	\[answer\]
+1			3b_lure	78	2	\[answer\]
+1			Target	80	1	\[answer\]
+1			3b_lure	80	2	\[answer\]
+1			non_lure	76	2	\[answer\]\0
+
+[DataSection_StimuliList6(1)]
+Weight	Nested	Procedure	Target	Image	CorrectRes	Answer
+1			start	11	2	\[answer\]
+1			start	12	2	\[answer\]
+1			start	13	2	\[answer\]
+1			non_lure	14	2	\[answer\]
+1			2b_lure	13	2	\[answer\]
+1			Target	13	1	\[answer\]
+1			4b_lure	13	2	\[answer\]
+1			4b_lure	14	2	\[answer\]
+1			Target	13	1	\[answer\]
+1			Target	13	1	\[answer\]\0
+
+[DataSection_StimuliList7(1)]
+Weight	Nested	Procedure	Target	Image	CorrectRes	Answer
+1			start	15	2	\[answer\]
+1			start	16	2	\[answer\]
+1			start	17	2	\[answer\]
+1			non_lure	18	2	\[answer\]
+1			Target	16	1	\[answer\]
+1			non_lure	19	2	\[answer\]
+1			non_lure	20	2	\[answer\]
+1			non_lure	21	2	\[answer\]
+1			Target	19	1	\[answer\]
+1			Target	20	1	\[answer\]\0
+
+[DataSection_StimuliList8(1)]
+Weight	Nested	Procedure	Target	Image	CorrectRes	Answer
+1			start	75	2	\[answer\]
+1			start	74	2	\[answer\]
+1			start	73	2	\[answer\]
+1			Target	74	1	\[answer\]
+1			Target	73	1	\[answer\]
+1			3b_lure	73	2	\[answer\]
+1			Target	73	1	\[answer\]
+1			Target	73	1	\[answer\]
+1			non_lure	72	2	\[answer\]
+1			non_lure	71	2	\[answer\]\0
+
+[DataSection_StimuliList9(1)]
+Weight	Nested	Procedure	Target	Image	CorrectRes	Answer
+1			start	70	2	\[answer\]
+1			start	69	2	\[answer\]
+1			start	68	2	\[answer\]
+1			Target	69	1	\[answer\]
+1			non_lure	67	2	\[answer\]
+1			non_lure	66	2	\[answer\]
+1			3b_lure	69	2	\[answer\]
+1			Target	66	1	\[answer\]
+1			4b_lure	67	2	\[answer\]
+1			Target	66	1	\[answer\]\0
+
+[DataSection_Taskrun(1)]
+Weight	Nested	Procedure	n
+1	\[setBlockList\]	Task	\0

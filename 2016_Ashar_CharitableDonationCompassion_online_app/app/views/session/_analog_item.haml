@@ -1,0 +1,8 @@
+- @item_num += 1
+.item
+	.item_label= "#{@item_num}. #{analog_item.text.capitalize.gsub(/(^|\s)i /, " I ")}"
+	.analog_bar{:id => "analog#{@item_num}"}
+	.analog_anchors
+		-# n_anchors.times do |i|
+	= hidden_field_tag "item[#{@item_num}][q_item_id]", analog_item.id
+	= hidden_field_tag "item[#{@item_num}][response]", 10, {:id => "analog_resp_#{@item_num}"}

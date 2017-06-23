@@ -1,0 +1,4 @@
+- @item_num += 1
+.item
+  %span.item_label= "#{@item_num}. #{select_item.text.capitalize.gsub(/(^|\s)i /, " I ")}."
+  %span.item_select= select "item[#{@item_num}]", "q_item_id", (0...n_anchors).to_a.map { |i| [item.anchors[i], i+1] }, {:prompt => 'Select One'}

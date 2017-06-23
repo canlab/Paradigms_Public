@@ -1,0 +1,9 @@
+=image_tag @ret.image.url, :alt=>@ret.image.url, :height=>300, :width=>250, :align=>:left, :hspace=>30
+.bio
+	=@ret.bio
+%br{:clear=>:all}
+
+-@target=true  #flag to _measures view
+.measure
+	-@ret = QMeasure.targ_measure
+	=render 'measures'

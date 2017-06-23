@@ -1,0 +1,24 @@
+-@measure = @ret
+-if !@target
+  %h4 Survey questions
+
+%p= @measure.instructions
+- if @measure.response_style == 'analog'
+  :javascript
+    var n_items = #{@items.size};
+.survey_page
+  = form_tag ''
+  =hidden_field_tag('fid', session[:fid]) 
+  
+  - @items = @measure.q_items.order(:id).uniq if !@target
+  - @items = @sess.target_ratings if @target
+
+  - @items.each do |item|
+    - item.anchors = @measure.anchors if item.anchors == nil
+    - item.response_style = @measure.response_style if item.response_style == nil
+    - n_anchors = nil
+    - if item.anchors
+      - item.anchors = item.anchors.split('/')
+      - n_anchors = item.anchors.size
+    = render :partial => "#{item.response_style}_item", :object => item, :locals => { :n_anchors => n_anchors}
+  %p= submit_tag :next, :class => 'big_button'

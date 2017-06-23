@@ -1,0 +1,18 @@
+- @item_num = 0 if @item_num == nil  #Yoni added this line!!
+- @item_num += 1
+- if n_anchors > 5
+  - stl = {:style => "width: #{((840-(5*n_anchors))/n_anchors).round}px; padding: 15px 2px 12px 2px; font-size: 13px;" }
+  - btn = 'width: 16px; height: 16px;'
+- else
+  - stl = {}
+.item
+  - ques = likert_item.text
+  - ques[0] = ques[0].capitalize
+  .item_label= "#{@item_num}. #{ques}"
+  - n_anchors.times do |i|
+    .likert_scale{stl}
+      = hidden_field_tag "item[#{@item_num}][q_item_id]", likert_item.id
+      = radio_button_tag "item[#{@item_num}][response]", i+1, false, :class=>"likert_button"
+      %br
+      = likert_item.anchors[i]
+    

@@ -1,0 +1,36 @@
+-if @ret.nil?
+	%p You didn't make any donation selections!
+	
+-else
+	%p You have completed the study - Thank you!
+	%br
+	
+	=image_tag @ret.target.image.url, :alt=>@ret.target.image.url, :height=>225, :width=>185, :align=>:left, :hspace=>30
+	%br
+	%p Your donation to #{@ret.target.name.name} was randomly chosen! You chose to donate
+	=number_to_currency (@ret.response-1) / 10.00
+	%p 
+		Your donation will be given to 
+		%a{:href => @ret.target.hardship.charity_url} #{@ret.target.hardship.charity_name}. 
+		Thank you!
+	%p In addition to the $1 payment, in the next few days you will receive a bonus of 
+	=number_to_currency 1 - ((@ret.response-1) / 10.00)
+	
+	%br
+	%br{:clear => :all}
+%br
+%b Please enter the code #{@sess.completion_code} into the MTurk browser window to receive your payment.
+%p If you enter the wrong code you will not be paid and you will not have the chance to enter another code.
+-4.times do
+	%br
+.fine_print		
+	If you have a technical issue, email canlab.research@colorado.edu with a detailed description of the problem and include any error messages.
+	-3.times do
+		%br
+	All images used are under the Creative Commons liscence: http://creativecommons.org/licenses/by-nd/3.0 
+	%br
+	%br Image rights belong to:
+	%br
+	- Image.all.map {|i| i.attribution}.uniq.each do |attr| 
+		=attr
+		%br

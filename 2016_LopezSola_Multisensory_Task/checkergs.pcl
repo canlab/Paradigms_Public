@@ -1,0 +1,48 @@
+
+sub
+   make_checker( int width, int height, int columns, int rows )
+begin
+   box1.set_width( width );
+   box2.set_width( width );
+   box1.set_height( height );
+   box2.set_height( height );
+   
+   int left_x = - width * columns / 2 + width / 2;  
+   int top_y = - height * rows / 2 + height / 2;
+   pic1.clear();
+   pic2.clear();
+   loop
+      int i = 1
+   until
+      i > columns
+   begin
+      loop
+         int j = 1
+      until
+         j > rows
+      begin
+         if ( (i + j) % 2 == 0) then
+            pic1.add_part( box1, left_x + (i - 1) * width,
+                           top_y + (j - 1) * height );      
+            pic2.add_part( box2, left_x + (i - 1) * width,
+                           top_y + (j - 1) * height );
+         else  
+            pic1.add_part( box2, left_x + (i - 1) * width,
+                           top_y + (j - 1) * height );      
+            pic2.add_part( box1, left_x + (i - 1) * width,
+                           top_y + (j - 1) * height );
+         end;
+         j = j + 1
+      end;
+      i = i + 1
+   end
+end; 
+
+box1.set_color( 255,255,255 );
+box2.set_color( 0,0,0 );
+make_checker( 60, 60, 8, 8 );
+trial1.present();
+trial1.present();
+trial1.present();
+trial1.present();
+trial2.present();

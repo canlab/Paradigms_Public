@@ -1,0 +1,20 @@
+%h2 Demographic information
+%p Please provide the following demographic information.
+- form_for @demographic, :url => '/db/survey' do |f|
+  =hidden_field_tag('fid', session[:fid]) 
+  =f.hidden_field 'survey_id', :value => @survey.id
+  %ul
+    %li
+      .demo_q Age (in years):
+      .demo_r= f.select 'age', (13..100).to_a, {:prompt => 'Select One'}, {:class => 'big_select'}
+    %li
+      .demo_q Sex:
+      .demo_r= f.select 'gender', ['Male', 'Female'], {:prompt => 'Select One'}, {:class => 'big_select'}
+    %li
+      .demo_q Racial/ethnic background:
+      .demo_r= f.select 'race', ['Native American or Alaskan Native', 'Asian or Pacific Islander', 'Black (not of Hispanic origin)', 'Hispanic', 'White (not of Hispanic origin)', 'Other or Unknown'], {:prompt => 'Select One'}, {:class => 'big_select'}
+    %li
+      .demo_q Religion:
+      .demo_r= f.select 'religion', ['Christian','Muslim','Jewish','Buddhist','Hindu','Atheist','Other'],{:prompt => 'Select One'}, {:class => 'big_select'}
+
+  %p= submit_tag 'Next', :class => 'big_button'

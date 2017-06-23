@@ -1,0 +1,6 @@
+- @item_num += 1
+.item
+  .item_label= "#{@item_num}. #{text_item.text.capitalize.gsub(/(^|\s)i /, " I ")}"
+  .text_item
+    = hidden_field_tag "item[#{@item_num}][q_item_id]", text_item.id
+    = text_area_tag "item[#{@item_num}][text]"

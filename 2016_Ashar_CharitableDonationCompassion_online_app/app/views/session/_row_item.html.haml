@@ -1,0 +1,8 @@
+- @item_num += 1
+- options = row_item.text.split('/')
+.item
+  - options.size.times do |i|
+    .row_item
+      = hidden_field_tag "item[#{@item_num}][q_item_id]", row_item.id
+      = radio_button_tag "item[#{@item_num}][response]", i+1, false, :class=>"likert_button"
+      = options[i]
