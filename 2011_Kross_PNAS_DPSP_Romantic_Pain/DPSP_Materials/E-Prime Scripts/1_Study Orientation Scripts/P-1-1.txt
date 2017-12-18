@@ -1,0 +1,41 @@
+*** Header Start ***
+VersionPersist: 1
+LevelName: Session
+LevelName: Block
+LevelName: Trial
+LevelName: SubTrial
+LevelName: LogLevel5
+LevelName: LogLevel6
+LevelName: LogLevel7
+LevelName: LogLevel8
+LevelName: LogLevel9
+LevelName: LogLevel10
+Experiment: P
+SessionDate: 11-05-2007
+SessionTime: 08:13:34
+RandomSeed: 1308800360
+Group: 1
+Subject: 1
+Session: 1
+Display.RefreshRate: 60.207
+*** Header End ***
+	Level: 2
+	*** LogFrame Start ***
+	InstrList: 1
+	Procedure: InstrProc
+	InstrList.Cycle: 1
+	InstrList.Sample: 1
+	Running: InstrList
+	*** LogFrame End ***
+Level: 1
+*** LogFrame Start ***
+Experiment: P
+SessionDate: 11-05-2007
+SessionTime: 08:13:34
+RandomSeed: 1308800360
+Group: 1
+Subject: 1
+Session: 1
+Display.RefreshRate: 60.207
+Clock.Information: <?xml version="1.0"?>\n<Clock xmlns:dt="urn:schemas-microsoft-com:datatypes"><Description dt:dt="string">E-Prime Primary Realtime Clock</Description><StartTime><Timestamp dt:dt="int">0</Timestamp><DateUtc dt:dt="string">2007-11-05T13:13:33Z</DateUtc></StartTime><FrequencyChanges><FrequencyChange><Frequency dt:dt="r8">3579545</Frequency><Timestamp dt:dt="r8">5786629054872</Timestamp><Current dt:dt="r8">0</Current><DateUtc dt:dt="string">1969-12-31T21:46:40Z</DateUtc></FrequencyChange></FrequencyChanges></Clock>\n
+*** LogFrame End ***

@@ -1,0 +1,1741 @@
+'
+'
+'
+'	C:\Documents and Settings\Ethan Kross\Desktop\DPSP Scripts\Time 1\3_Man Scripts (outside scanner)\CMn.ebs
+'	Generated on: 5/28/2008	16:00:07
+'
+'
+'	This file generated with E-Studio interface.
+'	E-Prime Copyright © 1996-2005 Psychology Software Tools.
+'	ALL RIGHTS RESERVED
+'
+'	Legal use of this experiment script requires a full E-Prime or Runtime License.
+'
+'
+'	Author:
+'		  (Columbia University)
+'	Notes:
+'		Maximum audio length is set to 60 seconds on all of the slides and audio clips for now.
+'
+'
+'
+'
+
+Option CStrings On
+Dim ebContext as Context
+
+
+'--------------------------------------------------------------------------
+' Class Declarations
+'--------------------------------------------------------------------------
+
+
+
+'--------------------------------------------------------------------------
+'InitSlideStateDefaults
+'--------------------------------------------------------------------------
+Sub InitSlideStateDefaults(theSlideState As SlideState)
+
+	If theSlideState Is Nothing Then Exit Sub
+
+	theSlideState.X = "center"
+	theSlideState.Y = "center"
+	theSlideState.Width = "100%"
+	theSlideState.Height = "100%"
+	theSlideState.BackColor = CColor("white")
+	theSlideState.BackStyle = "opaque"
+	theSlideState.BorderColor = CColor("black")
+	theSlideState.BorderWidth = CLng("0")
+	theSlideState.XAlign = "center"
+	theSlideState.YAlign = "center"
+	theSlideState.ClearAfter = CLogical("No")
+	theSlideState.Enabled = CLogical("Yes")
+
+End Sub
+
+'--------------------------------------------------------------------------
+'InitSlideVisualStimDefaults
+'--------------------------------------------------------------------------
+Sub InitSlideVisualStimDefaults(theSlideVisualStim As SlideVisualStim)
+
+	If theSlideVisualStim Is Nothing Then Exit Sub
+
+	theSlideVisualStim.X = "center"
+	theSlideVisualStim.Y = "center"
+	theSlideVisualStim.Width = "25%"
+	theSlideVisualStim.Height = "25%"
+	theSlideVisualStim.ForeColor = CColor("black")
+	theSlideVisualStim.BackColor = CColor("white")
+	theSlideVisualStim.BackStyle = "opaque"
+	theSlideVisualStim.BorderColor = CColor("black")
+	theSlideVisualStim.BorderWidth = CLng("0")
+	theSlideVisualStim.XAlign = "center"
+	theSlideVisualStim.YAlign = "center"
+	theSlideVisualStim.AlignHorizontal = "center"
+	theSlideVisualStim.AlignVertical = "center"
+
+End Sub
+
+'--------------------------------------------------------------------------
+'InitSlideTextDefaults
+'--------------------------------------------------------------------------
+Sub InitSlideTextDefaults(theSlideText As SlideText)
+
+	If theSlideText Is Nothing Then Exit Sub
+
+	InitSlideVisualStimDefaults theSlideText
+
+	theSlideText.WordWrap = True
+	theSlideText.FontName = "Courier New"
+	theSlideText.FontSize = "18"
+	theSlideText.FontBold = CLogical("Yes")
+	theSlideText.FontItalic = CLogical("No")
+	theSlideText.FontUnderline = CLogical("No")
+	theSlideText.FontStrikeout = CLogical("No")
+
+End Sub
+
+'--------------------------------------------------------------------------
+'InitSlideImageDefaults
+'--------------------------------------------------------------------------
+Sub InitSlideImageDefaults(theSlideImage As SlideImage)
+
+	If theSlideImage Is Nothing Then Exit Sub
+
+	InitSlideVisualStimDefaults theSlideImage
+
+	theSlideImage.Stretch = CLogical("No")
+	theSlideImage.MirrorLeftRight = CLogical("No")
+	theSlideImage.MirrorUpDown = CLogical("No")
+	theSlideImage.UseSourceColorKey = CLogical("No")
+	theSlideImage.SourceColorKey = CColor("black")
+
+End Sub
+
+'--------------------------------------------------------------------------
+'InitSlideSoundBufferDefaults
+'--------------------------------------------------------------------------
+Sub InitSlideSoundBufferDefaults(theSoundBuffer As SoundBuffer)
+
+	If theSoundBuffer Is Nothing Then Exit Sub
+
+	theSoundBuffer.Loop = CLogical("No")
+	theSoundBuffer.StopAfter = CLogical("Yes")
+	theSoundBuffer.StartOffset = "0"
+	theSoundBuffer.StopOffset = "0"
+
+End Sub
+
+
+
+
+
+'--------------------------------------------------------------------------
+'InitTextDisplayDefaults
+'--------------------------------------------------------------------------
+Sub InitTextDisplayDefaults(theTextDisplay As TextDisplay)
+
+	If theTextDisplay Is Nothing Then Exit Sub
+
+	theTextDisplay.X = "center"
+	theTextDisplay.Y = "center"
+	theTextDisplay.Width = "100%"
+	theTextDisplay.Height = "100%"
+	theTextDisplay.ForeColor = CColor("black")
+	theTextDisplay.BackColor = CColor("white")
+	theTextDisplay.BackStyle = "opaque"
+	theTextDisplay.BorderColor = CColor("black")
+	theTextDisplay.BorderWidth = CLng("0")
+	theTextDisplay.XAlign = "center"
+	theTextDisplay.YAlign = "center"
+	theTextDisplay.AlignHorizontal = "center"
+	theTextDisplay.AlignVertical = "center"
+	theTextDisplay.WordWrap = True
+	theTextDisplay.ClearAfter = CLogical("No")
+	theTextDisplay.FontName = "Courier New"
+	theTextDisplay.FontSize = "18"
+	theTextDisplay.FontBold = CLogical("Yes")
+	theTextDisplay.FontItalic = CLogical("No")
+	theTextDisplay.FontUnderline = CLogical("No")
+	theTextDisplay.FontStrikeout = CLogical("No")
+
+End Sub
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+'--------------------------------------------------------------------------
+' Instance Declarations
+'--------------------------------------------------------------------------
+Dim Display As DisplayDevice
+Dim Sound As SoundDevice
+Dim Keyboard As KeyboardDevice
+Dim Mouse As MouseDevice
+Dim SessionProc As Procedure
+
+Dim DistancedIs1OrImmersedIs2 As List
+
+Dim distancedProc As Procedure
+
+Dim Distance1 As Slide
+Dim Distance1_State As SlideState
+Dim Distance1_SlideSoundOut As SlideSoundOut
+Dim Distance1_SoundBuffer As SoundBuffer
+Dim Distance1_SoundBufferInfo As SoundBufferInfo
+
+Dim txtWelcome As TextDisplay
+Dim txtWelcomeEchoClients As EchoClientCollection
+
+Dim Distance2 As Slide
+Dim Distance2_State As SlideState
+Dim Distance2_SlideSoundOut As SlideSoundOut
+Dim Distance2_SoundBuffer As SoundBuffer
+Dim Distance2_SoundBufferInfo As SoundBufferInfo
+
+Dim Distance3 As Slide
+Dim Distance3_State As SlideState
+Dim Distance3_SlideSoundOut As SlideSoundOut
+Dim Distance3_SoundBuffer As SoundBuffer
+Dim Distance3_SoundBufferInfo As SoundBufferInfo
+
+Dim Distance4 As Slide
+Dim Distance4_State As SlideState
+Dim Distance4_SlideSoundOut As SlideSoundOut
+Dim Distance4_SoundBuffer As SoundBuffer
+Dim Distance4_SoundBufferInfo As SoundBufferInfo
+
+Dim Distance5 As Slide
+Dim Distance5EchoClients As EchoClientCollection
+Dim Distance5_State As SlideState
+Dim Distance5_SlideSoundOut As SlideSoundOut
+Dim Distance5_SoundBuffer As SoundBuffer
+Dim Distance5_SoundBufferInfo As SoundBufferInfo
+
+Dim ContinueSpace1 As Slide
+Dim ContinueSpace1EchoClients As EchoClientCollection
+Dim ContinueSpace1_State As SlideState
+
+Dim ContinueSpace3 As Slide
+Dim ContinueSpace3EchoClients As EchoClientCollection
+Dim ContinueSpace3_State As SlideState
+
+Dim ContinueSpace4in15 As Slide
+Dim ContinueSpace4in15_State As SlideState
+
+Dim immersedProc As Procedure
+
+Dim ContinueSpace2 As Slide
+Dim ContinueSpace2EchoClients As EchoClientCollection
+Dim ContinueSpace2_State As SlideState
+
+Dim Control3 As Slide
+Dim Control3_State As SlideState
+Dim Control3_SlideSoundOut As SlideSoundOut
+Dim Control3_SoundBuffer As SoundBuffer
+Dim Control3_SoundBufferInfo As SoundBufferInfo
+
+Dim Control4 As Slide
+Dim Control4_State As SlideState
+Dim Control4_SlideSoundOut As SlideSoundOut
+Dim Control4_SoundBuffer As SoundBuffer
+Dim Control4_SoundBufferInfo As SoundBufferInfo
+
+Dim Control1 As Slide
+Dim Control1_State As SlideState
+Dim Control1_SlideSoundOut As SlideSoundOut
+Dim Control1_SoundBuffer As SoundBuffer
+Dim Control1_SoundBufferInfo As SoundBufferInfo
+
+Dim Control5 As Slide
+Dim Control5_State As SlideState
+Dim Control5_SlideSoundOut As SlideSoundOut
+Dim Control5_SoundBuffer As SoundBuffer
+Dim Control5_SoundBufferInfo As SoundBufferInfo
+
+
+
+'--------------------------------------------------------------------------
+' Package Declare Script
+'--------------------------------------------------------------------------
+
+
+
+'--------------------------------------------------------------------------
+' User Script
+'--------------------------------------------------------------------------
+
+
+
+'--------------------------------------------------------------------------
+' Package Global Script
+'--------------------------------------------------------------------------
+
+
+
+'--------------------------------------------------------------------------
+' Package Routines
+'--------------------------------------------------------------------------
+
+
+
+'--------------------------------------------------------------------------
+' Implementation
+'--------------------------------------------------------------------------
+Sub SessionProc_Run(c as Context)
+	DistancedIs1OrImmersedIs2.Run c
+
+	 
+
+
+#If RUNTIME_VERSION_MAJOR > 1  Or (RUNTIME_VERSION_MAJOR = 1 And RUNTIME_VERSION_MINOR >= 2) Then
+	' Log clock timing information
+	c.SetAttrib "Clock.Information", Clock.Information
+#End If
+
+
+	c.Log
+End Sub
+
+Sub distancedProc_Run(c as Context)
+	
+	'''''''''''''''''''''''''''''''''''''''''''''
+	' InLine - InLine1 BEGIN
+	'''''''''''''''''''''''''''''''''''''''''''''
+	Dim gender(1) As String
+Dim genderResponse
+gender(0) = "Male"
+gender(1) = "Female"
+
+Do
+	genderResponse = SelectBox("Gender","Please indicate your gender:",gender)
+	If genderResponse = 1 Then Distance4.ActiveState = "Female"
+Loop While genderResponse = -1 'If they click cancel, ask again.
+
+Mouse.ShowCursor False
+
+	'''''''''''''''''''''''''''''''''''''''''''''
+	' InLine - InLine1 END
+	'''''''''''''''''''''''''''''''''''''''''''''
+	
+	
+	
+	txtWelcome.InputMasks.Reset
+	
+	If Keyboard.GetState() = ebStateOpen Then
+		txtWelcomeEchoClients.RemoveAll
+		txtWelcome.InputMasks.Add Keyboard.CreateInputMask("{SPACE}", "", CLng(txtWelcome.Duration), CLng("1"), ebEndResponseActionTerminate, CLogical("Yes"), "", "", "ResponseMode:All ProcessBackspace:Yes")
+
+	
+	End If
+
+	txtWelcome.Run
+	
+	
+	Select Case Distance1.ActiveState
+		Case "Default"
+
+
+			Set Distance1_SlideSoundOut = CSlideSoundOut(Distance1.States.Item("Default").Objects(1))
+			Set Distance1_SoundBuffer = Distance1_SlideSoundOut.Buffers(1)
+			Set Distance1_SoundBuffer = Nothing
+			Set Distance1_SlideSoundOut = Nothing
+	End Select
+
+	Distance1.Run
+	
+	
+	
+	Select Case ContinueSpace1.ActiveState
+		Case "Default"
+
+	End Select
+
+	
+	ContinueSpace1.InputMasks.Reset
+	
+	If Keyboard.GetState() = ebStateOpen Then
+		ContinueSpace1EchoClients.RemoveAll
+		ContinueSpace1.InputMasks.Add Keyboard.CreateInputMask("{SPACE}", "", CLng(ContinueSpace1.Duration), CLng("1"), ebEndResponseActionTerminate, CLogical("Yes"), "", "", "ResponseMode:All ProcessBackspace:Yes")
+
+	
+	End If
+
+	ContinueSpace1.Run
+	
+	c.SetAttrib ContinueSpace1.Name & ".OnsetDelay", ContinueSpace1.OnsetDelay
+	c.SetAttrib ContinueSpace1.Name & ".OnsetTime", ContinueSpace1.OnsetTime
+	c.SetAttrib ContinueSpace1.Name & ".DurationError", ContinueSpace1.DurationError
+	c.SetAttrib ContinueSpace1.Name & ".RTTime", ContinueSpace1.RTTime
+	c.SetAttrib ContinueSpace1.Name & ".ACC", ContinueSpace1.ACC
+	c.SetAttrib ContinueSpace1.Name & ".RT", ContinueSpace1.RT
+	c.SetAttrib ContinueSpace1.Name & ".RESP", ContinueSpace1.RESP
+	c.SetAttrib ContinueSpace1.Name & ".CRESP", ContinueSpace1.CRESP
+	
+	
+	
+	Select Case Distance2.ActiveState
+		Case "Default"
+
+
+			Set Distance2_SlideSoundOut = CSlideSoundOut(Distance2.States.Item("Default").Objects(1))
+			Set Distance2_SoundBuffer = Distance2_SlideSoundOut.Buffers(1)
+			Set Distance2_SoundBuffer = Nothing
+			Set Distance2_SlideSoundOut = Nothing
+	End Select
+
+	Distance2.Run
+	
+	
+	
+	Select Case ContinueSpace2.ActiveState
+		Case "Default"
+
+	End Select
+
+	
+	ContinueSpace2.InputMasks.Reset
+	
+	If Keyboard.GetState() = ebStateOpen Then
+		ContinueSpace2EchoClients.RemoveAll
+		ContinueSpace2.InputMasks.Add Keyboard.CreateInputMask("{SPACE}", "", CLng(ContinueSpace2.Duration), CLng("1"), ebEndResponseActionTerminate, CLogical("Yes"), "", "", "ResponseMode:All ProcessBackspace:Yes")
+
+	
+	End If
+
+	ContinueSpace2.Run
+	
+	c.SetAttrib ContinueSpace2.Name & ".OnsetDelay", ContinueSpace2.OnsetDelay
+	c.SetAttrib ContinueSpace2.Name & ".OnsetTime", ContinueSpace2.OnsetTime
+	c.SetAttrib ContinueSpace2.Name & ".DurationError", ContinueSpace2.DurationError
+	c.SetAttrib ContinueSpace2.Name & ".RTTime", ContinueSpace2.RTTime
+	c.SetAttrib ContinueSpace2.Name & ".ACC", ContinueSpace2.ACC
+	c.SetAttrib ContinueSpace2.Name & ".RT", ContinueSpace2.RT
+	c.SetAttrib ContinueSpace2.Name & ".RESP", ContinueSpace2.RESP
+	c.SetAttrib ContinueSpace2.Name & ".CRESP", ContinueSpace2.CRESP
+	
+	
+	
+	Select Case Distance3.ActiveState
+		Case "Default"
+
+
+			Set Distance3_SlideSoundOut = CSlideSoundOut(Distance3.States.Item("Default").Objects(1))
+			Set Distance3_SoundBuffer = Distance3_SlideSoundOut.Buffers(1)
+			Set Distance3_SoundBuffer = Nothing
+			Set Distance3_SlideSoundOut = Nothing
+	End Select
+
+	Distance3.Run
+	
+	
+	
+	Select Case ContinueSpace3.ActiveState
+		Case "Default"
+
+	End Select
+
+	
+	ContinueSpace3.InputMasks.Reset
+	
+	If Keyboard.GetState() = ebStateOpen Then
+		ContinueSpace3EchoClients.RemoveAll
+		ContinueSpace3.InputMasks.Add Keyboard.CreateInputMask("{SPACE}", "", CLng(ContinueSpace3.Duration), CLng("1"), ebEndResponseActionTerminate, CLogical("Yes"), "", "", "ResponseMode:All ProcessBackspace:Yes")
+
+	
+	End If
+
+	ContinueSpace3.Run
+	
+	c.SetAttrib ContinueSpace3.Name & ".OnsetDelay", ContinueSpace3.OnsetDelay
+	c.SetAttrib ContinueSpace3.Name & ".OnsetTime", ContinueSpace3.OnsetTime
+	c.SetAttrib ContinueSpace3.Name & ".DurationError", ContinueSpace3.DurationError
+	c.SetAttrib ContinueSpace3.Name & ".RTTime", ContinueSpace3.RTTime
+	c.SetAttrib ContinueSpace3.Name & ".ACC", ContinueSpace3.ACC
+	c.SetAttrib ContinueSpace3.Name & ".RT", ContinueSpace3.RT
+	c.SetAttrib ContinueSpace3.Name & ".RESP", ContinueSpace3.RESP
+	c.SetAttrib ContinueSpace3.Name & ".CRESP", ContinueSpace3.CRESP
+	
+	
+	
+	Select Case Distance4.ActiveState
+		Case "Male"
+
+
+			Set Distance4_SlideSoundOut = CSlideSoundOut(Distance4.States.Item("Male").Objects(1))
+			Set Distance4_SoundBuffer = Distance4_SlideSoundOut.Buffers(1)
+			Set Distance4_SoundBuffer = Nothing
+			Set Distance4_SlideSoundOut = Nothing
+		Case "Female"
+
+
+			Set Distance4_SlideSoundOut = CSlideSoundOut(Distance4.States.Item("Female").Objects(1))
+			Set Distance4_SoundBuffer = Distance4_SlideSoundOut.Buffers(1)
+			Set Distance4_SoundBuffer = Nothing
+			Set Distance4_SlideSoundOut = Nothing
+	End Select
+
+	Distance4.Run
+	
+	
+	
+	Select Case ContinueSpace4in15.ActiveState
+		Case "Default"
+
+	End Select
+
+	ContinueSpace4in15.Run
+	
+	
+	
+	Select Case Distance5.ActiveState
+		Case "Default"
+
+
+			Set Distance5_SlideSoundOut = CSlideSoundOut(Distance5.States.Item("Default").Objects(1))
+			Set Distance5_SoundBuffer = Distance5_SlideSoundOut.Buffers(1)
+			Set Distance5_SoundBuffer = Nothing
+			Set Distance5_SlideSoundOut = Nothing
+	End Select
+
+	
+	Distance5.InputMasks.Reset
+	
+	If Keyboard.GetState() = ebStateOpen Then
+		Distance5EchoClients.RemoveAll
+		Distance5.InputMasks.Add Keyboard.CreateInputMask("q", "", CLng(Distance5.Duration), CLng("1"), ebEndResponseActionTerminate, CLogical("Yes"), "", "", "ResponseMode:All ProcessBackspace:Yes")
+
+	
+	End If
+
+	Distance5.Run
+	
+	c.SetAttrib ContinueSpace1.Name & ".OnsetDelay", ContinueSpace1.OnsetDelay
+	c.SetAttrib ContinueSpace1.Name & ".OnsetTime", ContinueSpace1.OnsetTime
+	c.SetAttrib ContinueSpace1.Name & ".DurationError", ContinueSpace1.DurationError
+	c.SetAttrib ContinueSpace1.Name & ".RTTime", ContinueSpace1.RTTime
+	c.SetAttrib ContinueSpace1.Name & ".ACC", ContinueSpace1.ACC
+	c.SetAttrib ContinueSpace1.Name & ".RT", ContinueSpace1.RT
+	c.SetAttrib ContinueSpace1.Name & ".RESP", ContinueSpace1.RESP
+	c.SetAttrib ContinueSpace1.Name & ".CRESP", ContinueSpace1.CRESP
+	
+	c.SetAttrib ContinueSpace2.Name & ".OnsetDelay", ContinueSpace2.OnsetDelay
+	c.SetAttrib ContinueSpace2.Name & ".OnsetTime", ContinueSpace2.OnsetTime
+	c.SetAttrib ContinueSpace2.Name & ".DurationError", ContinueSpace2.DurationError
+	c.SetAttrib ContinueSpace2.Name & ".RTTime", ContinueSpace2.RTTime
+	c.SetAttrib ContinueSpace2.Name & ".ACC", ContinueSpace2.ACC
+	c.SetAttrib ContinueSpace2.Name & ".RT", ContinueSpace2.RT
+	c.SetAttrib ContinueSpace2.Name & ".RESP", ContinueSpace2.RESP
+	c.SetAttrib ContinueSpace2.Name & ".CRESP", ContinueSpace2.CRESP
+	
+	c.SetAttrib ContinueSpace3.Name & ".OnsetDelay", ContinueSpace3.OnsetDelay
+	c.SetAttrib ContinueSpace3.Name & ".OnsetTime", ContinueSpace3.OnsetTime
+	c.SetAttrib ContinueSpace3.Name & ".DurationError", ContinueSpace3.DurationError
+	c.SetAttrib ContinueSpace3.Name & ".RTTime", ContinueSpace3.RTTime
+	c.SetAttrib ContinueSpace3.Name & ".ACC", ContinueSpace3.ACC
+	c.SetAttrib ContinueSpace3.Name & ".RT", ContinueSpace3.RT
+	c.SetAttrib ContinueSpace3.Name & ".RESP", ContinueSpace3.RESP
+	c.SetAttrib ContinueSpace3.Name & ".CRESP", ContinueSpace3.CRESP
+	
+
+	c.Log
+End Sub
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Sub immersedProc_Run(c as Context)
+	
+	
+	txtWelcome.InputMasks.Reset
+	
+	If Keyboard.GetState() = ebStateOpen Then
+		txtWelcomeEchoClients.RemoveAll
+		txtWelcome.InputMasks.Add Keyboard.CreateInputMask("{SPACE}", "", CLng(txtWelcome.Duration), CLng("1"), ebEndResponseActionTerminate, CLogical("Yes"), "", "", "ResponseMode:All ProcessBackspace:Yes")
+
+	
+	End If
+
+	txtWelcome.Run
+	
+	
+	Select Case Control1.ActiveState
+		Case "Male"
+
+
+			Set Control1_SlideSoundOut = CSlideSoundOut(Control1.States.Item("Male").Objects(1))
+			Set Control1_SoundBuffer = Control1_SlideSoundOut.Buffers(1)
+			Set Control1_SoundBuffer = Nothing
+			Set Control1_SlideSoundOut = Nothing
+	End Select
+
+	Control1.Run
+	
+	
+	
+	Select Case ContinueSpace1.ActiveState
+		Case "Default"
+
+	End Select
+
+	
+	ContinueSpace1.InputMasks.Reset
+	
+	If Keyboard.GetState() = ebStateOpen Then
+		ContinueSpace1EchoClients.RemoveAll
+		ContinueSpace1.InputMasks.Add Keyboard.CreateInputMask("{SPACE}", "", CLng(ContinueSpace1.Duration), CLng("1"), ebEndResponseActionTerminate, CLogical("Yes"), "", "", "ResponseMode:All ProcessBackspace:Yes")
+
+	
+	End If
+
+	ContinueSpace1.Run
+	
+	c.SetAttrib ContinueSpace1.Name & ".OnsetDelay", ContinueSpace1.OnsetDelay
+	c.SetAttrib ContinueSpace1.Name & ".OnsetTime", ContinueSpace1.OnsetTime
+	c.SetAttrib ContinueSpace1.Name & ".DurationError", ContinueSpace1.DurationError
+	c.SetAttrib ContinueSpace1.Name & ".RTTime", ContinueSpace1.RTTime
+	c.SetAttrib ContinueSpace1.Name & ".ACC", ContinueSpace1.ACC
+	c.SetAttrib ContinueSpace1.Name & ".RT", ContinueSpace1.RT
+	c.SetAttrib ContinueSpace1.Name & ".RESP", ContinueSpace1.RESP
+	c.SetAttrib ContinueSpace1.Name & ".CRESP", ContinueSpace1.CRESP
+	
+	
+	
+	Select Case Distance2.ActiveState
+		Case "Default"
+
+
+			Set Distance2_SlideSoundOut = CSlideSoundOut(Distance2.States.Item("Default").Objects(1))
+			Set Distance2_SoundBuffer = Distance2_SlideSoundOut.Buffers(1)
+			Set Distance2_SoundBuffer = Nothing
+			Set Distance2_SlideSoundOut = Nothing
+	End Select
+
+	Distance2.Run
+	
+	
+	
+	Select Case ContinueSpace2.ActiveState
+		Case "Default"
+
+	End Select
+
+	
+	ContinueSpace2.InputMasks.Reset
+	
+	If Keyboard.GetState() = ebStateOpen Then
+		ContinueSpace2EchoClients.RemoveAll
+		ContinueSpace2.InputMasks.Add Keyboard.CreateInputMask("{SPACE}", "", CLng(ContinueSpace2.Duration), CLng("1"), ebEndResponseActionTerminate, CLogical("Yes"), "", "", "ResponseMode:All ProcessBackspace:Yes")
+
+	
+	End If
+
+	ContinueSpace2.Run
+	
+	c.SetAttrib ContinueSpace2.Name & ".OnsetDelay", ContinueSpace2.OnsetDelay
+	c.SetAttrib ContinueSpace2.Name & ".OnsetTime", ContinueSpace2.OnsetTime
+	c.SetAttrib ContinueSpace2.Name & ".DurationError", ContinueSpace2.DurationError
+	c.SetAttrib ContinueSpace2.Name & ".RTTime", ContinueSpace2.RTTime
+	c.SetAttrib ContinueSpace2.Name & ".ACC", ContinueSpace2.ACC
+	c.SetAttrib ContinueSpace2.Name & ".RT", ContinueSpace2.RT
+	c.SetAttrib ContinueSpace2.Name & ".RESP", ContinueSpace2.RESP
+	c.SetAttrib ContinueSpace2.Name & ".CRESP", ContinueSpace2.CRESP
+	
+	
+	
+	Select Case Control3.ActiveState
+		Case "Male"
+
+
+			Set Control3_SlideSoundOut = CSlideSoundOut(Control3.States.Item("Male").Objects(1))
+			Set Control3_SoundBuffer = Control3_SlideSoundOut.Buffers(1)
+			Set Control3_SoundBuffer = Nothing
+			Set Control3_SlideSoundOut = Nothing
+	End Select
+
+	Control3.Run
+	
+	
+	
+	Select Case ContinueSpace3.ActiveState
+		Case "Default"
+
+	End Select
+
+	
+	ContinueSpace3.InputMasks.Reset
+	
+	If Keyboard.GetState() = ebStateOpen Then
+		ContinueSpace3EchoClients.RemoveAll
+		ContinueSpace3.InputMasks.Add Keyboard.CreateInputMask("{SPACE}", "", CLng(ContinueSpace3.Duration), CLng("1"), ebEndResponseActionTerminate, CLogical("Yes"), "", "", "ResponseMode:All ProcessBackspace:Yes")
+
+	
+	End If
+
+	ContinueSpace3.Run
+	
+	c.SetAttrib ContinueSpace3.Name & ".OnsetDelay", ContinueSpace3.OnsetDelay
+	c.SetAttrib ContinueSpace3.Name & ".OnsetTime", ContinueSpace3.OnsetTime
+	c.SetAttrib ContinueSpace3.Name & ".DurationError", ContinueSpace3.DurationError
+	c.SetAttrib ContinueSpace3.Name & ".RTTime", ContinueSpace3.RTTime
+	c.SetAttrib ContinueSpace3.Name & ".ACC", ContinueSpace3.ACC
+	c.SetAttrib ContinueSpace3.Name & ".RT", ContinueSpace3.RT
+	c.SetAttrib ContinueSpace3.Name & ".RESP", ContinueSpace3.RESP
+	c.SetAttrib ContinueSpace3.Name & ".CRESP", ContinueSpace3.CRESP
+	
+	
+	
+	Select Case Control4.ActiveState
+		Case "Default"
+
+
+			Set Control4_SlideSoundOut = CSlideSoundOut(Control4.States.Item("Default").Objects(1))
+			Set Control4_SoundBuffer = Control4_SlideSoundOut.Buffers(1)
+			Set Control4_SoundBuffer = Nothing
+			Set Control4_SlideSoundOut = Nothing
+	End Select
+
+	Control4.Run
+	
+	
+	
+	Select Case ContinueSpace4in15.ActiveState
+		Case "Default"
+
+	End Select
+
+	ContinueSpace4in15.Run
+	
+	
+	
+	Select Case Control5.ActiveState
+		Case "Default"
+
+
+			Set Control5_SlideSoundOut = CSlideSoundOut(Control5.States.Item("Default").Objects(1))
+			Set Control5_SoundBuffer = Control5_SlideSoundOut.Buffers(1)
+			Set Control5_SoundBuffer = Nothing
+			Set Control5_SlideSoundOut = Nothing
+	End Select
+
+	Control5.Run
+	
+	c.SetAttrib ContinueSpace1.Name & ".OnsetDelay", ContinueSpace1.OnsetDelay
+	c.SetAttrib ContinueSpace1.Name & ".OnsetTime", ContinueSpace1.OnsetTime
+	c.SetAttrib ContinueSpace1.Name & ".DurationError", ContinueSpace1.DurationError
+	c.SetAttrib ContinueSpace1.Name & ".RTTime", ContinueSpace1.RTTime
+	c.SetAttrib ContinueSpace1.Name & ".ACC", ContinueSpace1.ACC
+	c.SetAttrib ContinueSpace1.Name & ".RT", ContinueSpace1.RT
+	c.SetAttrib ContinueSpace1.Name & ".RESP", ContinueSpace1.RESP
+	c.SetAttrib ContinueSpace1.Name & ".CRESP", ContinueSpace1.CRESP
+	
+	c.SetAttrib ContinueSpace2.Name & ".OnsetDelay", ContinueSpace2.OnsetDelay
+	c.SetAttrib ContinueSpace2.Name & ".OnsetTime", ContinueSpace2.OnsetTime
+	c.SetAttrib ContinueSpace2.Name & ".DurationError", ContinueSpace2.DurationError
+	c.SetAttrib ContinueSpace2.Name & ".RTTime", ContinueSpace2.RTTime
+	c.SetAttrib ContinueSpace2.Name & ".ACC", ContinueSpace2.ACC
+	c.SetAttrib ContinueSpace2.Name & ".RT", ContinueSpace2.RT
+	c.SetAttrib ContinueSpace2.Name & ".RESP", ContinueSpace2.RESP
+	c.SetAttrib ContinueSpace2.Name & ".CRESP", ContinueSpace2.CRESP
+	
+	c.SetAttrib ContinueSpace3.Name & ".OnsetDelay", ContinueSpace3.OnsetDelay
+	c.SetAttrib ContinueSpace3.Name & ".OnsetTime", ContinueSpace3.OnsetTime
+	c.SetAttrib ContinueSpace3.Name & ".DurationError", ContinueSpace3.DurationError
+	c.SetAttrib ContinueSpace3.Name & ".RTTime", ContinueSpace3.RTTime
+	c.SetAttrib ContinueSpace3.Name & ".ACC", ContinueSpace3.ACC
+	c.SetAttrib ContinueSpace3.Name & ".RT", ContinueSpace3.RT
+	c.SetAttrib ContinueSpace3.Name & ".RESP", ContinueSpace3.RESP
+	c.SetAttrib ContinueSpace3.Name & ".CRESP", ContinueSpace3.CRESP
+	
+
+	c.Log
+End Sub
+
+
+
+
+
+
+
+
+
+
+
+
+
+'--------------------------------------------------------------------------
+' InitDevices
+'
+'--------------------------------------------------------------------------
+Sub InitDevices(c As Context)
+
+
+
+	SetOSThreadPriority 3
+
+
+	Set Display = New DisplayDevice
+	Display.Name = "Display"
+
+	Dim DisplayDisplayDeviceInfo As DisplayDeviceInfo
+	DisplayDisplayDeviceInfo.XRes = 640
+	DisplayDisplayDeviceInfo.YRes = 480
+	DisplayDisplayDeviceInfo.ColorDepth = 16
+	DisplayDisplayDeviceInfo.RefreshRate = 0
+	DisplayDisplayDeviceInfo.NumPages = 0
+	
+	'Load values from context if they exist
+	If c.AttribExists(Display.Name & ".XRes") Then DisplayDisplayDeviceInfo.XRes = CLng(c.GetAttrib(Display.Name & ".XRes"))
+	If c.AttribExists(Display.Name & ".YRes") Then DisplayDisplayDeviceInfo.YRes = CLng(c.GetAttrib(Display.Name & ".YRes"))
+	If c.AttribExists(Display.Name & ".ColorDepth") Then DisplayDisplayDeviceInfo.ColorDepth = CLng(c.GetAttrib(Display.Name & ".ColorDepth"))
+
+	'Open the device, unless the context values indicate otherwise
+	Dim DisplayOpen As Boolean
+	DisplayOpen = True
+	If c.AttribExists(Display.Name & ".Open") Then DisplayOpen = CLogical(c.GetAttrib(Display.Name & ".Open"))
+	If DisplayOpen = True Then
+		Display.Open DisplayDisplayDeviceInfo
+		c.SetAttrib Display.Name & ".RefreshRate", Format$(Display.CalculatedRefreshRate, "0.000")
+	End If
+
+	Set Sound = New SoundDevice
+	Sound.Name = "Sound"
+
+	Dim SoundSoundOutDeviceInfo As SoundDeviceInfo
+	SoundSoundOutDeviceInfo.Channels = 2
+	SoundSoundOutDeviceInfo.SamplesPerSecond = 44100
+	SoundSoundOutDeviceInfo.BitsPerSample = 16
+	'Load values from context if they exist
+	If c.AttribExists(Sound.Name & ".Channels") Then SoundSoundOutDeviceInfo.Channels = CLng(c.GetAttrib(Sound.Name & ".Channels"))
+	If c.AttribExists(Sound.Name & ".SamplesPerSecond") Then SoundSoundOutDeviceInfo.SamplesPerSecond = CLng(c.GetAttrib(Sound.Name & ".SamplesPerSecond"))
+	If c.AttribExists(Sound.Name & ".BitsPerSample") Then SoundSoundOutDeviceInfo.BitsPerSample = CLng(c.GetAttrib(Sound.Name & ".BitsPerSample"))
+
+	'Open the device, unless the context values indicate otherwise
+	Dim SoundOpen As Boolean
+	SoundOpen = True
+	If c.AttribExists(Sound.Name & ".Open") Then SoundOpen = CLogical(c.GetAttrib(Sound.Name & ".Open"))
+	If SoundOpen = True Then
+		Sound.Open SoundSoundOutDeviceInfo
+	End If
+
+	Set Keyboard = New KeyboardDevice
+	Keyboard.Name = "Keyboard"
+
+	Dim KeyboardKeyboardDeviceInfo as KeyboardDeviceInfo
+	KeyboardKeyboardDeviceInfo.CollectionMode = ebPressesOnly
+	KeyboardKeyboardDeviceInfo.CapsLock = ebCapsLockOff
+	KeyboardKeyboardDeviceInfo.NumLock = ebNumLockOn
+	'Load values from context if they exist
+	If c.AttribExists(Keyboard.Name & ".CollectionMode") Then KeyboardKeyboardDeviceInfo.CollectionMode = CLng(c.GetAttrib(Keyboard.Name & ".CollectionMode"))
+	If c.AttribExists(Keyboard.Name & ".CapsLock") Then KeyboardKeyboardDeviceInfo.CapsLock = CLng(c.GetAttrib(Keyboard.Name & ".CapsLock"))
+	If c.AttribExists(Keyboard.Name & ".NumLock") Then KeyboardKeyboardDeviceInfo.NumLock = CLng(c.GetAttrib(Keyboard.Name & ".NumLock"))
+	If c.AttribExists(Keyboard.Name & ".EmulateDeviceName") Then KeyboardKeyboardDeviceInfo.EmulateDeviceName = c.GetAttrib(Keyboard.Name & ".EmulateDeviceName")
+
+	'Open the device, unless the context values indicate otherwise
+	Dim KeyboardOpen As Boolean
+	KeyboardOpen = True
+	If c.AttribExists(Keyboard.Name & ".Open") Then KeyboardOpen = CLogical(c.GetAttrib(Keyboard.Name & ".Open"))
+	If KeyboardOpen = True Then
+		Keyboard.Open KeyboardKeyboardDeviceInfo
+	End If
+
+	Set Mouse = New MouseDevice
+	Mouse.Name = "Mouse"
+
+	Dim MouseMouseDeviceInfo as MouseDeviceInfo
+	MouseMouseDeviceInfo.OpenMode = ebMouseOpenModeDirect
+	MouseMouseDeviceInfo.CollectionMode = ebPressesOnly
+	MouseMouseDeviceInfo.ShowCursor = True
+	'Load values from context if they exist
+	If c.AttribExists(Mouse.Name & ".OpenMode") Then MouseMouseDeviceInfo.OpenMode = CLng(c.GetAttrib(Mouse.Name & ".OpenMode"))
+	If c.AttribExists(Mouse.Name & ".CollectionMode") Then MouseMouseDeviceInfo.CollectionMode = CLng(c.GetAttrib(Mouse.Name & ".CollectionMode"))
+	If c.AttribExists(Mouse.Name & ".ShowCursor") Then MouseMouseDeviceInfo.ShowCursor = CLogical(c.GetAttrib(Mouse.Name & ".ShowCursor"))
+	If c.AttribExists(Mouse.Name & ".EmulateDeviceName") Then MouseMouseDeviceInfo.EmulateDeviceName = c.GetAttrib(Mouse.Name & ".EmulateDeviceName")
+
+	'Open the device, unless the context values indicate otherwise
+	Dim MouseOpen As Boolean
+	MouseOpen = True
+	If c.AttribExists(Mouse.Name & ".Open") Then MouseOpen = CLogical(c.GetAttrib(Mouse.Name & ".Open"))
+	If MouseOpen = True Then
+		Mouse.Open MouseMouseDeviceInfo
+	End If
+
+
+	SetOSThreadPriority 0
+
+End Sub
+
+
+
+'--------------------------------------------------------------------------
+' InitObjects
+'
+'--------------------------------------------------------------------------
+Sub InitObjects(c As Context)
+
+	Set SessionProc = New Procedure
+	SessionProc.Name = "SessionProc"
+	SessionProc.Tag = ""
+	SessionProc.Subroutine = "SessionProc_Run"
+
+	Set DistancedIs1OrImmersedIs2 = New List
+	DistancedIs1OrImmersedIs2.Name = "DistancedIs1OrImmersedIs2"
+	DistancedIs1OrImmersedIs2.Tag = ""
+
+	'Initialization for DistancedIs1OrImmersedIs2
+	
+	Set DistancedIs1OrImmersedIs2.Order = New RandomOrder
+	Set DistancedIs1OrImmersedIs2.Deletion = NoDeletion
+	DistancedIs1OrImmersedIs2.ResetEveryRun = False
+
+	' Create the column headings
+	DistancedIs1OrImmersedIs2.Filename = ""
+	DistancedIs1OrImmersedIs2.LoadMethod = ebLoadMethodEmbedded
+
+	DistancedIs1OrImmersedIs2.Load
+
+	Set DistancedIs1OrImmersedIs2.TerminateCondition = Samples(1)
+	Set DistancedIs1OrImmersedIs2.ResetCondition = Samples(1)
+	DistancedIs1OrImmersedIs2.Reset
+	
+	Set distancedProc = New Procedure
+	distancedProc.Name = "distancedProc"
+	distancedProc.Tag = ""
+	distancedProc.Subroutine = "distancedProc_Run"
+
+	Set Distance1 = New Slide
+	Distance1.Name = "Distance1"
+	Distance1.Tag = ""
+	Distance1.Duration = CLng("-1")
+	Distance1.TimingMode = ebTimingModeEvent
+	Distance1.PreRelease = Val("0")
+
+	Distance1.OnsetSync = 1
+	Distance1.OffsetSync = 0
+
+	Set Distance1_State = New SlideState
+	Distance1_State.Name = "Default"
+
+	InitSlideStateDefaults Distance1_State
+
+	Distance1_State.BackColor = CColor("255,250,132")
+
+	Distance1.States.Add Distance1_State, "Default"
+
+
+	Set Distance1_SlideSoundOut = New SlideSoundOut
+	Distance1_SlideSoundOut.Name = "SoundOut1"
+	Distance1_SoundBufferInfo.MaxLength = 60000
+	Distance1_SoundBufferInfo.VolumeControl = CLogical("no")
+	Distance1_SoundBufferInfo.PanControl = CLogical("no")
+	Set Distance1_SoundBuffer = Sound.CreateBuffer(Distance1_SoundBufferInfo)
+	Distance1_SlideSoundOut.Buffers.Add Distance1_SoundBuffer
+	Distance1.States.Item("Default").Objects.Add Distance1_SlideSoundOut, "SoundOut1"
+
+	Distance1_SoundBuffer.Filename = "audiofiles\\SPPfMRI-Dist-1.wav"
+	Distance1_SoundBuffer.Load
+
+	InitSlideSoundBufferDefaults Distance1_SoundBuffer
+
+	Distance1_SoundBuffer.EndSoundAction = 1
+	Set Distance1_SoundBuffer = Nothing
+	Distance1.ActiveState = "Default"
+
+	Set txtWelcome = New TextDisplay
+	txtWelcome.Name = "txtWelcome"
+	txtWelcome.Tag = ""
+
+	Set txtWelcomeEchoClients = New EchoClientCollection
+
+	InitTextDisplayDefaults txtWelcome
+
+	txtWelcome.Text = "\nIn the next part of the study we will again ask you to engage in the emotional picture and thermal stimulation tasks that you just participated in.\n" &_ 
+				"\nWe often find, however, that people's minds wander during the study, and they forget how they're supposed to focus on their feelings and sensations " &_ 
+				"- i.e., that you should simply focus on, and allow them to flow naturally.\n\nThe following audio instructions have been designed to remind you how to" &_ 
+				" do this.\n\nPress the spacebar when you're ready to continue."
+	txtWelcome.BackColor = CColor("255,250,132")
+	txtWelcome.FontName = "Trebuchet MS"
+	txtWelcome.Duration = CLng("-1")
+	txtWelcome.TimingMode = ebTimingModeEvent
+	txtWelcome.PreRelease = Val("0")
+
+	txtWelcome.OnsetSync = 1
+	txtWelcome.OffsetSync = 0
+
+	Set Distance2 = New Slide
+	Distance2.Name = "Distance2"
+	Distance2.Tag = ""
+	Distance2.Duration = CLng("-1")
+	Distance2.TimingMode = ebTimingModeEvent
+	Distance2.PreRelease = Val("0")
+
+	Distance2.OnsetSync = 1
+	Distance2.OffsetSync = 0
+
+	Set Distance2_State = New SlideState
+	Distance2_State.Name = "Default"
+
+	InitSlideStateDefaults Distance2_State
+
+	Distance2_State.BackColor = CColor("255,250,132")
+
+	Distance2.States.Add Distance2_State, "Default"
+
+
+	Set Distance2_SlideSoundOut = New SlideSoundOut
+	Distance2_SlideSoundOut.Name = "SoundOut1"
+	Distance2_SoundBufferInfo.MaxLength = 60000
+	Distance2_SoundBufferInfo.VolumeControl = CLogical("no")
+	Distance2_SoundBufferInfo.PanControl = CLogical("no")
+	Set Distance2_SoundBuffer = Sound.CreateBuffer(Distance2_SoundBufferInfo)
+	Distance2_SlideSoundOut.Buffers.Add Distance2_SoundBuffer
+	Distance2.States.Item("Default").Objects.Add Distance2_SlideSoundOut, "SoundOut1"
+
+	Distance2_SoundBuffer.Filename = "audiofiles\\SPPfMRI-both-2.wav"
+	Distance2_SoundBuffer.Load
+
+	InitSlideSoundBufferDefaults Distance2_SoundBuffer
+
+	Distance2_SoundBuffer.EndSoundAction = 1
+	Set Distance2_SoundBuffer = Nothing
+	Distance2.ActiveState = "Default"
+
+	Set Distance3 = New Slide
+	Distance3.Name = "Distance3"
+	Distance3.Tag = ""
+	Distance3.Duration = CLng("-1")
+	Distance3.TimingMode = ebTimingModeEvent
+	Distance3.PreRelease = Val("0")
+
+	Distance3.OnsetSync = 1
+	Distance3.OffsetSync = 0
+
+	Set Distance3_State = New SlideState
+	Distance3_State.Name = "Default"
+
+	InitSlideStateDefaults Distance3_State
+
+	Distance3_State.BackColor = CColor("255,250,132")
+
+	Distance3.States.Add Distance3_State, "Default"
+
+
+	Set Distance3_SlideSoundOut = New SlideSoundOut
+	Distance3_SlideSoundOut.Name = "SoundOut1"
+	Distance3_SoundBufferInfo.MaxLength = 60000
+	Distance3_SoundBufferInfo.VolumeControl = CLogical("no")
+	Distance3_SoundBufferInfo.PanControl = CLogical("no")
+	Set Distance3_SoundBuffer = Sound.CreateBuffer(Distance3_SoundBufferInfo)
+	Distance3_SlideSoundOut.Buffers.Add Distance3_SoundBuffer
+	Distance3.States.Item("Default").Objects.Add Distance3_SlideSoundOut, "SoundOut1"
+
+	Distance3_SoundBuffer.Filename = "audiofiles\\SPPfMRI-Dist-3.wav"
+	Distance3_SoundBuffer.Load
+
+	InitSlideSoundBufferDefaults Distance3_SoundBuffer
+
+	Distance3_SoundBuffer.EndSoundAction = 1
+	Set Distance3_SoundBuffer = Nothing
+	Distance3.ActiveState = "Default"
+
+	Set Distance4 = New Slide
+	Distance4.Name = "Distance4"
+	Distance4.Tag = ""
+	Distance4.Duration = CLng("-1")
+	Distance4.TimingMode = ebTimingModeEvent
+	Distance4.PreRelease = Val("0")
+
+	Distance4.OnsetSync = 1
+	Distance4.OffsetSync = 0
+
+	Set Distance4_State = New SlideState
+	Distance4_State.Name = "Male"
+
+	InitSlideStateDefaults Distance4_State
+
+	Distance4_State.BackColor = CColor("255,250,132")
+
+	Distance4.States.Add Distance4_State, "Male"
+
+
+	Set Distance4_SlideSoundOut = New SlideSoundOut
+	Distance4_SlideSoundOut.Name = "SoundOut1"
+	Distance4_SoundBufferInfo.MaxLength = 60000
+	Distance4_SoundBufferInfo.VolumeControl = CLogical("no")
+	Distance4_SoundBufferInfo.PanControl = CLogical("no")
+	Set Distance4_SoundBuffer = Sound.CreateBuffer(Distance4_SoundBufferInfo)
+	Distance4_SlideSoundOut.Buffers.Add Distance4_SoundBuffer
+	Distance4.States.Item("Male").Objects.Add Distance4_SlideSoundOut, "SoundOut1"
+
+	Distance4_SoundBuffer.Filename = "audiofiles\\SPPfMRI-Dist-4M.wav"
+	Distance4_SoundBuffer.Load
+
+	InitSlideSoundBufferDefaults Distance4_SoundBuffer
+
+	Distance4_SoundBuffer.EndSoundAction = 1
+	Set Distance4_SoundBuffer = Nothing
+
+	Set Distance4_State = New SlideState
+	Distance4_State.Name = "Female"
+
+	InitSlideStateDefaults Distance4_State
+
+	Distance4_State.BackColor = CColor("255,250,132")
+
+	Distance4.States.Add Distance4_State, "Female"
+
+
+	Set Distance4_SlideSoundOut = New SlideSoundOut
+	Distance4_SlideSoundOut.Name = "SoundOut1"
+	Distance4_SoundBufferInfo.MaxLength = 60000
+	Distance4_SoundBufferInfo.VolumeControl = CLogical("no")
+	Distance4_SoundBufferInfo.PanControl = CLogical("no")
+	Set Distance4_SoundBuffer = Sound.CreateBuffer(Distance4_SoundBufferInfo)
+	Distance4_SlideSoundOut.Buffers.Add Distance4_SoundBuffer
+	Distance4.States.Item("Female").Objects.Add Distance4_SlideSoundOut, "SoundOut1"
+
+	Distance4_SoundBuffer.Filename = "audiofiles\\SPPfMRI-Dist-4F.wav"
+	Distance4_SoundBuffer.Load
+
+	InitSlideSoundBufferDefaults Distance4_SoundBuffer
+
+	Distance4_SoundBuffer.EndSoundAction = 1
+	Set Distance4_SoundBuffer = Nothing
+	Distance4.ActiveState = "Male"
+
+	Set Distance5 = New Slide
+	Distance5.Name = "Distance5"
+	Distance5.Tag = ""
+
+	Set Distance5EchoClients = New EchoClientCollection
+	Distance5.Duration = CLng("-1")
+	Distance5.TimingMode = ebTimingModeEvent
+	Distance5.PreRelease = Val("0")
+
+	Distance5.OnsetSync = 1
+	Distance5.OffsetSync = 0
+
+	Set Distance5_State = New SlideState
+	Distance5_State.Name = "Default"
+
+	InitSlideStateDefaults Distance5_State
+
+	Distance5_State.BackColor = CColor("255,250,132")
+
+	Distance5.States.Add Distance5_State, "Default"
+
+
+	Set Distance5_SlideSoundOut = New SlideSoundOut
+	Distance5_SlideSoundOut.Name = "SoundOut1"
+	Distance5_SoundBufferInfo.MaxLength = 60000
+	Distance5_SoundBufferInfo.VolumeControl = CLogical("no")
+	Distance5_SoundBufferInfo.PanControl = CLogical("no")
+	Set Distance5_SoundBuffer = Sound.CreateBuffer(Distance5_SoundBufferInfo)
+	Distance5_SlideSoundOut.Buffers.Add Distance5_SoundBuffer
+	Distance5.States.Item("Default").Objects.Add Distance5_SlideSoundOut, "SoundOut1"
+
+	Distance5_SoundBuffer.Filename = "audiofiles\\SPPfMRI-Dist-5.wav"
+	Distance5_SoundBuffer.Load
+
+	InitSlideSoundBufferDefaults Distance5_SoundBuffer
+
+	Distance5_SoundBuffer.EndSoundAction = 0
+	Set Distance5_SoundBuffer = Nothing
+	Distance5.ActiveState = "Default"
+
+	Set ContinueSpace1 = New Slide
+	ContinueSpace1.Name = "ContinueSpace1"
+	ContinueSpace1.Tag = ""
+
+	Set ContinueSpace1EchoClients = New EchoClientCollection
+	ContinueSpace1.Duration = CLng("-1")
+	ContinueSpace1.TimingMode = ebTimingModeEvent
+	ContinueSpace1.PreRelease = Val("0")
+
+	ContinueSpace1.OnsetSync = 1
+	ContinueSpace1.OffsetSync = 0
+
+	Set ContinueSpace1_State = New SlideState
+	ContinueSpace1_State.Name = "Default"
+
+	InitSlideStateDefaults ContinueSpace1_State
+
+	ContinueSpace1_State.BackColor = CColor("255,250,132")
+
+	ContinueSpace1.States.Add ContinueSpace1_State, "Default"
+
+	ContinueSpace1.ActiveState = "Default"
+
+	Set ContinueSpace3 = New Slide
+	ContinueSpace3.Name = "ContinueSpace3"
+	ContinueSpace3.Tag = ""
+
+	Set ContinueSpace3EchoClients = New EchoClientCollection
+	ContinueSpace3.Duration = CLng("-1")
+	ContinueSpace3.TimingMode = ebTimingModeEvent
+	ContinueSpace3.PreRelease = Val("0")
+
+	ContinueSpace3.OnsetSync = 1
+	ContinueSpace3.OffsetSync = 0
+
+	Set ContinueSpace3_State = New SlideState
+	ContinueSpace3_State.Name = "Default"
+
+	InitSlideStateDefaults ContinueSpace3_State
+
+	ContinueSpace3_State.BackColor = CColor("255,250,132")
+
+	ContinueSpace3.States.Add ContinueSpace3_State, "Default"
+
+	ContinueSpace3.ActiveState = "Default"
+
+	Set ContinueSpace4in15 = New Slide
+	ContinueSpace4in15.Name = "ContinueSpace4in15"
+	ContinueSpace4in15.Tag = ""
+	ContinueSpace4in15.Duration = CLng("15000")
+	ContinueSpace4in15.TimingMode = ebTimingModeEvent
+	ContinueSpace4in15.PreRelease = Val("0")
+
+	ContinueSpace4in15.OnsetSync = 1
+	ContinueSpace4in15.OffsetSync = 0
+
+	Set ContinueSpace4in15_State = New SlideState
+	ContinueSpace4in15_State.Name = "Default"
+
+	InitSlideStateDefaults ContinueSpace4in15_State
+
+	ContinueSpace4in15_State.BackColor = CColor("255,250,132")
+
+	ContinueSpace4in15.States.Add ContinueSpace4in15_State, "Default"
+
+	ContinueSpace4in15.ActiveState = "Default"
+
+	Set immersedProc = New Procedure
+	immersedProc.Name = "immersedProc"
+	immersedProc.Tag = ""
+	immersedProc.Subroutine = "immersedProc_Run"
+
+	Set ContinueSpace2 = New Slide
+	ContinueSpace2.Name = "ContinueSpace2"
+	ContinueSpace2.Tag = ""
+
+	Set ContinueSpace2EchoClients = New EchoClientCollection
+	ContinueSpace2.Duration = CLng("-1")
+	ContinueSpace2.TimingMode = ebTimingModeEvent
+	ContinueSpace2.PreRelease = Val("0")
+
+	ContinueSpace2.OnsetSync = 1
+	ContinueSpace2.OffsetSync = 0
+
+	Set ContinueSpace2_State = New SlideState
+	ContinueSpace2_State.Name = "Default"
+
+	InitSlideStateDefaults ContinueSpace2_State
+
+	ContinueSpace2_State.BackColor = CColor("255,250,132")
+
+	ContinueSpace2.States.Add ContinueSpace2_State, "Default"
+
+	ContinueSpace2.ActiveState = "Default"
+
+	Set Control3 = New Slide
+	Control3.Name = "Control3"
+	Control3.Tag = ""
+	Control3.Duration = CLng("-1")
+	Control3.TimingMode = ebTimingModeEvent
+	Control3.PreRelease = Val("0")
+
+	Control3.OnsetSync = 1
+	Control3.OffsetSync = 0
+
+	Set Control3_State = New SlideState
+	Control3_State.Name = "Male"
+
+	InitSlideStateDefaults Control3_State
+
+	Control3_State.BackColor = CColor("255,250,132")
+
+	Control3.States.Add Control3_State, "Male"
+
+
+	Set Control3_SlideSoundOut = New SlideSoundOut
+	Control3_SlideSoundOut.Name = "SoundOut1"
+	Control3_SoundBufferInfo.MaxLength = 60000
+	Control3_SoundBufferInfo.VolumeControl = CLogical("no")
+	Control3_SoundBufferInfo.PanControl = CLogical("no")
+	Set Control3_SoundBuffer = Sound.CreateBuffer(Control3_SoundBufferInfo)
+	Control3_SlideSoundOut.Buffers.Add Control3_SoundBuffer
+	Control3.States.Item("Male").Objects.Add Control3_SlideSoundOut, "SoundOut1"
+
+	Control3_SoundBuffer.Filename = "audiofiles\\SPPfMRI-Control-3.wav"
+	Control3_SoundBuffer.Load
+
+	InitSlideSoundBufferDefaults Control3_SoundBuffer
+
+	Control3_SoundBuffer.EndSoundAction = 1
+	Set Control3_SoundBuffer = Nothing
+	Control3.ActiveState = "Male"
+
+	Set Control4 = New Slide
+	Control4.Name = "Control4"
+	Control4.Tag = ""
+	Control4.Duration = CLng("-1")
+	Control4.TimingMode = ebTimingModeEvent
+	Control4.PreRelease = Val("0")
+
+	Control4.OnsetSync = 1
+	Control4.OffsetSync = 0
+
+	Set Control4_State = New SlideState
+	Control4_State.Name = "Default"
+
+	InitSlideStateDefaults Control4_State
+
+	Control4_State.BackColor = CColor("255,250,132")
+
+	Control4.States.Add Control4_State, "Default"
+
+
+	Set Control4_SlideSoundOut = New SlideSoundOut
+	Control4_SlideSoundOut.Name = "SoundOut1"
+	Control4_SoundBufferInfo.MaxLength = 60000
+	Control4_SoundBufferInfo.VolumeControl = CLogical("no")
+	Control4_SoundBufferInfo.PanControl = CLogical("no")
+	Set Control4_SoundBuffer = Sound.CreateBuffer(Control4_SoundBufferInfo)
+	Control4_SlideSoundOut.Buffers.Add Control4_SoundBuffer
+	Control4.States.Item("Default").Objects.Add Control4_SlideSoundOut, "SoundOut1"
+
+	Control4_SoundBuffer.Filename = "audiofiles\\SPPfMRI-Control-4.wav"
+	Control4_SoundBuffer.Load
+
+	InitSlideSoundBufferDefaults Control4_SoundBuffer
+
+	Control4_SoundBuffer.EndSoundAction = 1
+	Set Control4_SoundBuffer = Nothing
+	Control4.ActiveState = "Default"
+
+	Set Control1 = New Slide
+	Control1.Name = "Control1"
+	Control1.Tag = ""
+	Control1.Duration = CLng("-1")
+	Control1.TimingMode = ebTimingModeEvent
+	Control1.PreRelease = Val("0")
+
+	Control1.OnsetSync = 1
+	Control1.OffsetSync = 0
+
+	Set Control1_State = New SlideState
+	Control1_State.Name = "Male"
+
+	InitSlideStateDefaults Control1_State
+
+	Control1_State.BackColor = CColor("255,250,132")
+
+	Control1.States.Add Control1_State, "Male"
+
+
+	Set Control1_SlideSoundOut = New SlideSoundOut
+	Control1_SlideSoundOut.Name = "SoundOut1"
+	Control1_SoundBufferInfo.MaxLength = 60000
+	Control1_SoundBufferInfo.VolumeControl = CLogical("no")
+	Control1_SoundBufferInfo.PanControl = CLogical("no")
+	Set Control1_SoundBuffer = Sound.CreateBuffer(Control1_SoundBufferInfo)
+	Control1_SlideSoundOut.Buffers.Add Control1_SoundBuffer
+	Control1.States.Item("Male").Objects.Add Control1_SlideSoundOut, "SoundOut1"
+
+	Control1_SoundBuffer.Filename = "audiofiles\\SPPfMRI-Control-1.wav"
+	Control1_SoundBuffer.Load
+
+	InitSlideSoundBufferDefaults Control1_SoundBuffer
+
+	Control1_SoundBuffer.EndSoundAction = 1
+	Set Control1_SoundBuffer = Nothing
+	Control1.ActiveState = "Male"
+
+	Set Control5 = New Slide
+	Control5.Name = "Control5"
+	Control5.Tag = ""
+	Control5.Duration = CLng("-1")
+	Control5.TimingMode = ebTimingModeEvent
+	Control5.PreRelease = Val("0")
+
+	Control5.OnsetSync = 1
+	Control5.OffsetSync = 0
+
+	Set Control5_State = New SlideState
+	Control5_State.Name = "Default"
+
+	InitSlideStateDefaults Control5_State
+
+	Control5_State.BackColor = CColor("255,250,132")
+
+	Control5.States.Add Control5_State, "Default"
+
+
+	Set Control5_SlideSoundOut = New SlideSoundOut
+	Control5_SlideSoundOut.Name = "SoundOut1"
+	Control5_SoundBufferInfo.MaxLength = 60000
+	Control5_SoundBufferInfo.VolumeControl = CLogical("no")
+	Control5_SoundBufferInfo.PanControl = CLogical("no")
+	Set Control5_SoundBuffer = Sound.CreateBuffer(Control5_SoundBufferInfo)
+	Control5_SlideSoundOut.Buffers.Add Control5_SoundBuffer
+	Control5.States.Item("Default").Objects.Add Control5_SlideSoundOut, "SoundOut1"
+
+	Control5_SoundBuffer.Filename = "audiofiles\\SPPfMRI-Control-5.wav"
+	Control5_SoundBuffer.Load
+
+	InitSlideSoundBufferDefaults Control5_SoundBuffer
+
+	Control5_SoundBuffer.EndSoundAction = 1
+	Set Control5_SoundBuffer = Nothing
+	Control5.ActiveState = "Default"
+
+
+End Sub
+
+
+'--------------------------------------------------------------------------
+' InitPackages
+'
+'--------------------------------------------------------------------------
+Sub InitPackages(c As Context)
+
+End Sub
+
+
+
+'--------------------------------------------------------------------------
+' InitGlobals
+'
+'--------------------------------------------------------------------------
+Sub InitGlobals(c As Context)
+
+End Sub
+
+
+
+'--------------------------------------------------------------------------
+
+
+'--------------------------------------------------------------------------
+'--------------------------------------------------------------------------
+' UnInitGlobals
+'--------------------------------------------------------------------------
+Sub UnInitGlobals()
+End Sub
+'--------------------------------------------------------------------------
+' UnInitDevices
+'--------------------------------------------------------------------------
+Sub UnInitDevices()
+	Display.Close
+	Set Display = Nothing
+	Sound.Close
+
+	Keyboard.Close
+	Set Keyboard = Nothing
+
+	Mouse.Close
+	Set Mouse = Nothing
+
+End Sub
+
+
+'--------------------------------------------------------------------------
+'--------------------------------------------------------------------------
+' UnInitPackages
+'--------------------------------------------------------------------------
+Sub UnInitPackages()
+End Sub
+
+
+'--------------------------------------------------------------------------
+' UnInitObjects
+'
+'--------------------------------------------------------------------------
+Sub UnInitObjects()
+
+	Set SessionProc = Nothing
+
+	Set DistancedIs1OrImmersedIs2 = Nothing
+
+	Set distancedProc = Nothing
+
+	Set Distance1 = Nothing
+
+	Set txtWelcome = Nothing
+
+	Set txtWelcomeEchoClients = Nothing
+
+	Set Distance2 = Nothing
+
+	Set Distance3 = Nothing
+
+	Set Distance4 = Nothing
+
+	Set Distance5 = Nothing
+
+	Set Distance5EchoClients = Nothing
+
+	Set ContinueSpace1 = Nothing
+
+	Set ContinueSpace1EchoClients = Nothing
+
+	Set ContinueSpace3 = Nothing
+
+	Set ContinueSpace3EchoClients = Nothing
+
+	Set ContinueSpace4in15 = Nothing
+
+	Set immersedProc = Nothing
+
+	Set ContinueSpace2 = Nothing
+
+	Set ContinueSpace2EchoClients = Nothing
+
+	Set Control3 = Nothing
+
+	Set Control4 = Nothing
+
+	Set Control1 = Nothing
+
+	Set Control5 = Nothing
+
+
+End Sub
+
+
+'--------------------------------------------------------------------------
+' Main
+'
+'--------------------------------------------------------------------------
+Sub Main()
+
+	' Create and initialize the default context, data file,
+	' and provide global access to the context.
+	Dim c As Context
+	Set c = New Context
+	Set c.DataFile = New DataFile
+	c.PushNewFrame
+	Set ebContext = c
+
+	' Set the log level names
+	c.SetLogLevelName 1, "Session"
+	c.SetLogLevelName 2, "Block"
+	c.SetLogLevelName 3, "Trial"
+	c.SetLogLevelName 4, "SubTrial"
+	c.SetLogLevelName 5, "LogLevel5"
+	c.SetLogLevelName 6, "LogLevel6"
+	c.SetLogLevelName 7, "LogLevel7"
+	c.SetLogLevelName 8, "LogLevel8"
+	c.SetLogLevelName 9, "LogLevel9"
+	c.SetLogLevelName 10, "LogLevel10"
+
+	' Set standard logging items
+	ebContext.SetAttrib "Experiment", "CMn"
+	ebContext.SetAttrib "SessionDate", Date$
+	ebContext.SetAttrib "SessionTime", Time$
+	ebContext.SetAttrib "RandomSeed", PRNG.GetSeed()
+	' Set default for GroupNumber
+	c.SetAttrib "Group", "1"
+
+	'Initialize global variables for packages
+	InitGlobals c
+
+	CreateDefaultPort
+
+	If Basic.OS = ebWin32 Then
+		WinActivate "E-Run Experiment Window"
+	End If
+
+	' Get the StartupInfo
+
+	' Set the defaults for all of the StartupInfo
+	If Not c.AttribExists("Subject") Then c.SetAttrib "Subject", "1"
+	If Not c.AttribExists("Session") Then c.SetAttrib "Session", "1"
+
+	' Determine if StartupInfo.UseDefaults exists and is True/False to override prompts for StartupInfo parameters
+	Dim bStartupInfoUseDefaults As Boolean
+	bStartupInfoUseDefaults = False
+	If c.AttribExists("StartupInfo.UseDefaults") Then bStartupInfoUseDefaults = CLogical(c.GetAttrib("StartupInfo.UseDefaults"))
+	If Not bStartupInfoUseDefaults Then
+
+		Dim vAnswer As Variant
+StartupInfo_Begin:
+
+StartupInfoPrompt_Subject:
+		vAnswer = AskBox("Please enter the Subject Number (1-32767, 0=No Data Logging):", c.GetAttrib("Subject"))
+		If Not IsEmpty(vAnswer) then
+			If Not IsNumeric(vAnswer) then
+				MsgBox "Please enter an integer value"
+				GoTo StartupInfoPrompt_Subject
+			ElseIf CLng(vAnswer) < 0 Then
+				MsgBox "The value for Subject must not be less than 0"
+				GoTo StartupInfoPrompt_Subject
+			ElseIf CLng(vAnswer) > 32767 Then
+				MsgBox "The value for Subject must be not be greater than 32767"
+				GoTo StartupInfoPrompt_Subject
+			End If
+		Else
+			GoTo ExperimentAbort
+		End if
+
+		c.SetAttrib "Subject", CStr(vAnswer)
+
+StartupInfoPrompt_Session:
+		vAnswer = AskBox("Please enter the Session Number (1-32767):", c.GetAttrib("Session"))
+		If Not IsEmpty(vAnswer) then
+			If Not IsNumeric(vAnswer) then
+				MsgBox "Please enter an integer value"
+				GoTo StartupInfoPrompt_Session
+			ElseIf CLng(vAnswer) < 1 Then
+				MsgBox "The value for Session must not be less than 1"
+				GoTo StartupInfoPrompt_Session
+			ElseIf CLng(vAnswer) > 32767 Then
+				MsgBox "The value for Session must be not be greater than 32767"
+				GoTo StartupInfoPrompt_Session
+			End If
+		Else
+			GoTo ExperimentAbort
+		End if
+
+		c.SetAttrib "Session", CStr(vAnswer)
+
+		' Display the summary
+		Dim strSummary As String
+		strSummary = "Subject:    " & c.GetAttrib("Subject") & "\n"
+		strSummary = strSummary & "Session:    " & c.GetAttrib("Session") & "\n"
+		strSummary = strSummary & "\nContinue with the above startup info?"
+
+		Dim nSummaryAnswer As Integer
+		nSummaryAnswer = MsgBox(strSummary, ebYesNoCancel + ebQuestion, "Summary of Startup Info")
+		If nSummaryAnswer = ebNo Then
+				GoTo StartupInfo_Begin
+		ElseIf nSummaryAnswer = ebCancel Then
+				GoTo ExperimentAbort
+		End If
+
+	End If
+
+
+	'If the attribute Clock.Scale.Override exists
+	'  then use it for to set the Clock.Scale value
+	If c.AttribExists("Clock.Scale.Override") Then
+		Clock.Scale = CDbl(c.GetAttrib("Clock.Scale.Override"))
+	End If
+
+	' Set the Filenames for the data files
+	Dim strFilenameRecovery As String
+	Dim strFilenameEDAT As String
+
+	'If the attribute DataFile.Filename.Override exists
+	'  then use it for the .txt and .edat filenames
+	If c.AttribExists("DataFile.Filename.Override") Then
+
+		' Set the default Data Filename
+		strFilenameRecovery = CStr(c.GetAttrib("DataFile.Filename.Override")) & ".txt"
+		strFilenameEDAT = CStr(c.GetAttrib("DataFile.Filename.Override")) & ".edat"
+
+	Else
+
+		' Set the default Data Filename
+		strFilenameRecovery = CStr(c.GetAttrib("Experiment")) & "-" & CStr(c.GetAttrib("Subject")) & "-" & CStr(c.GetAttrib("Session")) & ".txt"
+		strFilenameEDAT = CStr(c.GetAttrib("Experiment")) & "-" & CStr(c.GetAttrib("Subject")) & "-" & CStr(c.GetAttrib("Session")) & ".edat"
+
+	End If
+
+	'Set the name of the data file
+	c.DataFile.Filename = strFilenameRecovery
+
+	' If we are logging data, then prompt to overwrite the data file if it exists
+	If CLng(c.GetAttrib("Subject")) <> 0 Then
+		If FileExists(c.DataFile.Filename) Or FileExists(strFilenameEDAT) Then
+			If ebYes <> MsgBox("WARNING: The data file and/or recovery file already exists:\nFILE: " & c.DataFile.Filename & "\n\nDo you want to overwrite?", ebYesNo + ebQuestion) Then
+				GoTo ExperimentAbort
+			End If
+		End If
+	End If
+
+	' Initialize all system devices, packages, and objects
+	InitDevices c
+	InitPackages c
+	InitObjects c
+
+	' If we are logging data, then open the datafile
+	If CLng(c.GetAttrib("Subject")) <> 0 Then
+		c.DataFile.Open
+		c.LogHeader
+	End If
+
+
+
+#If RUNTIME_VERSION_MAJOR > 1  Or (RUNTIME_VERSION_MAJOR = 1 And RUNTIME_VERSION_MINOR >= 2) Then
+	' Log clock timing information
+	c.SetAttrib "Clock.Information", Clock.Information
+#End If
+
+	' Start the running of the Experiment
+	SessionProc.Run c
+
+	' Clean up the context and close the datafile
+	If CLng(c.GetAttrib("Subject")) <> 0 Then
+		c.DataFile.Close
+		' Attempt to convert the recovery file into a data file
+		Dim nConvert As Long
+		nConvert = c.DataFile.Convert(ebProgressSimple)
+		If nConvert = 0 Then
+			' Settings in E-Studio are set to not remove E-Recovery file
+		Else
+			' The datafile failed to convert!
+			MsgBox "ERROR: The datafile did not convert!\nFILE: " & c.DataFile.Filename & "\n\nIt is recommended that you recover your data with the E-Recovery utility"
+			MsgBox c.DataFile.GetLastErrorMessage()
+		End If
+	End If
+ExperimentFinish:
+
+	UnInitObjects
+
+	UnInitPackages
+	UnInitDevices
+
+	UnInitGlobals
+
+ExperimentAbort:
+
+	' Clean up the context
+	c.PopFrame
+	Set c = Nothing
+	Set ebContext = Nothing
+
+	DestroyDefaultPort
+
+End Sub
+
+
+[DataSection_DistancedIs1OrImmersedIs2(1)]
+Weight	Nested	Procedure
+0		distancedProc
+1		immersedProc\0

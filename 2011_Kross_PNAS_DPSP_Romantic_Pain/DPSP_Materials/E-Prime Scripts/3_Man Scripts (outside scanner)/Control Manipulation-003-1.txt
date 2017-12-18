@@ -1,0 +1,65 @@
+*** Header Start ***
+VersionPersist: 1
+LevelName: Session
+LevelName: Block
+LevelName: Trial
+LevelName: SubTrial
+LevelName: LogLevel5
+LevelName: LogLevel6
+LevelName: LogLevel7
+LevelName: LogLevel8
+LevelName: LogLevel9
+LevelName: LogLevel10
+Experiment: Control Manipulation
+SessionDate: 11-05-2007
+SessionTime: 11:37:31
+RandomSeed: -2135204701
+Group: 1
+Subject: 003
+Session: 1
+Display.RefreshRate: 60.207
+*** Header End ***
+	Level: 2
+	*** LogFrame Start ***
+	DistancedIs1OrImmersedIs2: 2
+	Procedure: immersedProc
+	DistancedIs1OrImmersedIs2.Cycle: 1
+	DistancedIs1OrImmersedIs2.Sample: 1
+	Running: DistancedIs1OrImmersedIs2
+	ContinueSpace1.OnsetDelay: 11
+	ContinueSpace1.OnsetTime: 1521711
+	ContinueSpace1.DurationError: -999999
+	ContinueSpace1.RTTime: 1523064
+	ContinueSpace1.ACC: 0
+	ContinueSpace1.RT: 1353
+	ContinueSpace1.RESP: {SPACE}
+	ContinueSpace1.CRESP: 
+	ContinueSpace2.OnsetDelay: 4
+	ContinueSpace2.OnsetTime: 1571589
+	ContinueSpace2.DurationError: -999999
+	ContinueSpace2.RTTime: 1571917
+	ContinueSpace2.ACC: 0
+	ContinueSpace2.RT: 328
+	ContinueSpace2.RESP: {SPACE}
+	ContinueSpace2.CRESP: 
+	ContinueSpace3.OnsetDelay: 16
+	ContinueSpace3.OnsetTime: 1588033
+	ContinueSpace3.DurationError: -999999
+	ContinueSpace3.RTTime: 1588767
+	ContinueSpace3.ACC: 0
+	ContinueSpace3.RT: 734
+	ContinueSpace3.RESP: {SPACE}
+	ContinueSpace3.CRESP: 
+	*** LogFrame End ***
+Level: 1
+*** LogFrame Start ***
+Experiment: Control Manipulation
+SessionDate: 11-05-2007
+SessionTime: 11:37:31
+RandomSeed: -2135204701
+Group: 1
+Subject: 003
+Session: 1
+Display.RefreshRate: 60.207
+Clock.Information: <?xml version="1.0"?>\n<Clock xmlns:dt="urn:schemas-microsoft-com:datatypes"><Description dt:dt="string">E-Prime Primary Realtime Clock</Description><StartTime><Timestamp dt:dt="int">0</Timestamp><DateUtc dt:dt="string">2007-11-05T16:37:30Z</DateUtc></StartTime><FrequencyChanges><FrequencyChange><Frequency dt:dt="r8">3579545</Frequency><Timestamp dt:dt="r8">5830429667031</Timestamp><Current dt:dt="r8">0</Current><DateUtc dt:dt="string">1969-12-31T19:00:50Z</DateUtc></FrequencyChange></FrequencyChanges></Clock>\n
+*** LogFrame End ***

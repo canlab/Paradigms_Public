@@ -1,0 +1,49 @@
+*** Header Start ***
+VersionPersist: 1
+LevelName: Session
+LevelName: Block
+LevelName: Trial
+LevelName: SubTrial
+LevelName: LogLevel5
+LevelName: LogLevel6
+LevelName: LogLevel7
+LevelName: LogLevel8
+LevelName: LogLevel9
+LevelName: LogLevel10
+Experiment: SP_Pain_T2_Script
+SessionDate: 11-10-2007
+SessionTime: 08:51:16
+RandomSeed: 56355799
+Group: 1
+Subject: 004
+Session: 1
+Display.RefreshRate: 60.021
+*** Header End ***
+	Level: 2
+	*** LogFrame Start ***
+	TrialList: 1
+	Procedure: T2Proc
+	TrialList.Cycle: 1
+	TrialList.Sample: 1
+	Running: TrialList
+	ContinueSpace1.OnsetDelay: 8
+	ContinueSpace1.OnsetTime: 469487
+	ContinueSpace1.DurationError: -999999
+	ContinueSpace1.RTTime: 477500
+	ContinueSpace1.ACC: 0
+	ContinueSpace1.RT: 8013
+	ContinueSpace1.RESP: {SPACE}
+	ContinueSpace1.CRESP: 
+	*** LogFrame End ***
+Level: 1
+*** LogFrame Start ***
+Experiment: SP_Pain_T2_Script
+SessionDate: 11-10-2007
+SessionTime: 08:51:16
+RandomSeed: 56355799
+Group: 1
+Subject: 004
+Session: 1
+Display.RefreshRate: 60.021
+Clock.Information: <?xml version="1.0"?>\n<Clock xmlns:dt="urn:schemas-microsoft-com:datatypes"><Description dt:dt="string">E-Prime Primary Realtime Clock</Description><StartTime><Timestamp dt:dt="int">0</Timestamp><DateUtc dt:dt="string">2007-11-10T13:51:16Z</DateUtc></StartTime><FrequencyChanges><FrequencyChange><Frequency dt:dt="r8">3579545</Frequency><Timestamp dt:dt="r8">309293275725</Timestamp><Current dt:dt="r8">0</Current><DateUtc dt:dt="string">1969-12-31T21:46:40Z</DateUtc></FrequencyChange></FrequencyChanges></Clock>\n
+*** LogFrame End ***

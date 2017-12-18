@@ -1,0 +1,65 @@
+*** Header Start ***
+VersionPersist: 1
+LevelName: Session
+LevelName: Block
+LevelName: Trial
+LevelName: SubTrial
+LevelName: LogLevel5
+LevelName: LogLevel6
+LevelName: LogLevel7
+LevelName: LogLevel8
+LevelName: LogLevel9
+LevelName: LogLevel10
+Experiment: CMn
+SessionDate: 05-19-2008
+SessionTime: 13:41:09
+RandomSeed: -1786481119
+Group: 1
+Subject: 033
+Session: 1
+Display.RefreshRate: 60.020
+*** Header End ***
+	Level: 2
+	*** LogFrame Start ***
+	DistancedIs1OrImmersedIs2: 2
+	Procedure: immersedProc
+	DistancedIs1OrImmersedIs2.Cycle: 1
+	DistancedIs1OrImmersedIs2.Sample: 1
+	Running: DistancedIs1OrImmersedIs2
+	ContinueSpace1.OnsetDelay: 353
+	ContinueSpace1.OnsetTime: 165334
+	ContinueSpace1.DurationError: -999999
+	ContinueSpace1.RTTime: 165733
+	ContinueSpace1.ACC: 0
+	ContinueSpace1.RT: 399
+	ContinueSpace1.RESP: {SPACE}
+	ContinueSpace1.CRESP: 
+	ContinueSpace2.OnsetDelay: 6
+	ContinueSpace2.OnsetTime: 214252
+	ContinueSpace2.DurationError: -999999
+	ContinueSpace2.RTTime: 215521
+	ContinueSpace2.ACC: 0
+	ContinueSpace2.RT: 1269
+	ContinueSpace2.RESP: {SPACE}
+	ContinueSpace2.CRESP: 
+	ContinueSpace3.OnsetDelay: 16
+	ContinueSpace3.OnsetTime: 231646
+	ContinueSpace3.DurationError: -999999
+	ContinueSpace3.RTTime: 233155
+	ContinueSpace3.ACC: 0
+	ContinueSpace3.RT: 1509
+	ContinueSpace3.RESP: {SPACE}
+	ContinueSpace3.CRESP: 
+	*** LogFrame End ***
+Level: 1
+*** LogFrame Start ***
+Experiment: CMn
+SessionDate: 05-19-2008
+SessionTime: 13:41:09
+RandomSeed: -1786481119
+Group: 1
+Subject: 033
+Session: 1
+Display.RefreshRate: 60.020
+Clock.Information: <?xml version="1.0"?>\n<Clock xmlns:dt="urn:schemas-microsoft-com:datatypes"><Description dt:dt="string">E-Prime Primary Realtime Clock</Description><StartTime><Timestamp dt:dt="int">0</Timestamp><DateUtc dt:dt="string">2008-05-19T17:41:09Z</DateUtc></StartTime><FrequencyChanges><FrequencyChange><Frequency dt:dt="r8">3579545</Frequency><Timestamp dt:dt="r8">23983052395</Timestamp><Current dt:dt="r8">0</Current><DateUtc dt:dt="string">1970-02-08T11:26:26Z</DateUtc></FrequencyChange></FrequencyChanges></Clock>\n
+*** LogFrame End ***

@@ -1,0 +1,1022 @@
+'
+'
+'
+'	C:\Documents and Settings\Ethan Kross\Desktop\DPSP Scripts\Time 1\1_Study Orientation Scripts\C.ebs
+'	Generated on: 6/2/2008	12:01:34
+'
+'
+'	This file generated with E-Studio interface.
+'	E-Prime Copyright © 1996-2005 Psychology Software Tools.
+'	ALL RIGHTS RESERVED
+'
+'	Legal use of this experiment script requires a full E-Prime or Runtime License.
+'
+'
+'	Author:
+'		Phil Enock (Columbia University)
+'
+'
+'
+'
+
+Option CStrings On
+Dim ebContext as Context
+
+
+'--------------------------------------------------------------------------
+' Class Declarations
+'--------------------------------------------------------------------------
+
+
+
+'--------------------------------------------------------------------------
+'InitTextDisplayDefaults
+'--------------------------------------------------------------------------
+Sub InitTextDisplayDefaults(theTextDisplay As TextDisplay)
+
+	If theTextDisplay Is Nothing Then Exit Sub
+
+	theTextDisplay.X = "center"
+	theTextDisplay.Y = "center"
+	theTextDisplay.Width = "100%"
+	theTextDisplay.Height = "100%"
+	theTextDisplay.ForeColor = CColor("black")
+	theTextDisplay.BackColor = CColor("white")
+	theTextDisplay.BackStyle = "opaque"
+	theTextDisplay.BorderColor = CColor("black")
+	theTextDisplay.BorderWidth = CLng("0")
+	theTextDisplay.XAlign = "center"
+	theTextDisplay.YAlign = "center"
+	theTextDisplay.AlignHorizontal = "center"
+	theTextDisplay.AlignVertical = "center"
+	theTextDisplay.WordWrap = True
+	theTextDisplay.ClearAfter = CLogical("No")
+	theTextDisplay.FontName = "Courier New"
+	theTextDisplay.FontSize = "18"
+	theTextDisplay.FontBold = CLogical("Yes")
+	theTextDisplay.FontItalic = CLogical("No")
+	theTextDisplay.FontUnderline = CLogical("No")
+	theTextDisplay.FontStrikeout = CLogical("No")
+
+End Sub
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+'--------------------------------------------------------------------------
+' Instance Declarations
+'--------------------------------------------------------------------------
+Dim Display As DisplayDevice
+Dim Sound As SoundDevice
+Dim Keyboard As KeyboardDevice
+Dim Mouse As MouseDevice
+Dim SessionProc As Procedure
+
+Dim InstrList As List
+
+Dim InstrProc As Procedure
+
+Dim Instr1 As TextDisplay
+Dim Instr1EchoClients As EchoClientCollection
+
+Dim Instr2 As TextDisplay
+Dim Instr2EchoClients As EchoClientCollection
+
+Dim Instr3 As TextDisplay
+Dim Instr3EchoClients As EchoClientCollection
+
+Dim Instr4 As TextDisplay
+Dim Instr4EchoClients As EchoClientCollection
+
+Dim Instr5 As TextDisplay
+Dim Instr5EchoClients As EchoClientCollection
+
+Dim Instr6 As TextDisplay
+Dim Instr6EchoClients As EchoClientCollection
+
+Dim Instr7 As TextDisplay
+Dim Instr7EchoClients As EchoClientCollection
+
+Dim Instr8 As TextDisplay
+Dim Instr8EchoClients As EchoClientCollection
+
+Dim Instr9 As TextDisplay
+Dim Instr9EchoClients As EchoClientCollection
+
+Dim Instr2b As TextDisplay
+Dim Instr2bEchoClients As EchoClientCollection
+
+Dim Instr10 As TextDisplay
+Dim Instr10EchoClients As EchoClientCollection
+
+Dim Instr11 As TextDisplay
+Dim Instr11EchoClients As EchoClientCollection
+
+Dim Instr12 As TextDisplay
+Dim Instr12EchoClients As EchoClientCollection
+
+
+
+'--------------------------------------------------------------------------
+' Package Declare Script
+'--------------------------------------------------------------------------
+
+
+
+'--------------------------------------------------------------------------
+' User Script
+'--------------------------------------------------------------------------
+
+
+
+'--------------------------------------------------------------------------
+' Package Global Script
+'--------------------------------------------------------------------------
+
+
+
+'--------------------------------------------------------------------------
+' Package Routines
+'--------------------------------------------------------------------------
+
+
+
+'--------------------------------------------------------------------------
+' Implementation
+'--------------------------------------------------------------------------
+Sub SessionProc_Run(c as Context)
+	InstrList.Run c
+
+	 
+
+
+#If RUNTIME_VERSION_MAJOR > 1  Or (RUNTIME_VERSION_MAJOR = 1 And RUNTIME_VERSION_MINOR >= 2) Then
+	' Log clock timing information
+	c.SetAttrib "Clock.Information", Clock.Information
+#End If
+
+
+	c.Log
+End Sub
+
+Sub InstrProc_Run(c as Context)
+	
+	
+	Instr1.InputMasks.Reset
+	
+	If Keyboard.GetState() = ebStateOpen Then
+		Instr1EchoClients.RemoveAll
+		Instr1.InputMasks.Add Keyboard.CreateInputMask("{SPACE}", "", CLng(Instr1.Duration), CLng("1"), ebEndResponseActionTerminate, CLogical("Yes"), "", "", "ResponseMode:All ProcessBackspace:Yes")
+
+	
+	End If
+
+	Instr1.Run
+	
+	
+	Instr2.InputMasks.Reset
+	
+	If Keyboard.GetState() = ebStateOpen Then
+		Instr2EchoClients.RemoveAll
+		Instr2.InputMasks.Add Keyboard.CreateInputMask("{SPACE}", "", CLng(Instr2.Duration), CLng("1"), ebEndResponseActionTerminate, CLogical("Yes"), "", "", "ResponseMode:All ProcessBackspace:Yes")
+
+	
+	End If
+
+	Instr2.Run
+	
+	
+	Instr2b.InputMasks.Reset
+	
+	If Keyboard.GetState() = ebStateOpen Then
+		Instr2bEchoClients.RemoveAll
+		Instr2b.InputMasks.Add Keyboard.CreateInputMask("{SPACE}", "", CLng(Instr2b.Duration), CLng("1"), ebEndResponseActionTerminate, CLogical("Yes"), "", "", "ResponseMode:All ProcessBackspace:Yes")
+
+	
+	End If
+
+	Instr2b.Run
+	
+	
+	Instr3.InputMasks.Reset
+	
+	If Keyboard.GetState() = ebStateOpen Then
+		Instr3EchoClients.RemoveAll
+		Instr3.InputMasks.Add Keyboard.CreateInputMask("{SPACE}", "", CLng(Instr3.Duration), CLng("1"), ebEndResponseActionTerminate, CLogical("Yes"), "", "", "ResponseMode:All ProcessBackspace:Yes")
+
+	
+	End If
+
+	Instr3.Run
+	
+	
+	Instr4.InputMasks.Reset
+	
+	If Keyboard.GetState() = ebStateOpen Then
+		Instr4EchoClients.RemoveAll
+		Instr4.InputMasks.Add Keyboard.CreateInputMask("{SPACE}", "", CLng(Instr4.Duration), CLng("1"), ebEndResponseActionTerminate, CLogical("Yes"), "", "", "ResponseMode:All ProcessBackspace:Yes")
+
+	
+	End If
+
+	Instr4.Run
+	
+	
+	Instr5.InputMasks.Reset
+	
+	If Keyboard.GetState() = ebStateOpen Then
+		Instr5EchoClients.RemoveAll
+		Instr5.InputMasks.Add Keyboard.CreateInputMask("{SPACE}", "", CLng(Instr5.Duration), CLng("1"), ebEndResponseActionTerminate, CLogical("Yes"), "", "", "ResponseMode:All ProcessBackspace:Yes")
+
+	
+	End If
+
+	Instr5.Run
+	
+	
+	Instr12.InputMasks.Reset
+	
+	If Keyboard.GetState() = ebStateOpen Then
+		Instr12EchoClients.RemoveAll
+		Instr12.InputMasks.Add Keyboard.CreateInputMask("q", "", CLng(Instr12.Duration), CLng("1"), ebEndResponseActionTerminate, CLogical("Yes"), "", "", "ResponseMode:All ProcessBackspace:Yes")
+
+	
+	End If
+
+	Instr12.Run
+
+	c.Log
+End Sub
+
+
+
+'--------------------------------------------------------------------------
+' InitDevices
+'
+'--------------------------------------------------------------------------
+Sub InitDevices(c As Context)
+
+
+
+	SetOSThreadPriority 3
+
+
+	Set Display = New DisplayDevice
+	Display.Name = "Display"
+
+	Dim DisplayDisplayDeviceInfo As DisplayDeviceInfo
+	DisplayDisplayDeviceInfo.XRes = 1024
+	DisplayDisplayDeviceInfo.YRes = 768
+	DisplayDisplayDeviceInfo.ColorDepth = 16
+	DisplayDisplayDeviceInfo.RefreshRate = 0
+	DisplayDisplayDeviceInfo.NumPages = 0
+	
+	'Load values from context if they exist
+	If c.AttribExists(Display.Name & ".XRes") Then DisplayDisplayDeviceInfo.XRes = CLng(c.GetAttrib(Display.Name & ".XRes"))
+	If c.AttribExists(Display.Name & ".YRes") Then DisplayDisplayDeviceInfo.YRes = CLng(c.GetAttrib(Display.Name & ".YRes"))
+	If c.AttribExists(Display.Name & ".ColorDepth") Then DisplayDisplayDeviceInfo.ColorDepth = CLng(c.GetAttrib(Display.Name & ".ColorDepth"))
+
+	'Open the device, unless the context values indicate otherwise
+	Dim DisplayOpen As Boolean
+	DisplayOpen = True
+	If c.AttribExists(Display.Name & ".Open") Then DisplayOpen = CLogical(c.GetAttrib(Display.Name & ".Open"))
+	If DisplayOpen = True Then
+		Display.Open DisplayDisplayDeviceInfo
+		c.SetAttrib Display.Name & ".RefreshRate", Format$(Display.CalculatedRefreshRate, "0.000")
+	End If
+
+	Set Sound = New SoundDevice
+	Sound.Name = "Sound"
+
+	Dim SoundSoundOutDeviceInfo As SoundDeviceInfo
+	SoundSoundOutDeviceInfo.Channels = 2
+	SoundSoundOutDeviceInfo.SamplesPerSecond = 22050
+	SoundSoundOutDeviceInfo.BitsPerSample = 16
+	'Load values from context if they exist
+	If c.AttribExists(Sound.Name & ".Channels") Then SoundSoundOutDeviceInfo.Channels = CLng(c.GetAttrib(Sound.Name & ".Channels"))
+	If c.AttribExists(Sound.Name & ".SamplesPerSecond") Then SoundSoundOutDeviceInfo.SamplesPerSecond = CLng(c.GetAttrib(Sound.Name & ".SamplesPerSecond"))
+	If c.AttribExists(Sound.Name & ".BitsPerSample") Then SoundSoundOutDeviceInfo.BitsPerSample = CLng(c.GetAttrib(Sound.Name & ".BitsPerSample"))
+
+	Set Keyboard = New KeyboardDevice
+	Keyboard.Name = "Keyboard"
+
+	Dim KeyboardKeyboardDeviceInfo as KeyboardDeviceInfo
+	KeyboardKeyboardDeviceInfo.CollectionMode = ebPressesOnly
+	KeyboardKeyboardDeviceInfo.CapsLock = ebCapsLockOff
+	KeyboardKeyboardDeviceInfo.NumLock = ebNumLockOn
+	'Load values from context if they exist
+	If c.AttribExists(Keyboard.Name & ".CollectionMode") Then KeyboardKeyboardDeviceInfo.CollectionMode = CLng(c.GetAttrib(Keyboard.Name & ".CollectionMode"))
+	If c.AttribExists(Keyboard.Name & ".CapsLock") Then KeyboardKeyboardDeviceInfo.CapsLock = CLng(c.GetAttrib(Keyboard.Name & ".CapsLock"))
+	If c.AttribExists(Keyboard.Name & ".NumLock") Then KeyboardKeyboardDeviceInfo.NumLock = CLng(c.GetAttrib(Keyboard.Name & ".NumLock"))
+	If c.AttribExists(Keyboard.Name & ".EmulateDeviceName") Then KeyboardKeyboardDeviceInfo.EmulateDeviceName = c.GetAttrib(Keyboard.Name & ".EmulateDeviceName")
+
+	'Open the device, unless the context values indicate otherwise
+	Dim KeyboardOpen As Boolean
+	KeyboardOpen = True
+	If c.AttribExists(Keyboard.Name & ".Open") Then KeyboardOpen = CLogical(c.GetAttrib(Keyboard.Name & ".Open"))
+	If KeyboardOpen = True Then
+		Keyboard.Open KeyboardKeyboardDeviceInfo
+	End If
+
+	Set Mouse = New MouseDevice
+	Mouse.Name = "Mouse"
+
+	Dim MouseMouseDeviceInfo as MouseDeviceInfo
+	MouseMouseDeviceInfo.OpenMode = ebMouseOpenModeDirect
+	MouseMouseDeviceInfo.CollectionMode = ebPressesOnly
+	MouseMouseDeviceInfo.ShowCursor = False
+	'Load values from context if they exist
+	If c.AttribExists(Mouse.Name & ".OpenMode") Then MouseMouseDeviceInfo.OpenMode = CLng(c.GetAttrib(Mouse.Name & ".OpenMode"))
+	If c.AttribExists(Mouse.Name & ".CollectionMode") Then MouseMouseDeviceInfo.CollectionMode = CLng(c.GetAttrib(Mouse.Name & ".CollectionMode"))
+	If c.AttribExists(Mouse.Name & ".ShowCursor") Then MouseMouseDeviceInfo.ShowCursor = CLogical(c.GetAttrib(Mouse.Name & ".ShowCursor"))
+	If c.AttribExists(Mouse.Name & ".EmulateDeviceName") Then MouseMouseDeviceInfo.EmulateDeviceName = c.GetAttrib(Mouse.Name & ".EmulateDeviceName")
+
+	'Open the device, unless the context values indicate otherwise
+	Dim MouseOpen As Boolean
+	MouseOpen = True
+	If c.AttribExists(Mouse.Name & ".Open") Then MouseOpen = CLogical(c.GetAttrib(Mouse.Name & ".Open"))
+	If MouseOpen = True Then
+		Mouse.Open MouseMouseDeviceInfo
+	End If
+
+
+	SetOSThreadPriority 0
+
+End Sub
+
+
+
+'--------------------------------------------------------------------------
+' InitObjects
+'
+'--------------------------------------------------------------------------
+Sub InitObjects(c As Context)
+
+	Set SessionProc = New Procedure
+	SessionProc.Name = "SessionProc"
+	SessionProc.Tag = ""
+	SessionProc.Subroutine = "SessionProc_Run"
+
+	Set InstrList = New List
+	InstrList.Name = "InstrList"
+	InstrList.Tag = ""
+
+	'Initialization for InstrList
+	
+	Set InstrList.Order = New SequentialOrder
+	Set InstrList.Deletion = NoDeletion
+	InstrList.ResetEveryRun = False
+
+	' Create the column headings
+	InstrList.Filename = ""
+	InstrList.LoadMethod = ebLoadMethodEmbedded
+
+	InstrList.Load
+
+	Set InstrList.TerminateCondition = Cycles(1)
+	Set InstrList.ResetCondition = Samples(1)
+	InstrList.Reset
+	
+	Set InstrProc = New Procedure
+	InstrProc.Name = "InstrProc"
+	InstrProc.Tag = ""
+	InstrProc.Subroutine = "InstrProc_Run"
+
+	Set Instr1 = New TextDisplay
+	Instr1.Name = "Instr1"
+	Instr1.Tag = ""
+
+	Set Instr1EchoClients = New EchoClientCollection
+
+	InitTextDisplayDefaults Instr1
+
+	Instr1.Text = "Welcome to the study.\n\n\n\n\nToday, you will be participating in a study that has two main goals. \n\n\nOur first goal is to investigate how your br" &_ 
+				"ain processes different types of pain. Specifically, we're interested in learning about what happens in your brain when you experience pain triggered " &_ 
+				"by a social experience - for example, thinking about a recent relationship break-up - as compared to pain triggered by a physical experience - for exa" &_ 
+				"mple, holding a hot cup of coffee. \n\n\nOn the following pages, please press the SPACEBAR to continue."
+	Instr1.BackColor = CColor("black")
+	Instr1.ForeColor = CColor("white")
+	Instr1.FontSize = "16"
+	Instr1.Duration = CLng("-1")
+	Instr1.TimingMode = ebTimingModeEvent
+	Instr1.PreRelease = Val("0")
+
+	Instr1.OnsetSync = 1
+	Instr1.OffsetSync = 0
+
+	Set Instr2 = New TextDisplay
+	Instr2.Name = "Instr2"
+	Instr2.Tag = ""
+
+	Set Instr2EchoClients = New EchoClientCollection
+
+	InitTextDisplayDefaults Instr2
+
+	Instr2.Text = "A second goal of this study is to test whether saline nose-sprays improve the clarity of fMRI images. We will therefore ask you to inhale a saline sol" &_ 
+				"ution twice in each nostril using a nose spray at a particular point during this study.\n\nThis nose spray is a highly effective nasal decongestant, s" &_ 
+				"imilar to afrin, and is commonly used to clear nasal pathways. The scanner environment often leads to nasal congestion, which can interfere with the s" &_ 
+				"canner's ability to produce clear images of your brain. Inhaling a saline solution should reduce this problem, allowing us to more clearly monitor you" &_ 
+				"r brain activity.\n\n\n(Press the SPACEBAR to continue.)"
+	Instr2.BackColor = CColor("black")
+	Instr2.ForeColor = CColor("white")
+	Instr2.FontSize = "16"
+	Instr2.Duration = CLng("-1")
+	Instr2.TimingMode = ebTimingModeEvent
+	Instr2.PreRelease = Val("0")
+
+	Instr2.OnsetSync = 1
+	Instr2.OffsetSync = 0
+
+	Set Instr3 = New TextDisplay
+	Instr3.Name = "Instr3"
+	Instr3.Tag = ""
+
+	Set Instr3EchoClients = New EchoClientCollection
+
+	InitTextDisplayDefaults Instr3
+
+	Instr3.Text = "You will be asked to perform 2 tasks while we take images of your brain using an fMRI scanner. \n\n\nTask A will involve having you look at a picture " &_ 
+				"of your former romantic partner while thinking about your recent break-up. In addition, you will also be asked to look at a picture of your close frie" &_ 
+				"nd while thinking about a recent positive experience you shared.  \n\n\nTask B will involve having you experience a moderately painful thermal stimulu" &_ 
+				"s and a non-painful thermal stimulus. The pain associated with the more painful stimulation will be similar to the feeling of holding a very hot cup o" &_ 
+				"f coffee. The thermode that is used to deliver heat is controlled by a computer and will reach a temperature that is painful but tolerable for you. Yo" &_ 
+				"u will always have ultimate control over the stimulation and can stop at any time if it becomes too painful. \n"
+	Instr3.BackColor = CColor("black")
+	Instr3.ForeColor = CColor("white")
+	Instr3.FontSize = "16"
+	Instr3.Duration = CLng("-1")
+	Instr3.TimingMode = ebTimingModeEvent
+	Instr3.PreRelease = Val("0")
+
+	Instr3.OnsetSync = 1
+	Instr3.OffsetSync = 0
+
+	Set Instr4 = New TextDisplay
+	Instr4.Name = "Instr4"
+	Instr4.Tag = ""
+
+	Set Instr4EchoClients = New EchoClientCollection
+
+	InitTextDisplayDefaults Instr4
+
+	Instr4.Text = "You will be asked to do each of these tasks twice during the experiment. The first time through, we will ask you to simply react naturally. That is, s" &_ 
+				"imply allow your thoughts and feelings to come to mind. \n\nAfter successfully completing the first part of the experiment, we will remove you from th" &_ 
+				"e scanner and ask you to inhale the saline solution twice in each nostril using a nose spray.\n\nOnce you have inhaled the saline solution, we will gi" &_ 
+				"ve you further instructions about the second part of the experiment.\n"
+	Instr4.BackColor = CColor("black")
+	Instr4.ForeColor = CColor("white")
+	Instr4.FontSize = "16"
+	Instr4.Duration = CLng("-1")
+	Instr4.TimingMode = ebTimingModeEvent
+	Instr4.PreRelease = Val("0")
+
+	Instr4.OnsetSync = 1
+	Instr4.OffsetSync = 0
+
+	Set Instr5 = New TextDisplay
+	Instr5.Name = "Instr5"
+	Instr5.Tag = ""
+
+	Set Instr5EchoClients = New EchoClientCollection
+
+	InitTextDisplayDefaults Instr5
+
+	Instr5.Text = "To recap, here's what you will be doing today:\n\n    (1) First you'll go through consent forms, MRI safety screenings and a few questionnaires. We'll" &_ 
+				" also ask you to take a urine drug test and a urine pregnancy test. This is a routine screening and is done to ensure your safety.\n\n(2) Once we're d" &_ 
+				"one with paperwork and screenings, we'll do a physical pain calibration task so we can choose temperatures that are appropriate for your pain threshol" &_ 
+				"d and tolerance.\n\n(3) Next, we'll walk you through the emotional picture task, in which you'll be shown one of the pictures you provided us with ear" &_ 
+				"lier, of your former romantic partner and close friend and asked to focus on a specific experience from your past. \n\n(4) We will then get you situat" &_ 
+				"ed in the scanner.  Prior to scanning we will go over again what will happen to you while you're in the scanner and the tasks that you'll be asked to " &_ 
+				"complete. \n"
+	Instr5.BackColor = CColor("black")
+	Instr5.ForeColor = CColor("white")
+	Instr5.FontSize = "16"
+	Instr5.Duration = CLng("-1")
+	Instr5.TimingMode = ebTimingModeEvent
+	Instr5.PreRelease = Val("0")
+
+	Instr5.OnsetSync = 1
+	Instr5.OffsetSync = 0
+
+	Set Instr6 = New TextDisplay
+	Instr6.Name = "Instr6"
+	Instr6.Tag = ""
+
+	Set Instr6EchoClients = New EchoClientCollection
+
+	InitTextDisplayDefaults Instr6
+
+	Instr6.Text = "On the following pages, we provide more specific explanations of each element of the study..."
+	Instr6.BackColor = CColor("black")
+	Instr6.ForeColor = CColor("white")
+	Instr6.FontSize = "16"
+	Instr6.Duration = CLng("-1")
+	Instr6.TimingMode = ebTimingModeEvent
+	Instr6.PreRelease = Val("0")
+
+	Instr6.OnsetSync = 1
+	Instr6.OffsetSync = 0
+
+	Set Instr7 = New TextDisplay
+	Instr7.Name = "Instr7"
+	Instr7.Tag = ""
+
+	Set Instr7EchoClients = New EchoClientCollection
+
+	InitTextDisplayDefaults Instr7
+
+	Instr7.Text = "TASKS BEFORE SCANNING (1 of 2) - PAIN CALIBRATION\n\n\n\n\n\n\n\n\nBefore the experiment begins, we will establish your pain threshold and pain tolera" &_ 
+				"nce by testing various temperatures at various durations. We want to stress that your participation in this experiment is voluntary and you should not" &_ 
+				" endure pain that is beyond your personal limits. At the same time, because we're investigating pain processing, we DO expect the heat to be painful t" &_ 
+				"o you. Rest assured that the temperature will never rise high enough to harm you. On your left forearm, we will secure a thermode - a device that warm" &_ 
+				"s up to produce a heat sensation on your skin during the experiment. Using this thermode, we will test different temperatures at different locations o" &_ 
+				"n your arm to find three spots that are equally sensitive to heat. \n"
+	Instr7.BackColor = CColor("black")
+	Instr7.ForeColor = CColor("white")
+	Instr7.FontSize = "16"
+	Instr7.Duration = CLng("-1")
+	Instr7.TimingMode = ebTimingModeEvent
+	Instr7.PreRelease = Val("0")
+
+	Instr7.OnsetSync = 1
+	Instr7.OffsetSync = 0
+
+	Set Instr8 = New TextDisplay
+	Instr8.Name = "Instr8"
+	Instr8.Tag = ""
+
+	Set Instr8EchoClients = New EchoClientCollection
+
+	InitTextDisplayDefaults Instr8
+
+	Instr8.Text = "TASKS BEFORE SCANNING (1 of 2) - PAIN CALIBRATION (continued)\n\n\n\n\n\nDuring this calibration period, you will rate the pain of each stimulus on a " &_ 
+				"scale of 0-8; feel free to use decimal values as well: \n\n0 is no sensation\n1 is light warmth with no pain\n2 is very warm, but not yet painful\n3 i" &_ 
+				"s slightly painful\n4 is mildly to moderately painful\n5 is moderately painful\n6 is moderately to very painful\n7 is very painful\n8 is the most pain" &_ 
+				" you can tolerate.\n\n\nA rating of more than 8 indicates that the pain is severe and intolerable, and the stimulus will be stopped immediately. "
+	Instr8.BackColor = CColor("black")
+	Instr8.ForeColor = CColor("white")
+	Instr8.FontSize = "16"
+	Instr8.Duration = CLng("-1")
+	Instr8.TimingMode = ebTimingModeEvent
+	Instr8.PreRelease = Val("0")
+
+	Instr8.OnsetSync = 1
+	Instr8.OffsetSync = 0
+
+	Set Instr9 = New TextDisplay
+	Instr9.Name = "Instr9"
+	Instr9.Tag = ""
+
+	Set Instr9EchoClients = New EchoClientCollection
+
+	InitTextDisplayDefaults Instr9
+
+	Instr9.Text = "TASKS BEFORE SCANNING (2 of 2) - PHOTOGRAPH TASK TRAINING\n\n\n\n\nEach time you view the pictures you provided us with earlier we would like you to r" &_ 
+				"ecall and think about a specific recent experience you had with each person. Specifically: \n\n- When you see pictures of your former romantic partner" &_ 
+				" we would like you to recall and think about your recent REJECTION EXPERIENCE  (that is, the specific time and place in which your former romantic par" &_ 
+				"tner communicated to you that they no longer wanted to be in a relationship).\n\n- When you see either picture of your friend, we would like you to re" &_ 
+				"call and think about a recent POSITIVE EXPERIENCE you had with that person. \n\n\nThe purpose of this training task is to teach you how to recall thes" &_ 
+				"e memories quickly and easily each time we show you the pictures of each person.\n"
+	Instr9.BackColor = CColor("black")
+	Instr9.ForeColor = CColor("white")
+	Instr9.FontSize = "16"
+	Instr9.Duration = CLng("-1")
+	Instr9.TimingMode = ebTimingModeEvent
+	Instr9.PreRelease = Val("0")
+
+	Instr9.OnsetSync = 1
+	Instr9.OffsetSync = 0
+
+	Set Instr2b = New TextDisplay
+	Instr2b.Name = "Instr2b"
+	Instr2b.Tag = ""
+
+	Set Instr2bEchoClients = New EchoClientCollection
+
+	InitTextDisplayDefaults Instr2b
+
+	Instr2b.Text = "The effects of the spray are temporary and dissipate after an hour (after the scanner task ends, but before you leave today).\n\nAfter viewing this vi" &_ 
+				"deo the experimenter will present you with a list of potential side effects associated with this nasal spray. Although these side effects are uncommon" &_ 
+				", we ask that you read through them carefully.\n\nThe research will take place at the Columbia University Medical Center functional imaging facility a" &_ 
+				"nd will take about 2-3 hours.\n\n\n(Press the SPACEBAR to continue through the rest of the instructions.)"
+	Instr2b.BackColor = CColor("black")
+	Instr2b.ForeColor = CColor("white")
+	Instr2b.FontSize = "16"
+	Instr2b.Duration = CLng("-1")
+	Instr2b.TimingMode = ebTimingModeEvent
+	Instr2b.PreRelease = Val("0")
+
+	Instr2b.OnsetSync = 1
+	Instr2b.OffsetSync = 0
+
+	Set Instr10 = New TextDisplay
+	Instr10.Name = "Instr10"
+	Instr10.Tag = ""
+
+	Set Instr10EchoClients = New EchoClientCollection
+
+	InitTextDisplayDefaults Instr10
+
+	Instr10.Text = "SCANNER INFO\n\n\n\n\n\n1. Important Instructions\n\nWhile you are in the scanner, it's very important that you stay as still as you can, both during " &_ 
+				"and between scanning runs,. We'll be taking a series of images across your head, and these images can be blurred by even slight movements, just as a p" &_ 
+				"hotograph can. You shouldn't tense up, but rather relax onto the scanner bed. We'll provide pillows to make you as comfortable as possible. \n\nWe'll " &_ 
+				"also be recording your heart rate and skin conductance during the scan. To do this, we'll place a strap around your abdomen and a cuff on your finger." &_ 
+				" "
+	Instr10.BackColor = CColor("black")
+	Instr10.ForeColor = CColor("white")
+	Instr10.FontSize = "16"
+	Instr10.Duration = CLng("-1")
+	Instr10.TimingMode = ebTimingModeEvent
+	Instr10.PreRelease = Val("0")
+
+	Instr10.OnsetSync = 1
+	Instr10.OffsetSync = 0
+
+	Set Instr11 = New TextDisplay
+	Instr11.Name = "Instr11"
+	Instr11.Tag = ""
+
+	Set Instr11EchoClients = New EchoClientCollection
+
+	InitTextDisplayDefaults Instr11
+
+	Instr11.Text = "SCANNER INFO (continued)\n\n\n\n\n2. Procedure\n\nOnce you are comfortable in the scanner suite, we will begin with a series of shorter scans to get p" &_ 
+				"ictures of where you are in the scanner. After that, we'll go into the tasks.\n\nBefore each task, the experimenter will provide you with details abou" &_ 
+				"t what will happen, and remind you how to respond in that task. The experimenter and scanner technician will be available at all times. \n\nAt the end" &_ 
+				" of the experiment there will be a final 10-minute scan. During this scan, all you have to do is relax. "
+	Instr11.BackColor = CColor("black")
+	Instr11.ForeColor = CColor("white")
+	Instr11.FontSize = "16"
+	Instr11.Duration = CLng("-1")
+	Instr11.TimingMode = ebTimingModeEvent
+	Instr11.PreRelease = Val("0")
+
+	Instr11.OnsetSync = 1
+	Instr11.OffsetSync = 0
+
+	Set Instr12 = New TextDisplay
+	Instr12.Name = "Instr12"
+	Instr12.Tag = ""
+
+	Set Instr12EchoClients = New EchoClientCollection
+
+	InitTextDisplayDefaults Instr12
+
+	Instr12.Text = "You're now done with the orientation script. Please signal the experimenter, who will go over any questions you have before beginning the study."
+	Instr12.BackColor = CColor("black")
+	Instr12.ForeColor = CColor("white")
+	Instr12.FontSize = "16"
+	Instr12.Duration = CLng("-1")
+	Instr12.TimingMode = ebTimingModeEvent
+	Instr12.PreRelease = Val("0")
+
+	Instr12.OnsetSync = 1
+	Instr12.OffsetSync = 0
+
+
+End Sub
+
+
+'--------------------------------------------------------------------------
+' InitPackages
+'
+'--------------------------------------------------------------------------
+Sub InitPackages(c As Context)
+
+End Sub
+
+
+
+'--------------------------------------------------------------------------
+' InitGlobals
+'
+'--------------------------------------------------------------------------
+Sub InitGlobals(c As Context)
+
+End Sub
+
+
+
+'--------------------------------------------------------------------------
+
+
+'--------------------------------------------------------------------------
+'--------------------------------------------------------------------------
+' UnInitGlobals
+'--------------------------------------------------------------------------
+Sub UnInitGlobals()
+End Sub
+'--------------------------------------------------------------------------
+' UnInitDevices
+'--------------------------------------------------------------------------
+Sub UnInitDevices()
+	Display.Close
+	Set Display = Nothing
+
+	Keyboard.Close
+	Set Keyboard = Nothing
+
+	Mouse.Close
+	Set Mouse = Nothing
+
+End Sub
+
+
+'--------------------------------------------------------------------------
+'--------------------------------------------------------------------------
+' UnInitPackages
+'--------------------------------------------------------------------------
+Sub UnInitPackages()
+End Sub
+
+
+'--------------------------------------------------------------------------
+' UnInitObjects
+'
+'--------------------------------------------------------------------------
+Sub UnInitObjects()
+
+	Set SessionProc = Nothing
+
+	Set InstrList = Nothing
+
+	Set InstrProc = Nothing
+
+	Set Instr1 = Nothing
+
+	Set Instr1EchoClients = Nothing
+
+	Set Instr2 = Nothing
+
+	Set Instr2EchoClients = Nothing
+
+	Set Instr3 = Nothing
+
+	Set Instr3EchoClients = Nothing
+
+	Set Instr4 = Nothing
+
+	Set Instr4EchoClients = Nothing
+
+	Set Instr5 = Nothing
+
+	Set Instr5EchoClients = Nothing
+
+	Set Instr6 = Nothing
+
+	Set Instr6EchoClients = Nothing
+
+	Set Instr7 = Nothing
+
+	Set Instr7EchoClients = Nothing
+
+	Set Instr8 = Nothing
+
+	Set Instr8EchoClients = Nothing
+
+	Set Instr9 = Nothing
+
+	Set Instr9EchoClients = Nothing
+
+	Set Instr2b = Nothing
+
+	Set Instr2bEchoClients = Nothing
+
+	Set Instr10 = Nothing
+
+	Set Instr10EchoClients = Nothing
+
+	Set Instr11 = Nothing
+
+	Set Instr11EchoClients = Nothing
+
+	Set Instr12 = Nothing
+
+	Set Instr12EchoClients = Nothing
+
+
+End Sub
+
+
+'--------------------------------------------------------------------------
+' Main
+'
+'--------------------------------------------------------------------------
+Sub Main()
+
+	' Create and initialize the default context, data file,
+	' and provide global access to the context.
+	Dim c As Context
+	Set c = New Context
+	Set c.DataFile = New DataFile
+	c.PushNewFrame
+	Set ebContext = c
+
+	' Set the log level names
+	c.SetLogLevelName 1, "Session"
+	c.SetLogLevelName 2, "Block"
+	c.SetLogLevelName 3, "Trial"
+	c.SetLogLevelName 4, "SubTrial"
+	c.SetLogLevelName 5, "LogLevel5"
+	c.SetLogLevelName 6, "LogLevel6"
+	c.SetLogLevelName 7, "LogLevel7"
+	c.SetLogLevelName 8, "LogLevel8"
+	c.SetLogLevelName 9, "LogLevel9"
+	c.SetLogLevelName 10, "LogLevel10"
+
+	' Set standard logging items
+	ebContext.SetAttrib "Experiment", "C"
+	ebContext.SetAttrib "SessionDate", Date$
+	ebContext.SetAttrib "SessionTime", Time$
+	ebContext.SetAttrib "RandomSeed", PRNG.GetSeed()
+	' Set default for GroupNumber
+	c.SetAttrib "Group", "1"
+
+	'Initialize global variables for packages
+	InitGlobals c
+
+	CreateDefaultPort
+
+	If Basic.OS = ebWin32 Then
+		WinActivate "E-Run Experiment Window"
+	End If
+
+	' Get the StartupInfo
+
+	' Set the defaults for all of the StartupInfo
+	If Not c.AttribExists("Subject") Then c.SetAttrib "Subject", "1"
+	If Not c.AttribExists("Session") Then c.SetAttrib "Session", "1"
+
+	' Determine if StartupInfo.UseDefaults exists and is True/False to override prompts for StartupInfo parameters
+	Dim bStartupInfoUseDefaults As Boolean
+	bStartupInfoUseDefaults = False
+	If c.AttribExists("StartupInfo.UseDefaults") Then bStartupInfoUseDefaults = CLogical(c.GetAttrib("StartupInfo.UseDefaults"))
+	If Not bStartupInfoUseDefaults Then
+
+		Dim vAnswer As Variant
+StartupInfo_Begin:
+
+StartupInfoPrompt_Subject:
+		vAnswer = AskBox("Please enter the Subject Number (1-32767, 0=No Data Logging):", c.GetAttrib("Subject"))
+		If Not IsEmpty(vAnswer) then
+			If Not IsNumeric(vAnswer) then
+				MsgBox "Please enter an integer value"
+				GoTo StartupInfoPrompt_Subject
+			ElseIf CLng(vAnswer) < 0 Then
+				MsgBox "The value for Subject must not be less than 0"
+				GoTo StartupInfoPrompt_Subject
+			ElseIf CLng(vAnswer) > 32767 Then
+				MsgBox "The value for Subject must be not be greater than 32767"
+				GoTo StartupInfoPrompt_Subject
+			End If
+		Else
+			GoTo ExperimentAbort
+		End if
+
+		c.SetAttrib "Subject", CStr(vAnswer)
+
+StartupInfoPrompt_Session:
+		vAnswer = AskBox("Please enter the Session Number (1-32767):", c.GetAttrib("Session"))
+		If Not IsEmpty(vAnswer) then
+			If Not IsNumeric(vAnswer) then
+				MsgBox "Please enter an integer value"
+				GoTo StartupInfoPrompt_Session
+			ElseIf CLng(vAnswer) < 1 Then
+				MsgBox "The value for Session must not be less than 1"
+				GoTo StartupInfoPrompt_Session
+			ElseIf CLng(vAnswer) > 32767 Then
+				MsgBox "The value for Session must be not be greater than 32767"
+				GoTo StartupInfoPrompt_Session
+			End If
+		Else
+			GoTo ExperimentAbort
+		End if
+
+		c.SetAttrib "Session", CStr(vAnswer)
+
+		' Display the summary
+		Dim strSummary As String
+		strSummary = "Subject:    " & c.GetAttrib("Subject") & "\n"
+		strSummary = strSummary & "Session:    " & c.GetAttrib("Session") & "\n"
+		strSummary = strSummary & "\nContinue with the above startup info?"
+
+		Dim nSummaryAnswer As Integer
+		nSummaryAnswer = MsgBox(strSummary, ebYesNoCancel + ebQuestion, "Summary of Startup Info")
+		If nSummaryAnswer = ebNo Then
+				GoTo StartupInfo_Begin
+		ElseIf nSummaryAnswer = ebCancel Then
+				GoTo ExperimentAbort
+		End If
+
+	End If
+
+
+	'If the attribute Clock.Scale.Override exists
+	'  then use it for to set the Clock.Scale value
+	If c.AttribExists("Clock.Scale.Override") Then
+		Clock.Scale = CDbl(c.GetAttrib("Clock.Scale.Override"))
+	End If
+
+	' Set the Filenames for the data files
+	Dim strFilenameRecovery As String
+	Dim strFilenameEDAT As String
+
+	'If the attribute DataFile.Filename.Override exists
+	'  then use it for the .txt and .edat filenames
+	If c.AttribExists("DataFile.Filename.Override") Then
+
+		' Set the default Data Filename
+		strFilenameRecovery = CStr(c.GetAttrib("DataFile.Filename.Override")) & ".txt"
+		strFilenameEDAT = CStr(c.GetAttrib("DataFile.Filename.Override")) & ".edat"
+
+	Else
+
+		' Set the default Data Filename
+		strFilenameRecovery = CStr(c.GetAttrib("Experiment")) & "-" & CStr(c.GetAttrib("Subject")) & "-" & CStr(c.GetAttrib("Session")) & ".txt"
+		strFilenameEDAT = CStr(c.GetAttrib("Experiment")) & "-" & CStr(c.GetAttrib("Subject")) & "-" & CStr(c.GetAttrib("Session")) & ".edat"
+
+	End If
+
+	'Set the name of the data file
+	c.DataFile.Filename = strFilenameRecovery
+
+	' If we are logging data, then prompt to overwrite the data file if it exists
+	If CLng(c.GetAttrib("Subject")) <> 0 Then
+		If FileExists(c.DataFile.Filename) Or FileExists(strFilenameEDAT) Then
+			If ebYes <> MsgBox("WARNING: The data file and/or recovery file already exists:\nFILE: " & c.DataFile.Filename & "\n\nDo you want to overwrite?", ebYesNo + ebQuestion) Then
+				GoTo ExperimentAbort
+			End If
+		End If
+	End If
+
+	' Initialize all system devices, packages, and objects
+	InitDevices c
+	InitPackages c
+	InitObjects c
+
+	' If we are logging data, then open the datafile
+	If CLng(c.GetAttrib("Subject")) <> 0 Then
+		c.DataFile.Open
+		c.LogHeader
+	End If
+
+
+
+#If RUNTIME_VERSION_MAJOR > 1  Or (RUNTIME_VERSION_MAJOR = 1 And RUNTIME_VERSION_MINOR >= 2) Then
+	' Log clock timing information
+	c.SetAttrib "Clock.Information", Clock.Information
+#End If
+
+	' Start the running of the Experiment
+	SessionProc.Run c
+
+	' Clean up the context and close the datafile
+	If CLng(c.GetAttrib("Subject")) <> 0 Then
+		c.DataFile.Close
+		' Attempt to convert the recovery file into a data file
+		Dim nConvert As Long
+		nConvert = c.DataFile.Convert(ebProgressSimple)
+		If nConvert = 0 Then
+			' Settings in E-Studio are set to not remove E-Recovery file
+		Else
+			' The datafile failed to convert!
+			MsgBox "ERROR: The datafile did not convert!\nFILE: " & c.DataFile.Filename & "\n\nIt is recommended that you recover your data with the E-Recovery utility"
+			MsgBox c.DataFile.GetLastErrorMessage()
+		End If
+	End If
+ExperimentFinish:
+
+	UnInitObjects
+
+	UnInitPackages
+	UnInitDevices
+
+	UnInitGlobals
+
+ExperimentAbort:
+
+	' Clean up the context
+	c.PopFrame
+	Set c = Nothing
+	Set ebContext = Nothing
+
+	DestroyDefaultPort
+
+End Sub
+
+
+[DataSection_InstrList(1)]
+Weight	Nested	Procedure
+1		InstrProc\0
