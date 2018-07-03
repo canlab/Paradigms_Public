@@ -1,0 +1,1 @@
+This is the eprime and other necessary files to run the learning task of the SCEBL behavioral study (SCEBL = Social Conformity and Experience-Based Learning influences on pain). See Koban & Wager (in press, Emotion) for details.
