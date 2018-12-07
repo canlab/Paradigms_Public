@@ -1,4 +1,4 @@
-This repo contains the paradigms used in the Psych. Txs for CBP study (aka OLP4CBP). The paradigms are written in MATLAB. They require 1) PsychToolbox (http://psychtoolbox.org/), and 2) installation of the finger pressure device and back bladder pressure device, for the tasks that uses those devices.
+This repo contains the paradigms used in the Psych. Txs for CBP study (aka OLP4CBP). The paradigms are written in MATLAB. They require 1) PsychToolbox (http://psychtoolbox.org/), and 2) installation of the finger pressure device and back bladder pressure device, for the tasks that uses those devices. Installers and controllers for the devices are available here:  https://github.com/canlab/CANlab_data_and_equipment_private/tree/master/Equipment_and_devices (private repository, ask for access)
 
 `run_mri_tasks.m` runs the MRI tasks in order, and `run_EEG_task.m` runs the tasks from the EEG session in order. For both of those files, edit the subject number and the session (i.e., timepoint / day) at the top, and then run the following cells. Paths will need to be edited to match the location to which you download this repository.
 
