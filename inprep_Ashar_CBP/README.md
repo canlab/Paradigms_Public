@@ -1,0 +1,1 @@
+This repo contains the paradigms used in the Psych. Txs for CBP study (aka OLP4CBP). The paradigms are written in MATLAB. They require 1) PsychToolbox (http://psychtoolbox.org/), and 2) installation of the finger pressure device and back bladder pressure device, for the tasks that uses those devices.
