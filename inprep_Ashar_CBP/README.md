@@ -8,3 +8,7 @@ The tasks are as follows. Please note that the numbers at the beginning of each 
 * `03_PRTask`: Progressive ratio task. This was administered outside of the scanner. Subjects push the space bar repeatedly for monetary reward. Key refs: Schwartz et al., 2014, Science (rodent analogue); Treadway et al., 2009 PLoS ONE)
 * `04_BackPain`: The bladder task
 * `05_BDMAuction`: Pain auction. Make bids on how much you value avoiding pain. This was administered outside of the scanner. Key refs: Vlaev et al., 2009, 2012.
+* `06_Structural`: For familiarizing subjects with stimuli and devices during the structural scan. Administers two sound stimuli, two thumb stimuli, and asks for pain ratings
+* `07_BackPain_EEG`: administer bladder stimulations while collecting continuous pain ratings
+* `08_ToneTracking_EEG`: A sensory intensity rating control task for the `07_BackPain_EEG` task. Take the pain ratings the subject provided in the `07_BackPain_EEG` tasks, and modulate the volume of a tone by those pain ratings. Then play that tone back to subjects, and ask them to continuously rate tone loudness.
+
