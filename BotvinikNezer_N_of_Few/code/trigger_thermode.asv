@@ -1,0 +1,62 @@
+function heat_onset = trigger_thermode(experiment_name, peak_temp, peak_duration, ramp_up_duration, ramp_down_duration)
+% This function chooses the program based on parameters and starts it, then
+% wait for the stimulus duration interval
+% code by Rotem Botvinik-Nezer
+% Last updated October 2020
+
+ip = '192.168.0.114';
+port = 20121;
+
+% define program number (8 bit)
+program_name = [experiment_name '_' task '_peak' num2str(peak_temp) '_' num2str(peak_duration) '_up' num2str(ramp_up_duration) '_down' num2str(ramp_down_duration)];
+switch program_name
+    case 'NOF_peak40_5_up2_down2'
+        program =  200;
+    case 'NOF_peak41_5_up2_down2'
+        program =  201;
+    case 'NOF_peak42_5_up2_down2'
+        program =  202;
+    case 'NOF_peak43_5_up2_down2'
+        program =  203;
+    case 'NOF_peak44_5_up2_down2'
+        program =  204;
+    case 'NOF_peak45_5_up2_down2'
+        program =  205;
+    case 'NOF_peak46_5_up2_down2'
+        program =  206;
+    case 'NOF_peak47_5_up2_down2'
+        program =  207;    
+    case 'NOF_peak48_5_up2_down2'
+        program =  208;    
+    case 'NOF_peak49_5_up2_down2'
+        program =  209; 
+    case 'NOF_peak40_5_up2_down2'
+        program =  200;
+    case 'NOF_peak41_5_up2_down2'
+        program =  201;
+    case 'NOF_peak42_5_up2_down2'
+        program =  202;
+    case 'NOF_peak43_5_up2_down2'
+        program =  203;
+    case 'NOF_peak44_5_up2_down2'
+        program =  204;
+    case 'NOF_peak45_5_up2_down2'
+        program =  205;
+    case 'NOF_peak46_5_up2_down2'
+        program =  206;
+    case 'NOF_peak47_5_up2_down2'
+        program =  207;    
+    case 'NOF_peak48_5_up2_down2'
+        program =  208;    
+    case 'NOF_peak49_5_up2_down2'
+        program =  209; 
+    case 'NOF_peak49_5_up2_down2'
+        program =  209;     otherwise
+        error(['can''t trigger thermode, invalid program name: ' program_name]);
+end
+main(ip, port, 1, program); % choose program to start
+main(ip, port, 4, program); % trigger
+heat_onset = GetSecs; % record stimulus onset
+WaitSecs(peak_duration+ramp_down_duration+ramp_down_duration); % wait for the stimulus duration
+end
+
