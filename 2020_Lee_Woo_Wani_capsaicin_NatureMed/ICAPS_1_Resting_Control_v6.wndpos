@@ -1,0 +1,14 @@
+[Object0]
+Name=GetRatingPostScan
+WindowState=0
+Left=8
+Top=30
+Width=213
+Height=135
+[Object1]
+Name=Instructions
+WindowState=0
+Left=125
+Top=125
+Width=426
+Height=316

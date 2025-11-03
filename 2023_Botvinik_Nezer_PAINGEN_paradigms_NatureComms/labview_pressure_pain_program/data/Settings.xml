@@ -1,0 +1,29 @@
+<?xml version='1.0' standalone='yes' ?>
+<LVData xmlns="http://www.ni.com/LVData">
+<Version>17.0f2</Version>
+<Cluster>
+<Name>Settings</Name>
+<NumElts>3</NumElts>
+<DBL>
+<Name>Calibration slope</Name>
+<Val>1.00000000000000</Val>
+</DBL>
+<DBL>
+<Name>Calibration offset</Name>
+<Val>0.00000000000000</Val>
+</DBL>
+<Cluster>
+<Name>Logging Configuration</Name>
+<NumElts>2</NumElts>
+<Path>
+<Name>Log File Base Path</Name>
+<Val>C:\Users\CANLAB\Documents\mpa2_genetics_mod\tmp</Val>
+</Path>
+<Refnum>
+<Name>Byte Stream Reference</Name>
+<RefKind>Byte Stream File</RefKind>
+<Val>0x00000000</Val>
+</Refnum>
+</Cluster>
+</Cluster>
+</LVData>

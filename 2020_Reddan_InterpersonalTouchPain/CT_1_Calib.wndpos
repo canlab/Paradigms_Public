@@ -1,0 +1,17 @@
+[Object0]
+Name=CalcStim1
+WindowState=0
+Left=8
+Top=30
+Width=213
+Height=174
+[Object1]
+Name=PainRatingC1
+WindowState=0
+Left=75
+Top=75
+Width=530
+Height=388
+[Object2]
+Name=GetPainRatingC1
+WindowState=2
